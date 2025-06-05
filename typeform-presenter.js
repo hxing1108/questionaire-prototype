@@ -758,11 +758,14 @@ class TypeformPresenter extends HTMLElement {
       }
 
       .nav-button.prev {
-        background: transparent;
-        color: hsl(var(--foreground) / 0.6);
+        background: hsl(var(--background));
+        color: hsl(var(--foreground));
+        border: 2px solid #000000 !important;
       }
 
       .nav-button.prev:hover:not(:disabled) {
+        background: hsl(var(--foreground) / 0.05);
+        border: 2px solid hsl(var(--foreground)) !important;
         color: hsl(var(--foreground));
       }
 

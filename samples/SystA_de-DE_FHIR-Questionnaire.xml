@@ -1,0 +1,3936 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Stylesheet-Version: fragengruppe_2_FHIR-Questionnaire.xsl – V0.0.40 – 2021-08-02, 20:59 Uhr-->
+<!--Stylesheet-Version: clean_up_FHIR-Questionnaire.xsl – V0.0.9 – 2020-12-10, 15:52 Uhr-->
+<!--Stylesheet-Version: humanReadable_FHIR-Questionnaire.xsl – V0.0.5 – 2021-08-02, 21:41 Uhr-->
+<Questionnaire xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xmlns="http://hl7.org/fhir"
+               xmlns:h="http://www.w3.org/1999/xhtml"
+               xsi:schemaLocation="../XSD_4.0.1/questionnaire.xsd">
+   <id value="PC-SystA-06-2021v1"/>
+   <meta>
+      <profile value="http://thieme-compliance.de/fhir/StructureDefinition/Questionnaire"/>
+   </meta>
+   <language value="de-DE"/>
+   <text>
+      <status value="generated"/>
+      <h:div xml:lang="de-DE">
+         <h:h1>Basisanamnese bei Erwachsenen</h:h1>
+         <h:table>
+            <h:thead>
+               <h:tr>
+                  <h:th>Nr.</h:th>
+                  <h:th>Frage</h:th>
+                  <h:th>Antwort</h:th>
+               </h:tr>
+            </h:thead>
+            <h:tbody>
+               <h:tr>
+                  <h:td/>
+                  <h:td>Bitte geben Sie Ihr Geburtsdatum an.</h:td>
+                  <h:td>
+                     <h:hr/>
+                  </h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>
+                     <h:b/>
+                  </h:td>
+                  <h:td>
+                     <h:b>Bitte geben Sie Ihre Größe (in cm), Ihr Gewicht (in kg) sowie Ihr Geschlecht an.</h:b>
+                  </h:td>
+                  <h:td/>
+               </h:tr>
+               <h:tr>
+                  <h:td/>
+                  <h:td>Größe:</h:td>
+                  <h:td>
+                     <h:hr/>
+                  </h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td/>
+                  <h:td>Gewicht:</h:td>
+                  <h:td>
+                     <h:hr/>
+                  </h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td/>
+                  <h:td>Geschlecht:</h:td>
+                  <h:td>☐ weiblich<h:br/>☐ männlich</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td/>
+                  <h:td>Wird der Eingriff ambulant oder stationär durchgeführt?</h:td>
+                  <h:td>☐ ambulant<h:br/>☐ stationär<h:br/>☒ unbekannt</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>
+                     <h:b>I.</h:b>
+                  </h:td>
+                  <h:td>
+                     <h:b>Angaben zu den persönlichen Lebensumständen</h:b>
+                  </h:td>
+                  <h:td/>
+               </h:tr>
+               <h:tr>
+                  <h:td>1.1</h:td>
+                  <h:td>Verstehen Sie Deutsch in Wort und Schrift?</h:td>
+                  <h:td>☐ nein<h:br/>☐ ja</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>2.1</h:td>
+                  <h:td>Beruf:</h:td>
+                  <h:td>
+                     <h:hr/>
+                  </h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>3.1</h:td>
+                  <h:td>Leben Sie allein?</h:td>
+                  <h:td>☐ nein<h:br/>☐ ja</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>4.1</h:td>
+                  <h:td>Leben bei Ihnen Personen oder Haustiere, die auf Ihre Hilfe angewiesen sind?</h:td>
+                  <h:td>☐ nein<h:br/>☐ ja</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>5.1</h:td>
+                  <h:td>Treiben Sie regelmäßig Sport?</h:td>
+                  <h:td>☐ nein<h:br/>☐ ja</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>5.2</h:td>
+                  <h:td>Wenn ja, welche Sportart(en)?</h:td>
+                  <h:td>
+                     <h:hr/>
+                  </h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>6.1</h:td>
+                  <h:td>Trinken Sie mehrmals pro Woche Alkohol?</h:td>
+                  <h:td>☐ nein<h:br/>☐ Bier<h:br/>☐ Wein<h:br/>☐ hochprozentige Alkoholika</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>7.1</h:td>
+                  <h:td>Rauchen Sie?</h:td>
+                  <h:td>☐ nein<h:br/>☐ ja</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>8.1</h:td>
+                  <h:td>Nehmen Sie Drogen?</h:td>
+                  <h:td>☐ nein<h:br/>☐ ja</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>
+                     <h:b>II.</h:b>
+                  </h:td>
+                  <h:td>
+                     <h:b>Voraussetzungen für ambulante Eingriffe (nicht auszufüllen bei stationären Eingriffen)</h:b>
+                  </h:td>
+                  <h:td/>
+               </h:tr>
+               <h:tr>
+                  <h:td>1.1</h:td>
+                  <h:td>Welche volljährige Begleitperson bringt Sie nach dem Eingriff nach Hause (Vor-/​Zuname der Begleitperson)?</h:td>
+                  <h:td>
+                     <h:hr/>
+                  </h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>2.1</h:td>
+                  <h:td>Welche volljährige Person betreut Sie in den ersten 24 Stunden (oder in der vom Arzt vorgegebenen Zeit) nach dem Eingriff (Vor-/​Zuname des Betreuenden)?</h:td>
+                  <h:td>
+                     <h:hr/>
+                  </h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>3.1</h:td>
+                  <h:td>Wo sind Sie in den ersten 24 Stunden nach dem Eingriff erreichbar (Adresse)?</h:td>
+                  <h:td>
+                     <h:hr/>
+                  </h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>4.1</h:td>
+                  <h:td>Wie sind Sie in den ersten 24 Stunden nach dem Eingriff erreichbar (Telefonnummer)?</h:td>
+                  <h:td>
+                     <h:hr/>
+                  </h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>5.1</h:td>
+                  <h:td>Könnten Sie innerhalb von 30 Minuten in das nächste Krankenhaus gebracht werden?</h:td>
+                  <h:td>☐ nein<h:br/>☐ ja</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>
+                     <h:b>III.</h:b>
+                  </h:td>
+                  <h:td>
+                     <h:b>Fragen zu allgemeinen Störungen/​Vorschäden</h:b>
+                  </h:td>
+                  <h:td/>
+               </h:tr>
+               <h:tr>
+                  <h:td>1.1</h:td>
+                  <h:td>Haben Sie in den letzten Wochen/​Monaten ungewollt Gewicht verloren?</h:td>
+                  <h:td>☐ nein<h:br/>☐ ja</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>1.2</h:td>
+                  <h:td>Wenn ja, wie viel (kg)?</h:td>
+                  <h:td>
+                     <h:hr/>
+                  </h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>2.1</h:td>
+                  <h:td>Bestehen Störungen des Allgemeinbefindens?</h:td>
+                  <h:td>☐ nein<h:br/>☐ Schlafstörungen<h:br/>☐ Erschöpfbarkeit<h:br/>☐ Erinnerungslücken<h:br/>☐ Vergesslichkeit<h:br/>☐ Schmerzen</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>3.1</h:td>
+                  <h:td>Besteht eine Allergie?</h:td>
+                  <h:td>☐ nein<h:br/>☐ Medikamente (z.B. Antibiotika, Metamizol, Paracetamol)<h:br/>☐ Betäubungsmittel<h:br/>☐ Röntgenkontrastmittel<h:br/>☐ Latex<h:br/>☐ Desinfektionsmittel<h:br/>☐ Jod<h:br/>☐ Pflaster<h:br/>☐ Kunststoffe</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>4.1</h:td>
+                  <h:td>Besteht eine Allergie/​Überempfindlichkeit gegenüber Metallen?</h:td>
+                  <h:td>☐ nein<h:br/>☐ Nickel<h:br/>☐ Kobalt<h:br/>☐ Chrom<h:br/>☐ Molybdän</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>5.1</h:td>
+                  <h:td>Besteht eine Neigung zu Wundheilungsstörungen?</h:td>
+                  <h:td>☐ nein<h:br/>☐ ja</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>6.1</h:td>
+                  <h:td>Besteht derzeit/​Bestand in den letzten 6 Monaten eine Entzündung (z.B. an einem Zahn)?</h:td>
+                  <h:td>☐ nein<h:br/>☐ ja</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>6.2</h:td>
+                  <h:td>Wenn ja, wo?</h:td>
+                  <h:td>
+                     <h:hr/>
+                  </h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>7.1</h:td>
+                  <h:td>Treten wiederholt Entzündungen auf?</h:td>
+                  <h:td>☐ nein<h:br/>☐ ja</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>8.1</h:td>
+                  <h:td>Bestand in den letzten 4 Wochen ein Infekt?</h:td>
+                  <h:td>☐ nein<h:br/>☐ Atemwege<h:br/>☐ Magen-Darm<h:br/>☐ Harnwege</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>9.1</h:td>
+                  <h:td>Besteht/​Bestand eine Infektionskrankheit?</h:td>
+                  <h:td>☐ nein<h:br/>☐ Hepatitis<h:br/>☐ HIV/​AIDS<h:br/>☐ Hirnhautentzündung<h:br/>☐ Tuberkulose</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>10.1</h:td>
+                  <h:td>Bestehen Schwellungen der Lymphknoten?</h:td>
+                  <h:td>☐ nein<h:br/>☐ ja</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>11.1</h:td>
+                  <h:td>Neigen Sie zu Schwellungen an Armen, Beinen oder Gelenken?</h:td>
+                  <h:td>☐ nein<h:br/>☐ ja</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>12.1</h:td>
+                  <h:td>Bestehen neu aufgetretene Hautveränderungen?</h:td>
+                  <h:td>☐ nein<h:br/>☐ ja</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>13.1</h:td>
+                  <h:td>Besteht eine körperliche Beeinträchtigung?</h:td>
+                  <h:td>☐ nein<h:br/>☐ Behinderung<h:br/>☐ angeborene Fehlbildung</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>14.1</h:td>
+                  <h:td>Gibt oder gab es in der Blutsverwandtschaft Erkrankungen oder Anzeichen einer Erkrankung?</h:td>
+                  <h:td>☐ nein<h:br/>☐ Krebs<h:br/>☐ Stoffwechselleiden (z.B. Diabetes, Gicht)<h:br/>☐ Herz-/​Kreislauf-Erkrankungen (z.B. Herzinfarkt, Schlaganfall)<h:br/>☐ Erbkrankheiten</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>15.1</h:td>
+                  <h:td>Tragen Sie ein Piercing?</h:td>
+                  <h:td>☐ nein<h:br/>☐ Zungenpiercing<h:br/>☐ Genitalpiercing</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>16.1</h:td>
+                  <h:td>Sind Sie tätowiert?</h:td>
+                  <h:td>☐ nein<h:br/>☐ ja</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>
+                     <h:b>IV.</h:b>
+                  </h:td>
+                  <h:td>
+                     <h:b>Fragen zu akuten oder chronischen Schmerzen</h:b>
+                  </h:td>
+                  <h:td/>
+               </h:tr>
+               <h:tr>
+                  <h:td>1.1</h:td>
+                  <h:td>Bestehen akute/​chronische Schmerzen?</h:td>
+                  <h:td>☐ nein<h:br/>☐ ja</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>1.2</h:td>
+                  <h:td>Wenn ja, seit wann?</h:td>
+                  <h:td>☐ seit ein paar Tagen<h:br/>☐ seit ein paar Wochen<h:br/>☐ seit ein paar Monaten<h:br/>☐ seit Jahren</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>1.3</h:td>
+                  <h:td>Wenn ja, an welcher Körperstelle?</h:td>
+                  <h:td>☐ Kopf<h:br/>☐ Bauch<h:br/>☐ Rücken<h:br/>☐ Arme<h:br/>☐ Beine</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>1.4</h:td>
+                  <h:td>Wenn ja, welcher Art sind die Schmerzen?</h:td>
+                  <h:td>☐ dumpf<h:br/>☐ kolikartig<h:br/>☐ brennend<h:br/>☐ stechend<h:br/>☐ ziehend</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>1.5</h:td>
+                  <h:td>Wenn ja, wie lange halten die Schmerzen an?</h:td>
+                  <h:td>☐ dauerhaft<h:br/>☐ länger anhaltend<h:br/>☐ kurz</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>1.6</h:td>
+                  <h:td>Wenn ja, wie oft treten die Schmerzen auf?</h:td>
+                  <h:td>☐ zeitweise<h:br/>☐ ständig<h:br/>☐ regelmäßig wiederkehrend<h:br/>☐ gelegentlich</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>1.7</h:td>
+                  <h:td>Wenn ja, wie stark sind die Schmerzen?</h:td>
+                  <h:td>☐ leicht<h:br/>☐ mittel<h:br/>☐ stark<h:br/>☐ wechselnd</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>1.8</h:td>
+                  <h:td>Wenn ja, gibt es äußere Einflüsse, welche den Schmerz auslösen oder verstärken?</h:td>
+                  <h:td>☐ nein<h:br/>☐ Mahlzeiten<h:br/>☐ Tageszeit<h:br/>☐ körperliche Belastung<h:br/>☐ bestimmte Bewegungen<h:br/>☐ Wetterumschwung<h:br/>☐ Körperposition/​Lage</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>2.1</h:td>
+                  <h:td>Leiden Sie unter Migräne?</h:td>
+                  <h:td>☐ nein<h:br/>☐ ja</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>
+                     <h:b>V.</h:b>
+                  </h:td>
+                  <h:td>
+                     <h:b>Fragen für Frauen</h:b>
+                  </h:td>
+                  <h:td/>
+               </h:tr>
+               <h:tr>
+                  <h:td>1.1</h:td>
+                  <h:td>Hatten Sie schon einmal eine Entbindung/​Geburt?</h:td>
+                  <h:td>☐ nein<h:br/>☐ ja</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>1.2</h:td>
+                  <h:td>Wenn ja, wann?</h:td>
+                  <h:td>
+                     <h:hr/>
+                  </h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>1.3</h:td>
+                  <h:td>Wenn ja, traten während oder nach der Geburt Komplikationen auf?</h:td>
+                  <h:td>☐ nein<h:br/>☐ verstärkte Blutungen<h:br/>☐ Nachblutungen<h:br/>☐ Notkaiserschnitt</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>2.1</h:td>
+                  <h:td>Hatten Sie schon einmal eine Fehlgeburt?</h:td>
+                  <h:td>☐ nein<h:br/>☐ ja</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>3.1</h:td>
+                  <h:td>Waren Sie schon einmal schwanger?</h:td>
+                  <h:td>☐ nein<h:br/>☐ ja</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>3.2</h:td>
+                  <h:td>Wenn ja, gab es Besonderheiten?</h:td>
+                  <h:td>☐ nein<h:br/>☐ Gelbsucht<h:br/>☐ Juckreiz<h:br/>☐ Ausschlag<h:br/>☐ Präeklampsie</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>4.1</h:td>
+                  <h:td>Wann war der 1. Tag der letzten Regelblutung?</h:td>
+                  <h:td>
+                     <h:hr/>
+                  </h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>5.1</h:td>
+                  <h:td>Kommt es zu verstärkter, ggf. schmerzhafter Regelblutung?</h:td>
+                  <h:td>☐ nein<h:br/>☐ ja</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>6.1</h:td>
+                  <h:td>Dauern Ihre Regelblutungen länger als 7 Tage?</h:td>
+                  <h:td>☐ nein<h:br/>☐ ja</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>7.1</h:td>
+                  <h:td>Könnten Sie schwanger sein?</h:td>
+                  <h:td>☐ nein<h:br/>☐ ja</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>8.1</h:td>
+                  <h:td>Stillen Sie?</h:td>
+                  <h:td>☐ nein<h:br/>☐ ja</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>9.1</h:td>
+                  <h:td>Verwenden Sie Verhütungsmittel?</h:td>
+                  <h:td>☐ nein<h:br/>☐ Antibabypille<h:br/>☐ Hormonspirale<h:br/>☐ Kupferspirale</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>
+                     <h:b>VI.</h:b>
+                  </h:td>
+                  <h:td>
+                     <h:b>Fragen zu den Sinnesorganen</h:b>
+                  </h:td>
+                  <h:td/>
+               </h:tr>
+               <h:tr>
+                  <h:td>1.1</h:td>
+                  <h:td>Leiden Sie unter Schwerhörigkeit?</h:td>
+                  <h:td>☐ nein<h:br/>☐ ja</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>2.1</h:td>
+                  <h:td>Tragen Sie ein Hörgerät?</h:td>
+                  <h:td>☐ nein<h:br/>☐ ja</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>3.1</h:td>
+                  <h:td>Bestehen Gleichgewichtsstörungen oder ein häufiges Schwindelgefühl?</h:td>
+                  <h:td>☐ nein<h:br/>☐ ja</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>4.1</h:td>
+                  <h:td>Besteht eine Augenerkrankung?</h:td>
+                  <h:td>☐ nein<h:br/>☐ Grauer Star<h:br/>☐ Grüner Star</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>5.1</h:td>
+                  <h:td>Tragen Sie Kontaktlinsen?</h:td>
+                  <h:td>☐ nein<h:br/>☐ ja</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>6.1</h:td>
+                  <h:td>Bestehen Störungen des Geschmackssinns?</h:td>
+                  <h:td>☐ nein<h:br/>☐ ja</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>7.1</h:td>
+                  <h:td>Bestehen Störungen beim Riechen?</h:td>
+                  <h:td>☐ nein<h:br/>☐ ja</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>
+                     <h:b>VII.</h:b>
+                  </h:td>
+                  <h:td>
+                     <h:b>Fragen zum Blut und zum Immunsystem</h:b>
+                  </h:td>
+                  <h:td/>
+               </h:tr>
+               <h:tr>
+                  <h:td>1.1</h:td>
+                  <h:td>Besteht eine erhöhte Blutungsneigung wie z.B. häufig Nasen-/​Zahnfleischbluten, blaue Flecken, längeres Bluten nach Verletzungen?</h:td>
+                  <h:td>☐ nein<h:br/>☐ ja</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>2.1</h:td>
+                  <h:td>Besteht in der Blutsverwandtschaft eine erhöhte Blutungsneigung?</h:td>
+                  <h:td>☐ nein<h:br/>☐ ja</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>3.1</h:td>
+                  <h:td>Besteht eine Blutgerinnungsstörung?</h:td>
+                  <h:td>☐ nein<h:br/>☐ Hämophilie<h:br/>☐ Thrombozytopenie<h:br/>☐ Von-Willebrand-Jürgens-Syndrom<h:br/>☐ Faktorenmangel</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>4.1</h:td>
+                  <h:td>Besteht/​Bestand eine Bluterkrankung?</h:td>
+                  <h:td>☐ nein<h:br/>☐ Anämie<h:br/>☐ Leukämie<h:br/>☐ Multiples Myelom</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>5.1</h:td>
+                  <h:td>Besteht eine Erkrankung des Immunsystems?</h:td>
+                  <h:td>☐ nein<h:br/>☐ Colitis ulcerosa<h:br/>☐ Morbus Crohn<h:br/>☐ Multiple Sklerose<h:br/>☐ Rheuma<h:br/>☐ Sklerodermie<h:br/>☐ Lupus erythematodes<h:br/>☐ Immunschwäche</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>6.1</h:td>
+                  <h:td>Besteht/​Bestand eine Krebserkrankung?</h:td>
+                  <h:td>☐ nein<h:br/>☐ Darm<h:br/>☐ Brust<h:br/>☐ Haut<h:br/>☐ Gebärmutter<h:br/>☐ Prostata<h:br/>☐ Lunge<h:br/>☐ Leber<h:br/>☐ Bauchspeicheldrüse</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>
+                     <h:b>VIII.</h:b>
+                  </h:td>
+                  <h:td>
+                     <h:b>Fragen zum zentralen Nervensystem</h:b>
+                  </h:td>
+                  <h:td/>
+               </h:tr>
+               <h:tr>
+                  <h:td>1.1</h:td>
+                  <h:td>Besteht/​Bestand eine Erkrankung des Nervensystems?</h:td>
+                  <h:td>☐ nein<h:br/>☐ Gehstörungen/​Lähmungen<h:br/>☐ Krampfleiden (Epilepsie)<h:br/>☐ Parkinson<h:br/>☐ Gefühlsstörungen<h:br/>☐ Polyneuropathie<h:br/>☐ Schmerzen</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>2.1</h:td>
+                  <h:td>Hatten Sie schon einmal einen Schlaganfall?</h:td>
+                  <h:td>☐ nein<h:br/>☐ ja</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>2.2</h:td>
+                  <h:td>Wenn ja, sind Einschränkungen zurückgeblieben?</h:td>
+                  <h:td>☐ nein<h:br/>☐ Gehstörungen/​Lähmungen<h:br/>☐ Sprachstörungen</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>
+                     <h:b>IX.</h:b>
+                  </h:td>
+                  <h:td>
+                     <h:b>Frage zur Psyche</h:b>
+                  </h:td>
+                  <h:td/>
+               </h:tr>
+               <h:tr>
+                  <h:td>1.1</h:td>
+                  <h:td>Leiden Sie an einer psychischen Erkrankung?</h:td>
+                  <h:td>☐ nein<h:br/>☐ Depression<h:br/>☐ Burn-out<h:br/>☐ Schizophrenie<h:br/>☐ Borderline-Syndrom<h:br/>☐ Angststörungen</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>
+                     <h:b>X.</h:b>
+                  </h:td>
+                  <h:td>
+                     <h:b>Fragen zu Gefäßerkrankungen</h:b>
+                  </h:td>
+                  <h:td/>
+               </h:tr>
+               <h:tr>
+                  <h:td>1.1</h:td>
+                  <h:td>Kam es schon einmal zu einem Gefäßverschluss durch Blutgerinnsel (Thrombose/​Embolie)?</h:td>
+                  <h:td>☐ nein<h:br/>☐ ja</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>2.1</h:td>
+                  <h:td>Besteht/​Bestand eine (weitere) Gefäßerkrankung?</h:td>
+                  <h:td>☐ nein<h:br/>☐ Arteriosklerose<h:br/>☐ Krampfadern<h:br/>☐ Erkrankung der Herzkranzgefäße<h:br/>☐ Durchblutungsstörung<h:br/>☐ Aneurysma<h:br/>☐ Verengung der Halsschlagader</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>
+                     <h:b>XI.</h:b>
+                  </h:td>
+                  <h:td>
+                     <h:b>Fragen zu Herz und Kreislauf</h:b>
+                  </h:td>
+                  <h:td/>
+               </h:tr>
+               <h:tr>
+                  <h:td>1.1</h:td>
+                  <h:td>Besteht/​Bestand eine (weitere) Herz-/​Kreislauf-Erkrankung?</h:td>
+                  <h:td>☐ nein<h:br/>☐ koronare Herzkrankheit<h:br/>☐ Bluthochdruck<h:br/>☐ Rhythmusstörungen<h:br/>☐ Schlaganfall<h:br/>☐ Herzinfarkt<h:br/>☐ Angina pectoris<h:br/>☐ Herzmuskelentzündung<h:br/>☐ Klappenfehler</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>2.1</h:td>
+                  <h:td>Tritt Atemnot beim Treppensteigen auf?</h:td>
+                  <h:td>☐ nein<h:br/>☐ ja</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>2.2</h:td>
+                  <h:td>Wenn ja, nach wie vielen Treppenstufen müssen Sie stehen bleiben?</h:td>
+                  <h:td>
+                     <h:hr/>
+                  </h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>
+                     <h:b>XII.</h:b>
+                  </h:td>
+                  <h:td>
+                     <h:b>Fragen zur Lunge und zu den Atemwegen</h:b>
+                  </h:td>
+                  <h:td/>
+               </h:tr>
+               <h:tr>
+                  <h:td>1.1</h:td>
+                  <h:td>Besteht/​Bestand eine Atemwegs-/​Lungenerkrankung?</h:td>
+                  <h:td>☐ nein<h:br/>☐ chronische Bronchitis<h:br/>☐ Lungenentzündung<h:br/>☐ Asthma bronchiale<h:br/>☐ Lungenblähung<h:br/>☐ angeborene Fehlbildung</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>2.1</h:td>
+                  <h:td>Treten nächtliche Atemstörungen auf?</h:td>
+                  <h:td>☐ nein<h:br/>☐ starkes Schnarchen<h:br/>☐ Schlafapnoe</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>
+                     <h:b>XIII.</h:b>
+                  </h:td>
+                  <h:td>
+                     <h:b>Fragen zur Haut</h:b>
+                  </h:td>
+                  <h:td/>
+               </h:tr>
+               <h:tr>
+                  <h:td>1.1</h:td>
+                  <h:td>Besteht eine Hauterkrankung?</h:td>
+                  <h:td>☐ nein<h:br/>☐ Ausschlag<h:br/>☐ Schuppenflechte<h:br/>☐ Tumor</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>2.1</h:td>
+                  <h:td>Kam es schon einmal zu einer Narbenwucherung wie z.B. Keloid?</h:td>
+                  <h:td>☐ nein<h:br/>☐ ja</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>
+                     <h:b>XIV.</h:b>
+                  </h:td>
+                  <h:td>
+                     <h:b>Fragen zu Muskeln und Skelett</h:b>
+                  </h:td>
+                  <h:td/>
+               </h:tr>
+               <h:tr>
+                  <h:td>1.1</h:td>
+                  <h:td>Besteht/​Bestand eine Muskel- oder Skeletterkrankung?</h:td>
+                  <h:td>☐ nein<h:br/>☐ Muskelschwäche<h:br/>☐ Gelenkerkrankung<h:br/>☐ Osteoporose<h:br/>☐ Osteomalazie</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>2.1</h:td>
+                  <h:td>Besteht eine Schädigung der Wirbelsäule?</h:td>
+                  <h:td>☐ nein<h:br/>☐ Bandscheibenschaden<h:br/>☐ Enge des Wirbelkanals (Spinalkanalstenose)</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>3.1</h:td>
+                  <h:td>Bestehen Gelenkbeschwerden?</h:td>
+                  <h:td>☐ nein<h:br/>☐ Hüfte<h:br/>☐ Schulter<h:br/>☐ Finger<h:br/>☐ Knie<h:br/>☐ Zehen<h:br/>☐ Ellenbogen<h:br/>☐ Sprunggelenk</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>4.1</h:td>
+                  <h:td>Besteht eine Schwäche der Bauchwand?</h:td>
+                  <h:td>☐ nein<h:br/>☐ Bauchwandbruch<h:br/>☐ Leistenbruch<h:br/>☐ Narbenbruch</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>
+                     <h:b>XV.</h:b>
+                  </h:td>
+                  <h:td>
+                     <h:b>Frage zu den Zähnen/​dem Zahnstatus</h:b>
+                  </h:td>
+                  <h:td/>
+               </h:tr>
+               <h:tr>
+                  <h:td>1.1</h:td>
+                  <h:td>Gibt es Besonderheiten beim Zustand der Zähne?</h:td>
+                  <h:td>☐ nein<h:br/>☐ lockere Zähne<h:br/>☐ Zahnspange<h:br/>☐ Prothese<h:br/>☐ Brücke<h:br/>☐ Krone<h:br/>☐ Implantat<h:br/>☐ Retainer<h:br/>☐ Parodontose</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>
+                     <h:b>XVI.</h:b>
+                  </h:td>
+                  <h:td>
+                     <h:b>Fragen zur Verdauung</h:b>
+                  </h:td>
+                  <h:td/>
+               </h:tr>
+               <h:tr>
+                  <h:td>1.1</h:td>
+                  <h:td>Besteht/​Bestand eine Erkrankung des Verdauungssystems?</h:td>
+                  <h:td>☐ nein<h:br/>☐ Speiseröhre<h:br/>☐ Magen<h:br/>☐ Darm</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>2.1</h:td>
+                  <h:td>Bestehen derzeit Beschwerden bei der Nahrungsaufnahme?</h:td>
+                  <h:td>☐ nein<h:br/>☐ Appetitlosigkeit<h:br/>☐ Schluckstörungen<h:br/>☐ Schmerzen</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>3.1</h:td>
+                  <h:td>Bestehen derzeit Beschwerden bei der Verdauung?</h:td>
+                  <h:td>☐ nein<h:br/>☐ Verstopfung<h:br/>☐ Durchfälle<h:br/>☐ Blähungen<h:br/>☐ Schmerzen<h:br/>☐ Beimengungen im Stuhlgang<h:br/>☐ Stuhlhalteschwäche</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>4.1</h:td>
+                  <h:td>Tritt häufiger Sodbrennen auf?</h:td>
+                  <h:td>☐ nein<h:br/>☐ ja</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>5.1</h:td>
+                  <h:td>Besteht eine Refluxkrankheit?</h:td>
+                  <h:td>☐ nein<h:br/>☐ ja</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>6.1</h:td>
+                  <h:td>Besteht ein Zwerchfellbruch?</h:td>
+                  <h:td>☐ nein<h:br/>☐ ja</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>
+                     <h:b>XVII.</h:b>
+                  </h:td>
+                  <h:td>
+                     <h:b>Frage zu den Oberbauchorganen</h:b>
+                  </h:td>
+                  <h:td/>
+               </h:tr>
+               <h:tr>
+                  <h:td>1.1</h:td>
+                  <h:td>Bestand eine Erkrankung der Oberbauchorgane?</h:td>
+                  <h:td>☐ nein<h:br/>☐ Leberentzündung/​Hepatitis<h:br/>☐ Fettleber<h:br/>☐ Zirrhose<h:br/>☐ Gallenkoliken/​-steine<h:br/>☐ Gelbsucht<h:br/>☐ Pankreatitis</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>
+                     <h:b>XVIII.</h:b>
+                  </h:td>
+                  <h:td>
+                     <h:b>Frage zu den Nieren/​ableitenden Harnorganen</h:b>
+                  </h:td>
+                  <h:td/>
+               </h:tr>
+               <h:tr>
+                  <h:td>1.1</h:td>
+                  <h:td>Besteht/​Bestand eine Erkrankung oder Fehlbildung der Nieren bzw. Harnorgane?</h:td>
+                  <h:td>☐ nein<h:br/>☐ Nierenfunktionsstörung<h:br/>☐ Nierensteine<h:br/>☐ chronischer Harnwegsinfekt<h:br/>☐ Nierenentzündung<h:br/>☐ angeborene Fehlbildung (z.B. Doppelniere)<h:br/>☐ Blasenentleerungsstörung/​verzögerte Blasenentleerung</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>
+                     <h:b>XIX.</h:b>
+                  </h:td>
+                  <h:td>
+                     <h:b>Fragen für Männer</h:b>
+                  </h:td>
+                  <h:td/>
+               </h:tr>
+               <h:tr>
+                  <h:td>1.1</h:td>
+                  <h:td>Besteht/​Bestand eine Prostataerkrankung?</h:td>
+                  <h:td>☐ nein<h:br/>☐ Prostatavergrößerung<h:br/>☐ Prostataentzündung<h:br/>☐ Prostatakrebs</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>2.1</h:td>
+                  <h:td>Leiden Sie unter Störungen der Sexualfunktion?</h:td>
+                  <h:td>☐ nein<h:br/>☐ mangelnde Gliedsteife (Erektionsstörung)<h:br/>☐ Störungen des Samenergusses</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>
+                     <h:b>XX.</h:b>
+                  </h:td>
+                  <h:td>
+                     <h:b>Fragen zum endokrinen System</h:b>
+                  </h:td>
+                  <h:td/>
+               </h:tr>
+               <h:tr>
+                  <h:td>1.1</h:td>
+                  <h:td>Besteht/​Bestand eine Schilddrüsenerkrankung?</h:td>
+                  <h:td>☐ nein<h:br/>☐ Überfunktion<h:br/>☐ Unterfunktion<h:br/>☐ Kropf<h:br/>☐ Hashimoto</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>2.1</h:td>
+                  <h:td>Besteht eine Stoffwechselerkrankung?</h:td>
+                  <h:td>☐ nein<h:br/>☐ Zuckerkrankheit<h:br/>☐ Gicht</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>3.1</h:td>
+                  <h:td>Sind weitere endokrine Erkrankungen bekannt?</h:td>
+                  <h:td>☐ nein<h:br/>☐ Über-/​Unterfunktion der Nebenschilddrüse<h:br/>☐ Morbus Cushing<h:br/>☐ Hypophysenerkrankung</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>4.1</h:td>
+                  <h:td>Bestehen weitere Erkrankungen?</h:td>
+                  <h:td>☐ nein<h:br/>☐ ja</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>4.2</h:td>
+                  <h:td>Wenn ja, welche?</h:td>
+                  <h:td>
+                     <h:hr/>
+                  </h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>
+                     <h:b>XXI.</h:b>
+                  </h:td>
+                  <h:td>
+                     <h:b>Fragen zu Vorbehandlungen/​Voruntersuchungen</h:b>
+                  </h:td>
+                  <h:td/>
+               </h:tr>
+               <h:tr>
+                  <h:td>1.1</h:td>
+                  <h:td>Ist in den letzten Wochen eine andere ärztliche Behandlung erfolgt?</h:td>
+                  <h:td>☐ nein<h:br/>☐ ja</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>1.2</h:td>
+                  <h:td>Wenn ja, weswegen?</h:td>
+                  <h:td>
+                     <h:hr/>
+                  </h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>2.1</h:td>
+                  <h:td>Werden Medikamente eingenommen?</h:td>
+                  <h:td>☐ nein<h:br/>☐ gerinnungshemmende Mittel (z.B. Marcumar®, Aspirin)<h:br/>☐ Schmerzmittel<h:br/>☐ Antidiabetika (v.a. metforminhaltige)<h:br/>☐ Herz-/​Kreislauf-Medikamente<h:br/>☐ Hormonpräparate<h:br/>☐ Schlaf- oder Beruhigungsmittel<h:br/>☐ blutdrucksenkende Mittel</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>3.1</h:td>
+                  <h:td>Werden Medikamente eingenommen, die das Immunsystem und dadurch die Abwehrkraft des Körpers hemmen?</h:td>
+                  <h:td>☐ nein<h:br/>☐ Kortison<h:br/>☐ Rheumamittel<h:br/>☐ Immunsuppressiva</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>4.1</h:td>
+                  <h:td>Werden pflanzliche Mittel/​Ergänzungspräparate eingenommen?</h:td>
+                  <h:td>☐ nein<h:br/>☐ Johanniskraut<h:br/>☐ Ginkgo<h:br/>☐ Vitamine</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>5.1</h:td>
+                  <h:td>Wurde schon einmal eine Operation durchgeführt?</h:td>
+                  <h:td>☐ nein<h:br/>☐ ja</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>5.2</h:td>
+                  <h:td>Wenn ja, welche?</h:td>
+                  <h:td>
+                     <h:hr/>
+                  </h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>5.3</h:td>
+                  <h:td>Wenn ja, traten Komplikationen auf?</h:td>
+                  <h:td>☐ nein<h:br/>☐ ja</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>5.4</h:td>
+                  <h:td>Wenn ja, welche?</h:td>
+                  <h:td>
+                     <h:hr/>
+                  </h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>6.1</h:td>
+                  <h:td>Wurde schon einmal eine Betäubung durchgeführt?</h:td>
+                  <h:td>☐ nein<h:br/>☐ Narkose<h:br/>☐ Regionalanästhesie<h:br/>☐ örtliche Betäubung (z.B. beim Zahnarzt)<h:br/>☐ Sedierung</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>6.3</h:td>
+                  <h:td>Wenn ja, gab es dabei Komplikationen?</h:td>
+                  <h:td>☐ nein<h:br/>☐ ja</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>6.4</h:td>
+                  <h:td>Wenn ja, welche?</h:td>
+                  <h:td>
+                     <h:hr/>
+                  </h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>7.1</h:td>
+                  <h:td>Besteht eine Veranlagung zu hohem Fieber bei/​nach einer Narkose (maligne Hyperthermie)?</h:td>
+                  <h:td>☐ nein<h:br/>☐ ja</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>8.1</h:td>
+                  <h:td>Trat bei Blutsverwandten bei/​nach einer Narkose eine maligne Hyperthermie auf?</h:td>
+                  <h:td>☐ nein<h:br/>☐ ja</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>9.1</h:td>
+                  <h:td>Ist schon einmal eine Übertragung von Blut/​Blutbestandteilen (Transfusion) erfolgt?</h:td>
+                  <h:td>☐ nein<h:br/>☐ ja</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>10.1</h:td>
+                  <h:td>Wurden in den letzten 10 Jahren bildgebende Verfahren durchgeführt?</h:td>
+                  <h:td>☐ nein<h:br/>☐ Röntgenuntersuchung<h:br/>☐ Computertomografie<h:br/>☐ Kernspintomografie</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>10.3</h:td>
+                  <h:td>Wenn ja, in welchem Körperbereich?</h:td>
+                  <h:td>☐ Oberkörper<h:br/>☐ Bauch<h:br/>☐ Wirbelsäule<h:br/>☐ Kopf<h:br/>☐ Extremitäten</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>10.4</h:td>
+                  <h:td>Wenn ja, Name der Klinik/​Praxis?</h:td>
+                  <h:td>
+                     <h:hr/>
+                  </h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>11.1</h:td>
+                  <h:td>Wurden bereits Untersuchungen mit Kontrastmittel durchgeführt?</h:td>
+                  <h:td>☐ nein<h:br/>☐ ja</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>11.2</h:td>
+                  <h:td>Wenn ja, traten Komplikationen auf?</h:td>
+                  <h:td>☐ nein<h:br/>☐ Hautausschlag<h:br/>☐ Kreislaufreaktionen<h:br/>☐ Schock</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>12.1</h:td>
+                  <h:td>Hatten Sie schon einmal eine Strahlenbehandlung?</h:td>
+                  <h:td>☐ nein<h:br/>☐ ja</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>13.1</h:td>
+                  <h:td>Wurde schon einmal eine Chemotherapie durchgeführt?</h:td>
+                  <h:td>☐ nein<h:br/>☐ ja</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>14.1</h:td>
+                  <h:td>Wurde schon einmal eine endoskopische Untersuchung/​Behandlung durchgeführt?</h:td>
+                  <h:td>☐ nein<h:br/>☐ Magen<h:br/>☐ Darm<h:br/>☐ Speiseröhre<h:br/>☐ Bauchhöhle<h:br/>☐ Gelenke<h:br/>☐ Atemwege<h:br/>☐ Kehlkopf<h:br/>☐ Harnröhre<h:br/>☐ Harnblase</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>14.3</h:td>
+                  <h:td>Wenn ja, gab es dabei Komplikationen?</h:td>
+                  <h:td>☐ nein<h:br/>☐ ja</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>14.4</h:td>
+                  <h:td>Wenn ja, welche?</h:td>
+                  <h:td>
+                     <h:hr/>
+                  </h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>15.1</h:td>
+                  <h:td>Wurde in den letzten 2 Wochen eine Impfung durchgeführt?</h:td>
+                  <h:td>☐ nein<h:br/>☐ ja</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>15.2</h:td>
+                  <h:td>Wenn ja, wogegen?</h:td>
+                  <h:td>
+                     <h:hr/>
+                  </h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>16.1</h:td>
+                  <h:td>Befinden sich Implantate im Körper?</h:td>
+                  <h:td>☐ nein<h:br/>☐ Schrittmacher<h:br/>☐ Defibrillator<h:br/>☐ Herzklappe<h:br/>☐ Stent<h:br/>☐ künstliches Gelenk<h:br/>☐ Silikon<h:br/>☐ Hydrogel<h:br/>☐ Zähne<h:br/>☐ Metall</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>
+                     <h:b>XXII.</h:b>
+                  </h:td>
+                  <h:td>
+                     <h:b>Fragen zu wichtigen Unterlagen</h:b>
+                  </h:td>
+                  <h:td/>
+               </h:tr>
+               <h:tr>
+                  <h:td>1.1</h:td>
+                  <h:td>Liegen medizinische Ausweise/​Pässe vor?</h:td>
+                  <h:td>☐ Keine<h:br/>☐ Allergieausweis<h:br/>☐ Anästhesieausweis<h:br/>☐ Röntgenpass<h:br/>☐ Implantatausweis (z.B. Herzschrittmacher)<h:br/>☐ Notfallausweis<h:br/>☐ Blutspendeausweis<h:br/>☐ Diabetikerausweis<h:br/>☐ Marcumarausweis</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>2.1</h:td>
+                  <h:td>Liegen frühere Befunde/​Röntgenbilder vor?</h:td>
+                  <h:td>☐ nein<h:br/>☐ ja</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>3.1</h:td>
+                  <h:td>Haben Sie Vorsorgeregelungen getroffen?</h:td>
+                  <h:td>☐ nein<h:br/>☐ Patientenverfügung<h:br/>☐ Betreuungsverfügung<h:br/>☐ Vorsorgevollmacht</h:td>
+               </h:tr>
+            </h:tbody>
+         </h:table>
+      </h:div>
+   </text>
+   <url value="http://thieme-compliance.de/fhir/Questionnaire/PC-SystA"/>
+   <identifier>
+      <use value="official"/>
+      <system value="http://thieme-compliance.de/fhir/identifier/EcpBogencode"/>
+      <value value="PC-SystA"/>
+   </identifier>
+   <identifier>
+      <use value="usual"/>
+      <system value="http://thieme-compliance.de/fhir/identifier/TcgBogencode"/>
+      <value value="SystA"/>
+   </identifier>
+   <identifier>
+      <use value="secondary"/>
+      <system value="http://thieme-compliance.de/fhir/identifier/SapArtikelnummer"/>
+      <value value="DE800261"/>
+   </identifier>
+   <version value="06/2021v1"/>
+   <name value="SystA"/>
+   <title value="Basisanamnese bei Erwachsenen"/>
+   <status value="active"/>
+   <experimental value="true"/>
+   <subjectType value="Patient"/>
+   <date value="2021-10-06T11:26:57.879+02:00"/>
+   <publisher value="Thieme Compliance GmbH, Am Weichselgarten 30a, 91058 Erlangen"/>
+   <contact>
+      <name value="Homepage"/>
+      <telecom>
+         <system value="url"/>
+         <value value="www.thieme-compliance.de"/>
+      </telecom>
+   </contact>
+   <contact>
+      <name value="E-Mail"/>
+      <telecom>
+         <system value="email"/>
+         <value value="service@thieme-compliance.de"/>
+      </telecom>
+   </contact>
+   <contact>
+      <name value="Telefon"/>
+      <telecom>
+         <system value="phone"/>
+         <value value="+49 (0)9131 93406-40"/>
+      </telecom>
+   </contact>
+   <contact>
+      <name value="Fax"/>
+      <telecom>
+         <system value="fax"/>
+         <value value="+49 (0)9131 93406-70"/>
+      </telecom>
+   </contact>
+   <description value="Der Anamnesebogen „Basisanamnese bei Erwachsenen – Fragen zur Minimierung des Eingriffsrisikos (SystA)“ stellt eine umfassende medizinische wie auch familiäre Anamnese vor Beginn einer Operation dar und soll helfen, Gesundheitsstörungen zu ermitteln, die Operationsfähigkeit zu beurteilen und somit das Eingriffsrisiko bei einer Operation zu minimieren."/>
+   <jurisdiction>
+      <coding>
+         <system value="urn:iso:std:iso:3166"/>
+         <code value="AT"/>
+      </coding>
+      <coding>
+         <system value="http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen"/>
+         <code value="A"/>
+      </coding>
+   </jurisdiction>
+   <jurisdiction>
+      <coding>
+         <system value="urn:iso:std:iso:3166"/>
+         <code value="CH"/>
+      </coding>
+      <coding>
+         <system value="http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen"/>
+         <code value="CH"/>
+      </coding>
+   </jurisdiction>
+   <jurisdiction>
+      <coding>
+         <system value="urn:iso:std:iso:3166"/>
+         <code value="DE"/>
+      </coding>
+      <coding>
+         <system value="http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen"/>
+         <code value="D"/>
+      </coding>
+   </jurisdiction>
+   <jurisdiction>
+      <coding>
+         <system value="urn:iso:std:iso:3166"/>
+         <code value="IT"/>
+      </coding>
+      <coding>
+         <system value="http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen"/>
+         <code value="I"/>
+      </coding>
+   </jurisdiction>
+   <copyright value="© 2021 Thieme Compliance GmbH"/>
+   <approvalDate value="2021-06"/>
+   <lastReviewDate value="2021-08"/>
+   <item>
+      <extension url="http://hl7.org/fhir/StructureDefinition/entryFormat">
+         <valueString value="JJJJ-MM-TT"/>
+      </extension>
+      <linkId value="dateOfBirth"/>
+      <text value="Bitte geben Sie Ihr Geburtsdatum an."/>
+      <type value="date"/>
+      <required value="true"/>
+   </item>
+   <item>
+      <linkId value="baseDataDecimal"/>
+      <text value="Bitte geben Sie Ihre Größe (in cm), Ihr Gewicht (in kg) sowie Ihr Geschlecht an."/>
+      <type value="group"/>
+      <required value="true"/>
+      <item>
+         <linkId value="baseDataDecimalHeight"/>
+         <text value="Größe:"/>
+         <type value="integer"/>
+         <required value="true"/>
+         <maxLength value="3"/>
+      </item>
+      <item>
+         <linkId value="baseDataDecimalWeight"/>
+         <text value="Gewicht:"/>
+         <type value="decimal"/>
+         <required value="true"/>
+      </item>
+      <item>
+         <linkId value="baseDataDecimalGender"/>
+         <text value="Geschlecht:"/>
+         <type value="choice"/>
+         <required value="true"/>
+         <repeats value="false"/>
+         <answerOption id="baseDataDecimalGender_female">
+            <valueString value="weiblich"/>
+         </answerOption>
+         <answerOption id="baseDataDecimalGender_male">
+            <valueString value="männlich"/>
+         </answerOption>
+      </item>
+   </item>
+   <item>
+      <linkId value="AmbulantOderStationaer"/>
+      <text value="Wird der Eingriff ambulant oder stationär durchgeführt?"/>
+      <type value="choice"/>
+      <required value="true"/>
+      <repeats value="false"/>
+      <answerOption id="AmbulantOderStationaer_true">
+         <valueString value="ambulant"/>
+      </answerOption>
+      <answerOption id="AmbulantOderStationaer_false">
+         <valueString value="stationär"/>
+      </answerOption>
+      <answerOption id="AmbulantOderStationaer_unknown">
+         <valueString value="unbekannt"/>
+         <initialSelected value="true"/>
+      </answerOption>
+   </item>
+   <item>
+      <linkId value="PC-SystA_06-2021v1_Frage_I.0"/>
+      <prefix value="I."/>
+      <text value="Angaben zu den persönlichen Lebensumständen"/>
+      <type value="group"/>
+      <required value="true"/>
+      <item>
+         <linkId value="MF_Sprache_6262579_1.1"/>
+         <prefix value="1.1"/>
+         <text value="Verstehen Sie Deutsch in Wort und Schrift?"/>
+         <type value="boolean"/>
+         <required value="true"/>
+      </item>
+      <item>
+         <extension url="http://fhir.thieme-compliance.de/StructureDefinition/Einwilligung/QuestionnaireErlaeuterung">
+            <valueString value="Der Beruf ist wichtig zu wissen, falls Sie eine gefahrenträchtige Tätigkeit ausüben oder mit möglicherweise gesundheitsschädlichen Stoffen in Berührung kommen. Der Eingriff kann ggf. auch die Ausübung Ihres Berufes beeinträchtigen."/>
+         </extension>
+         <linkId value="MF_Beruf_6248193_1.1"/>
+         <prefix value="2.1"/>
+         <text value="Beruf:"/>
+         <type value="string"/>
+         <required value="true"/>
+      </item>
+      <item>
+         <linkId value="MF_Leben_allein_5771197_1.1"/>
+         <prefix value="3.1"/>
+         <text value="Leben Sie allein?"/>
+         <type value="boolean"/>
+         <required value="true"/>
+      </item>
+      <item>
+         <extension url="http://fhir.thieme-compliance.de/StructureDefinition/Einwilligung/QuestionnaireErlaeuterung">
+            <valueString value="Wenn ja, sorgen Sie bitte während Ihrer Abwesenheit für eine Betreuung der Personen bzw. Tiere!"/>
+         </extension>
+         <linkId value="MF_Haustiere_Personen_6251497_1.1"/>
+         <prefix value="4.1"/>
+         <text value="Leben bei Ihnen Personen oder Haustiere, die auf Ihre Hilfe angewiesen sind?"/>
+         <type value="boolean"/>
+         <required value="true"/>
+      </item>
+      <item>
+         <linkId value="MF_Sport_5771238_1.1"/>
+         <prefix value="5.1"/>
+         <text value="Treiben Sie regelmäßig Sport?"/>
+         <type value="boolean"/>
+         <required value="true"/>
+      </item>
+      <item>
+         <linkId value="MF_Sport_5771238_1.2"/>
+         <prefix value="5.2"/>
+         <text value="Wenn ja, welche Sportart(en)?"/>
+         <type value="string"/>
+         <enableWhen>
+            <question value="MF_Sport_5771238_1.1"/>
+            <operator value="="/>
+            <answerBoolean value="true"/>
+         </enableWhen>
+         <required value="true"/>
+      </item>
+      <item>
+         <extension url="http://fhir.thieme-compliance.de/StructureDefinition/Einwilligung/QuestionnaireErlaeuterung">
+            <valueString value="Bitte beantworten Sie die Frage wahrheitsgemäß, da Alkohol die Wirkung der Betäubungsmittel beeinflussen kann."/>
+         </extension>
+         <linkId value="MF_Alkohol_6245422_1.1"/>
+         <prefix value="6.1"/>
+         <text value="Trinken Sie mehrmals pro Woche Alkohol?"/>
+         <type value="open-choice"/>
+         <required value="true"/>
+         <repeats value="true"/>
+         <answerOption id="MF_Alkohol_6245422_1.1_none">
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-optionExclusive">
+               <valueBoolean value="true"/>
+            </extension>
+            <valueString value="nein"/>
+         </answerOption>
+         <answerOption id="MF_Alkohol_6245422_1.1_1">
+            <valueString value="Bier"/>
+         </answerOption>
+         <answerOption id="MF_Alkohol_6245422_1.1_2">
+            <valueString value="Wein"/>
+         </answerOption>
+         <answerOption id="MF_Alkohol_6245422_1.1_3">
+            <extension url="http://fhir.thieme-compliance.de/StructureDefinition/Einwilligung/QuestionnaireErlaeuterung">
+               <valueString value="z.B. Schnaps, Cognac, Whiskey"/>
+            </extension>
+            <valueString value="hochprozentige Alkoholika"/>
+         </answerOption>
+         <!--Die Freitext-Oder-Option muss durch den Questionnaire-Renderer aufgrund "open-choice" eingefügt werden.-->
+         <!--<answerOption id="MF_Alkohol_6245422_1.1_others"><valueString value="oder:"/></answerOption>-->
+      </item>
+      <item>
+         <extension url="http://fhir.thieme-compliance.de/StructureDefinition/Einwilligung/QuestionnaireErlaeuterung">
+            <valueString value="Wenn Sie rauchen, erhöht sich z.B. die Gefahr einer Wundheilungsstörung oder einer Thrombosebildung."/>
+         </extension>
+         <linkId value="MF_Tabak_6262585_1.1"/>
+         <prefix value="7.1"/>
+         <text value="Rauchen Sie?"/>
+         <type value="boolean"/>
+         <required value="true"/>
+      </item>
+      <item>
+         <linkId value="MF_Drogen_5771107_1.1"/>
+         <prefix value="8.1"/>
+         <text value="Nehmen Sie Drogen?"/>
+         <type value="boolean"/>
+         <required value="true"/>
+      </item>
+   </item>
+   <item>
+      <linkId value="PC-SystA_06-2021v1_Frage_II.0"/>
+      <prefix value="II."/>
+      <text value="Voraussetzungen für ambulante Eingriffe (nicht auszufüllen bei stationären Eingriffen)"/>
+      <type value="group"/>
+      <required value="true"/>
+      <item>
+         <linkId value="MF_Ambulant_Begleitperson_5729714_1.1"/>
+         <prefix value="1.1"/>
+         <text value="Welche volljährige Begleitperson bringt Sie nach dem Eingriff nach Hause (Vor-/​Zuname der Begleitperson)?"/>
+         <type value="string"/>
+         <enableWhen>
+            <question value="AmbulantOderStationaer"/>
+            <operator value="!="/>
+            <answerString value="stationär"/>
+         </enableWhen>
+         <required value="true"/>
+      </item>
+      <item>
+         <linkId value="MF_Ambulant_Betreuung_5729716_1.1"/>
+         <prefix value="2.1"/>
+         <text value="Welche volljährige Person betreut Sie in den ersten 24 Stunden (oder in der vom Arzt vorgegebenen Zeit) nach dem Eingriff (Vor-/​Zuname des Betreuenden)?"/>
+         <type value="string"/>
+         <enableWhen>
+            <question value="AmbulantOderStationaer"/>
+            <operator value="!="/>
+            <answerString value="stationär"/>
+         </enableWhen>
+         <required value="true"/>
+      </item>
+      <item>
+         <linkId value="MF_Ambulant_Adresse_5729712_1.1"/>
+         <prefix value="3.1"/>
+         <text value="Wo sind Sie in den ersten 24 Stunden nach dem Eingriff erreichbar (Adresse)?"/>
+         <type value="string"/>
+         <enableWhen>
+            <question value="AmbulantOderStationaer"/>
+            <operator value="!="/>
+            <answerString value="stationär"/>
+         </enableWhen>
+         <required value="true"/>
+      </item>
+      <item>
+         <linkId value="MF_Ambulant_Telefonnummer_5771076_1.1"/>
+         <prefix value="4.1"/>
+         <text value="Wie sind Sie in den ersten 24 Stunden nach dem Eingriff erreichbar (Telefonnummer)?"/>
+         <type value="string"/>
+         <enableWhen>
+            <question value="AmbulantOderStationaer"/>
+            <operator value="!="/>
+            <answerString value="stationär"/>
+         </enableWhen>
+         <required value="true"/>
+      </item>
+      <item>
+         <linkId value="MF_Ambulant_Notfalltransport_KH_6246166_1.1"/>
+         <prefix value="5.1"/>
+         <text value="Könnten Sie innerhalb von 30 Minuten in das nächste Krankenhaus gebracht werden?"/>
+         <type value="boolean"/>
+         <enableWhen>
+            <question value="AmbulantOderStationaer"/>
+            <operator value="!="/>
+            <answerString value="stationär"/>
+         </enableWhen>
+         <required value="true"/>
+      </item>
+   </item>
+   <item>
+      <linkId value="PC-SystA_06-2021v1_Frage_III.0"/>
+      <prefix value="III."/>
+      <text value="Fragen zu allgemeinen Störungen/​Vorschäden"/>
+      <type value="group"/>
+      <required value="true"/>
+      <item>
+         <linkId value="MF_Gewichtsverlust_6251492_1.1"/>
+         <prefix value="1.1"/>
+         <text value="Haben Sie in den letzten Wochen/​Monaten ungewollt Gewicht verloren?"/>
+         <type value="boolean"/>
+         <required value="true"/>
+      </item>
+      <item>
+         <linkId value="MF_Gewichtsverlust_6251492_1.2"/>
+         <prefix value="1.2"/>
+         <text value="Wenn ja, wie viel (kg)?"/>
+         <type value="decimal"/>
+         <enableWhen>
+            <question value="MF_Gewichtsverlust_6251492_1.1"/>
+            <operator value="="/>
+            <answerBoolean value="true"/>
+         </enableWhen>
+         <required value="true"/>
+      </item>
+      <item>
+         <linkId value="MF_Allgemeinbefinden_5771074_1.1"/>
+         <prefix value="2.1"/>
+         <text value="Bestehen Störungen des Allgemeinbefindens?"/>
+         <type value="open-choice"/>
+         <required value="true"/>
+         <repeats value="true"/>
+         <answerOption id="MF_Allgemeinbefinden_5771074_1.1_none">
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-optionExclusive">
+               <valueBoolean value="true"/>
+            </extension>
+            <valueString value="nein"/>
+         </answerOption>
+         <answerOption id="MF_Allgemeinbefinden_5771074_1.1_1">
+            <valueString value="Schlafstörungen"/>
+         </answerOption>
+         <answerOption id="MF_Allgemeinbefinden_5771074_1.1_2">
+            <valueString value="Erschöpfbarkeit"/>
+         </answerOption>
+         <answerOption id="MF_Allgemeinbefinden_5771074_1.1_3">
+            <valueString value="Erinnerungslücken"/>
+         </answerOption>
+         <answerOption id="MF_Allgemeinbefinden_5771074_1.1_4">
+            <valueString value="Vergesslichkeit"/>
+         </answerOption>
+         <answerOption id="MF_Allgemeinbefinden_5771074_1.1_5">
+            <valueString value="Schmerzen"/>
+         </answerOption>
+         <!--Die Freitext-Oder-Option muss durch den Questionnaire-Renderer aufgrund "open-choice" eingefügt werden.-->
+         <!--<answerOption id="MF_Allgemeinbefinden_5771074_1.1_others"><valueString value="oder:"/></answerOption>-->
+      </item>
+      <item>
+         <linkId value="MF_Allergie_6246162_1.1"/>
+         <prefix value="3.1"/>
+         <text value="Besteht eine Allergie?"/>
+         <type value="open-choice"/>
+         <required value="true"/>
+         <repeats value="true"/>
+         <answerOption id="MF_Allergie_6246162_1.1_none">
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-optionExclusive">
+               <valueBoolean value="true"/>
+            </extension>
+            <valueString value="nein"/>
+         </answerOption>
+         <answerOption id="MF_Allergie_6246162_1.1_1">
+            <extension url="http://fhir.thieme-compliance.de/StructureDefinition/Einwilligung/QuestionnaireErlaeuterung">
+               <valueString value="Metamizol: z.B. Novalgin®; Antibiotika: z.B. Penicillin"/>
+            </extension>
+            <valueString value="Medikamente (z.B. Antibiotika, Metamizol, Paracetamol)"/>
+         </answerOption>
+         <answerOption id="MF_Allergie_6246162_1.1_2">
+            <valueString value="Betäubungsmittel"/>
+         </answerOption>
+         <answerOption id="MF_Allergie_6246162_1.1_3">
+            <valueString value="Röntgenkontrastmittel"/>
+         </answerOption>
+         <answerOption id="MF_Allergie_6246162_1.1_4">
+            <extension url="http://fhir.thieme-compliance.de/StructureDefinition/Einwilligung/QuestionnaireErlaeuterung">
+               <valueString value="Die meisten OP-Handschuhe sind noch aus Latex."/>
+            </extension>
+            <valueString value="Latex"/>
+         </answerOption>
+         <answerOption id="MF_Allergie_6246162_1.1_5">
+            <valueString value="Desinfektionsmittel"/>
+         </answerOption>
+         <answerOption id="MF_Allergie_6246162_1.1_6">
+            <valueString value="Jod"/>
+         </answerOption>
+         <answerOption id="MF_Allergie_6246162_1.1_7">
+            <valueString value="Pflaster"/>
+         </answerOption>
+         <answerOption id="MF_Allergie_6246162_1.1_8">
+            <valueString value="Kunststoffe"/>
+         </answerOption>
+         <!--Die Freitext-Oder-Option muss durch den Questionnaire-Renderer aufgrund "open-choice" eingefügt werden.-->
+         <!--<answerOption id="MF_Allergie_6246162_1.1_others"><valueString value="oder:"/></answerOption>-->
+      </item>
+      <item>
+         <linkId value="MF_Allergie_Metalle_6246156_1.1"/>
+         <prefix value="4.1"/>
+         <text value="Besteht eine Allergie/​Überempfindlichkeit gegenüber Metallen?"/>
+         <type value="open-choice"/>
+         <required value="true"/>
+         <repeats value="true"/>
+         <answerOption id="MF_Allergie_Metalle_6246156_1.1_none">
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-optionExclusive">
+               <valueBoolean value="true"/>
+            </extension>
+            <valueString value="nein"/>
+         </answerOption>
+         <answerOption id="MF_Allergie_Metalle_6246156_1.1_1">
+            <valueString value="Nickel"/>
+         </answerOption>
+         <answerOption id="MF_Allergie_Metalle_6246156_1.1_2">
+            <valueString value="Kobalt"/>
+         </answerOption>
+         <answerOption id="MF_Allergie_Metalle_6246156_1.1_3">
+            <valueString value="Chrom"/>
+         </answerOption>
+         <answerOption id="MF_Allergie_Metalle_6246156_1.1_4">
+            <valueString value="Molybdän"/>
+         </answerOption>
+         <!--Die Freitext-Oder-Option muss durch den Questionnaire-Renderer aufgrund "open-choice" eingefügt werden.-->
+         <!--<answerOption id="MF_Allergie_Metalle_6246156_1.1_others"><valueString value="oder:"/></answerOption>-->
+      </item>
+      <item>
+         <extension url="http://fhir.thieme-compliance.de/StructureDefinition/Einwilligung/QuestionnaireErlaeuterung">
+            <valueString value="Darunter versteht man unter anderem die Bildung von Abszessen (Eiteransammlungen) und/​oder Fisteln (unnatürliche Verbindungsgänge zwischen Hohlorganen oder Hohlorganen und der Körperoberfläche)."/>
+         </extension>
+         <linkId value="MF_Wundheilungsstoerungen_6262594_1.1"/>
+         <prefix value="5.1"/>
+         <text value="Besteht eine Neigung zu Wundheilungsstörungen?"/>
+         <type value="boolean"/>
+         <required value="true"/>
+      </item>
+      <item>
+         <linkId value="MF_Entzuendung_akut_6248215_1.1"/>
+         <prefix value="6.1"/>
+         <text value="Besteht derzeit/​Bestand in den letzten 6 Monaten eine Entzündung (z.B. an einem Zahn)?"/>
+         <type value="boolean"/>
+         <required value="true"/>
+      </item>
+      <item>
+         <linkId value="MF_Entzuendung_akut_6248215_1.2"/>
+         <prefix value="6.2"/>
+         <text value="Wenn ja, wo?"/>
+         <type value="string"/>
+         <enableWhen>
+            <question value="MF_Entzuendung_akut_6248215_1.1"/>
+            <operator value="="/>
+            <answerBoolean value="true"/>
+         </enableWhen>
+         <required value="true"/>
+      </item>
+      <item>
+         <linkId value="MF_Entzuendungen_5771111_1.1"/>
+         <prefix value="7.1"/>
+         <text value="Treten wiederholt Entzündungen auf?"/>
+         <type value="boolean"/>
+         <required value="true"/>
+      </item>
+      <item>
+         <linkId value="MF_Infekt_6254750_1.1"/>
+         <prefix value="8.1"/>
+         <text value="Bestand in den letzten 4 Wochen ein Infekt?"/>
+         <type value="open-choice"/>
+         <required value="true"/>
+         <repeats value="true"/>
+         <answerOption id="MF_Infekt_6254750_1.1_none">
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-optionExclusive">
+               <valueBoolean value="true"/>
+            </extension>
+            <valueString value="nein"/>
+         </answerOption>
+         <answerOption id="MF_Infekt_6254750_1.1_1">
+            <extension url="http://fhir.thieme-compliance.de/StructureDefinition/Einwilligung/QuestionnaireErlaeuterung">
+               <valueString value="z.B. verstärkter Husten"/>
+            </extension>
+            <valueString value="Atemwege"/>
+         </answerOption>
+         <answerOption id="MF_Infekt_6254750_1.1_2">
+            <extension url="http://fhir.thieme-compliance.de/StructureDefinition/Einwilligung/QuestionnaireErlaeuterung">
+               <valueString value="z.B. Erbrechen oder Durchfall"/>
+            </extension>
+            <valueString value="Magen-Darm"/>
+         </answerOption>
+         <answerOption id="MF_Infekt_6254750_1.1_3">
+            <extension url="http://fhir.thieme-compliance.de/StructureDefinition/Einwilligung/QuestionnaireErlaeuterung">
+               <valueString value="z.B. Blasenentzündung"/>
+            </extension>
+            <valueString value="Harnwege"/>
+         </answerOption>
+         <!--Die Freitext-Oder-Option muss durch den Questionnaire-Renderer aufgrund "open-choice" eingefügt werden.-->
+         <!--<answerOption id="MF_Infekt_6254750_1.1_others"><valueString value="oder:"/></answerOption>-->
+      </item>
+      <item>
+         <extension url="http://fhir.thieme-compliance.de/StructureDefinition/Einwilligung/QuestionnaireErlaeuterung">
+            <valueString value="Krankheit, die durch Bakterien, Viren oder Pilze hervorgerufen wird."/>
+         </extension>
+         <linkId value="MF_Infektionskrankheit_6254756_1.1"/>
+         <prefix value="9.1"/>
+         <text value="Besteht/​Bestand eine Infektionskrankheit?"/>
+         <type value="open-choice"/>
+         <required value="true"/>
+         <repeats value="true"/>
+         <answerOption id="MF_Infektionskrankheit_6254756_1.1_none">
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-optionExclusive">
+               <valueBoolean value="true"/>
+            </extension>
+            <valueString value="nein"/>
+         </answerOption>
+         <answerOption id="MF_Infektionskrankheit_6254756_1.1_1">
+            <extension url="http://fhir.thieme-compliance.de/StructureDefinition/Einwilligung/QuestionnaireErlaeuterung">
+               <valueString value="Entzündung der Leber"/>
+            </extension>
+            <valueString value="Hepatitis"/>
+         </answerOption>
+         <answerOption id="MF_Infektionskrankheit_6254756_1.1_2">
+            <extension url="http://fhir.thieme-compliance.de/StructureDefinition/Einwilligung/QuestionnaireErlaeuterung">
+               <valueString value="Erkrankung/​Schwäche des Immunsystems, hervorgerufen durch ein Virus"/>
+            </extension>
+            <valueString value="HIV/​AIDS"/>
+         </answerOption>
+         <answerOption id="MF_Infektionskrankheit_6254756_1.1_3">
+            <extension url="http://fhir.thieme-compliance.de/StructureDefinition/Einwilligung/QuestionnaireErlaeuterung">
+               <valueString value="Meningitis; Entzündung des zentralen Nervensystems v.a. durch Bakterien oder Viren"/>
+            </extension>
+            <valueString value="Hirnhautentzündung"/>
+         </answerOption>
+         <answerOption id="MF_Infektionskrankheit_6254756_1.1_4">
+            <extension url="http://fhir.thieme-compliance.de/StructureDefinition/Einwilligung/QuestionnaireErlaeuterung">
+               <valueString value="Bakterielle Infektionskrankheit, die meistens die Lunge betrifft"/>
+            </extension>
+            <valueString value="Tuberkulose"/>
+         </answerOption>
+         <!--Die Freitext-Oder-Option muss durch den Questionnaire-Renderer aufgrund "open-choice" eingefügt werden.-->
+         <!--<answerOption id="MF_Infektionskrankheit_6254756_1.1_others"><valueString value="oder:"/></answerOption>-->
+      </item>
+      <item>
+         <linkId value="MF_Schwellungen_Lymphknoten_5771230_1.1"/>
+         <prefix value="10.1"/>
+         <text value="Bestehen Schwellungen der Lymphknoten?"/>
+         <type value="boolean"/>
+         <required value="true"/>
+      </item>
+      <item>
+         <linkId value="MF_Schwellungsneigung_5771232_1.1"/>
+         <prefix value="11.1"/>
+         <text value="Neigen Sie zu Schwellungen an Armen, Beinen oder Gelenken?"/>
+         <type value="boolean"/>
+         <required value="true"/>
+      </item>
+      <item>
+         <linkId value="MF_Hautveraenderungen_5771179_1.1"/>
+         <prefix value="12.1"/>
+         <text value="Bestehen neu aufgetretene Hautveränderungen?"/>
+         <type value="boolean"/>
+         <required value="true"/>
+      </item>
+      <item>
+         <linkId value="MF_Behinderung_Fehlbildung_5771093_1.1"/>
+         <prefix value="13.1"/>
+         <text value="Besteht eine körperliche Beeinträchtigung?"/>
+         <type value="open-choice"/>
+         <required value="true"/>
+         <repeats value="true"/>
+         <answerOption id="MF_Behinderung_Fehlbildung_5771093_1.1_none">
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-optionExclusive">
+               <valueBoolean value="true"/>
+            </extension>
+            <valueString value="nein"/>
+         </answerOption>
+         <answerOption id="MF_Behinderung_Fehlbildung_5771093_1.1_1">
+            <valueString value="Behinderung"/>
+         </answerOption>
+         <answerOption id="MF_Behinderung_Fehlbildung_5771093_1.1_2">
+            <valueString value="angeborene Fehlbildung"/>
+         </answerOption>
+         <!--Die Freitext-Oder-Option muss durch den Questionnaire-Renderer aufgrund "open-choice" eingefügt werden.-->
+         <!--<answerOption id="MF_Behinderung_Fehlbildung_5771093_1.1_others"><valueString value="oder:"/></answerOption>-->
+      </item>
+      <item>
+         <linkId value="MF_Erkrankungen_Familie_6248218_1.1"/>
+         <prefix value="14.1"/>
+         <text value="Gibt oder gab es in der Blutsverwandtschaft Erkrankungen oder Anzeichen einer Erkrankung?"/>
+         <type value="open-choice"/>
+         <required value="true"/>
+         <repeats value="true"/>
+         <answerOption id="MF_Erkrankungen_Familie_6248218_1.1_none">
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-optionExclusive">
+               <valueBoolean value="true"/>
+            </extension>
+            <valueString value="nein"/>
+         </answerOption>
+         <answerOption id="MF_Erkrankungen_Familie_6248218_1.1_1">
+            <valueString value="Krebs"/>
+         </answerOption>
+         <answerOption id="MF_Erkrankungen_Familie_6248218_1.1_2">
+            <valueString value="Stoffwechselleiden (z.B. Diabetes, Gicht)"/>
+         </answerOption>
+         <answerOption id="MF_Erkrankungen_Familie_6248218_1.1_3">
+            <valueString value="Herz-/​Kreislauf-Erkrankungen (z.B. Herzinfarkt, Schlaganfall)"/>
+         </answerOption>
+         <answerOption id="MF_Erkrankungen_Familie_6248218_1.1_4">
+            <valueString value="Erbkrankheiten"/>
+         </answerOption>
+         <!--Die Freitext-Oder-Option muss durch den Questionnaire-Renderer aufgrund "open-choice" eingefügt werden.-->
+         <!--<answerOption id="MF_Erkrankungen_Familie_6248218_1.1_others"><valueString value="oder:"/></answerOption>-->
+      </item>
+      <item>
+         <linkId value="MF_Piercing_5771205_1.1"/>
+         <prefix value="15.1"/>
+         <text value="Tragen Sie ein Piercing?"/>
+         <type value="open-choice"/>
+         <required value="true"/>
+         <repeats value="true"/>
+         <answerOption id="MF_Piercing_5771205_1.1_none">
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-optionExclusive">
+               <valueBoolean value="true"/>
+            </extension>
+            <valueString value="nein"/>
+         </answerOption>
+         <answerOption id="MF_Piercing_5771205_1.1_1">
+            <valueString value="Zungenpiercing"/>
+         </answerOption>
+         <answerOption id="MF_Piercing_5771205_1.1_2">
+            <valueString value="Genitalpiercing"/>
+         </answerOption>
+         <!--Die Freitext-Oder-Option muss durch den Questionnaire-Renderer aufgrund "open-choice" eingefügt werden.-->
+         <!--<answerOption id="MF_Piercing_5771205_1.1_others"><valueString value="oder:"/></answerOption>-->
+      </item>
+      <item>
+         <linkId value="MF_Tattoo_5771244_1.1"/>
+         <prefix value="16.1"/>
+         <text value="Sind Sie tätowiert?"/>
+         <type value="boolean"/>
+         <required value="true"/>
+      </item>
+   </item>
+   <item>
+      <linkId value="PC-SystA_06-2021v1_Frage_IV.0"/>
+      <prefix value="IV."/>
+      <text value="Fragen zu akuten oder chronischen Schmerzen"/>
+      <type value="group"/>
+      <required value="true"/>
+      <item>
+         <linkId value="MF_Schmerzanamnese_5771228_1.1"/>
+         <prefix value="1.1"/>
+         <text value="Bestehen akute/​chronische Schmerzen?"/>
+         <type value="boolean"/>
+         <required value="true"/>
+      </item>
+      <item>
+         <linkId value="MF_Schmerzanamnese_5771228_1.2"/>
+         <prefix value="1.2"/>
+         <text value="Wenn ja, seit wann?"/>
+         <type value="choice"/>
+         <enableWhen>
+            <question value="MF_Schmerzanamnese_5771228_1.1"/>
+            <operator value="="/>
+            <answerBoolean value="true"/>
+         </enableWhen>
+         <required value="true"/>
+         <repeats value="false"/>
+         <answerOption id="MF_Schmerzanamnese_5771228_1.2_1">
+            <valueString value="seit ein paar Tagen"/>
+         </answerOption>
+         <answerOption id="MF_Schmerzanamnese_5771228_1.2_2">
+            <valueString value="seit ein paar Wochen"/>
+         </answerOption>
+         <answerOption id="MF_Schmerzanamnese_5771228_1.2_3">
+            <valueString value="seit ein paar Monaten"/>
+         </answerOption>
+         <answerOption id="MF_Schmerzanamnese_5771228_1.2_4">
+            <valueString value="seit Jahren"/>
+         </answerOption>
+      </item>
+      <item>
+         <linkId value="MF_Schmerzanamnese_5771228_1.3"/>
+         <prefix value="1.3"/>
+         <text value="Wenn ja, an welcher Körperstelle?"/>
+         <type value="open-choice"/>
+         <enableWhen>
+            <question value="MF_Schmerzanamnese_5771228_1.1"/>
+            <operator value="="/>
+            <answerBoolean value="true"/>
+         </enableWhen>
+         <required value="true"/>
+         <repeats value="true"/>
+         <answerOption id="MF_Schmerzanamnese_5771228_1.3_1">
+            <valueString value="Kopf"/>
+         </answerOption>
+         <answerOption id="MF_Schmerzanamnese_5771228_1.3_2">
+            <valueString value="Bauch"/>
+         </answerOption>
+         <answerOption id="MF_Schmerzanamnese_5771228_1.3_3">
+            <valueString value="Rücken"/>
+         </answerOption>
+         <answerOption id="MF_Schmerzanamnese_5771228_1.3_4">
+            <valueString value="Arme"/>
+         </answerOption>
+         <answerOption id="MF_Schmerzanamnese_5771228_1.3_5">
+            <valueString value="Beine"/>
+         </answerOption>
+         <!--Die Freitext-Oder-Option muss durch den Questionnaire-Renderer aufgrund "open-choice" eingefügt werden.-->
+         <!--<answerOption id="MF_Schmerzanamnese_5771228_1.3_others"><valueString value="oder:"/></answerOption>-->
+      </item>
+      <item>
+         <linkId value="MF_Schmerzanamnese_5771228_1.4"/>
+         <prefix value="1.4"/>
+         <text value="Wenn ja, welcher Art sind die Schmerzen?"/>
+         <type value="open-choice"/>
+         <enableWhen>
+            <question value="MF_Schmerzanamnese_5771228_1.1"/>
+            <operator value="="/>
+            <answerBoolean value="true"/>
+         </enableWhen>
+         <required value="true"/>
+         <repeats value="true"/>
+         <answerOption id="MF_Schmerzanamnese_5771228_1.4_1">
+            <valueString value="dumpf"/>
+         </answerOption>
+         <answerOption id="MF_Schmerzanamnese_5771228_1.4_2">
+            <valueString value="kolikartig"/>
+         </answerOption>
+         <answerOption id="MF_Schmerzanamnese_5771228_1.4_3">
+            <valueString value="brennend"/>
+         </answerOption>
+         <answerOption id="MF_Schmerzanamnese_5771228_1.4_4">
+            <valueString value="stechend"/>
+         </answerOption>
+         <answerOption id="MF_Schmerzanamnese_5771228_1.4_5">
+            <valueString value="ziehend"/>
+         </answerOption>
+         <!--Die Freitext-Oder-Option muss durch den Questionnaire-Renderer aufgrund "open-choice" eingefügt werden.-->
+         <!--<answerOption id="MF_Schmerzanamnese_5771228_1.4_others"><valueString value="oder:"/></answerOption>-->
+      </item>
+      <item>
+         <linkId value="MF_Schmerzanamnese_5771228_1.5"/>
+         <prefix value="1.5"/>
+         <text value="Wenn ja, wie lange halten die Schmerzen an?"/>
+         <type value="open-choice"/>
+         <enableWhen>
+            <question value="MF_Schmerzanamnese_5771228_1.1"/>
+            <operator value="="/>
+            <answerBoolean value="true"/>
+         </enableWhen>
+         <required value="true"/>
+         <repeats value="true"/>
+         <answerOption id="MF_Schmerzanamnese_5771228_1.5_1">
+            <valueString value="dauerhaft"/>
+         </answerOption>
+         <answerOption id="MF_Schmerzanamnese_5771228_1.5_2">
+            <valueString value="länger anhaltend"/>
+         </answerOption>
+         <answerOption id="MF_Schmerzanamnese_5771228_1.5_3">
+            <valueString value="kurz"/>
+         </answerOption>
+         <!--Die Freitext-Oder-Option muss durch den Questionnaire-Renderer aufgrund "open-choice" eingefügt werden.-->
+         <!--<answerOption id="MF_Schmerzanamnese_5771228_1.5_others"><valueString value="oder:"/></answerOption>-->
+      </item>
+      <item>
+         <linkId value="MF_Schmerzanamnese_5771228_1.6"/>
+         <prefix value="1.6"/>
+         <text value="Wenn ja, wie oft treten die Schmerzen auf?"/>
+         <type value="open-choice"/>
+         <enableWhen>
+            <question value="MF_Schmerzanamnese_5771228_1.1"/>
+            <operator value="="/>
+            <answerBoolean value="true"/>
+         </enableWhen>
+         <required value="true"/>
+         <repeats value="true"/>
+         <answerOption id="MF_Schmerzanamnese_5771228_1.6_1">
+            <valueString value="zeitweise"/>
+         </answerOption>
+         <answerOption id="MF_Schmerzanamnese_5771228_1.6_2">
+            <valueString value="ständig"/>
+         </answerOption>
+         <answerOption id="MF_Schmerzanamnese_5771228_1.6_3">
+            <valueString value="regelmäßig wiederkehrend"/>
+         </answerOption>
+         <answerOption id="MF_Schmerzanamnese_5771228_1.6_4">
+            <valueString value="gelegentlich"/>
+         </answerOption>
+         <!--Die Freitext-Oder-Option muss durch den Questionnaire-Renderer aufgrund "open-choice" eingefügt werden.-->
+         <!--<answerOption id="MF_Schmerzanamnese_5771228_1.6_others"><valueString value="oder:"/></answerOption>-->
+      </item>
+      <item>
+         <linkId value="MF_Schmerzanamnese_5771228_1.7"/>
+         <prefix value="1.7"/>
+         <text value="Wenn ja, wie stark sind die Schmerzen?"/>
+         <type value="open-choice"/>
+         <enableWhen>
+            <question value="MF_Schmerzanamnese_5771228_1.1"/>
+            <operator value="="/>
+            <answerBoolean value="true"/>
+         </enableWhen>
+         <required value="true"/>
+         <repeats value="true"/>
+         <answerOption id="MF_Schmerzanamnese_5771228_1.7_1">
+            <valueString value="leicht"/>
+         </answerOption>
+         <answerOption id="MF_Schmerzanamnese_5771228_1.7_2">
+            <valueString value="mittel"/>
+         </answerOption>
+         <answerOption id="MF_Schmerzanamnese_5771228_1.7_3">
+            <valueString value="stark"/>
+         </answerOption>
+         <answerOption id="MF_Schmerzanamnese_5771228_1.7_4">
+            <valueString value="wechselnd"/>
+         </answerOption>
+         <!--Die Freitext-Oder-Option muss durch den Questionnaire-Renderer aufgrund "open-choice" eingefügt werden.-->
+         <!--<answerOption id="MF_Schmerzanamnese_5771228_1.7_others"><valueString value="oder:"/></answerOption>-->
+      </item>
+      <item>
+         <linkId value="MF_Schmerzanamnese_5771228_1.8"/>
+         <prefix value="1.8"/>
+         <text value="Wenn ja, gibt es äußere Einflüsse, welche den Schmerz auslösen oder verstärken?"/>
+         <type value="open-choice"/>
+         <enableWhen>
+            <question value="MF_Schmerzanamnese_5771228_1.1"/>
+            <operator value="="/>
+            <answerBoolean value="true"/>
+         </enableWhen>
+         <required value="true"/>
+         <repeats value="true"/>
+         <answerOption id="MF_Schmerzanamnese_5771228_1.8_none">
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-optionExclusive">
+               <valueBoolean value="true"/>
+            </extension>
+            <valueString value="nein"/>
+         </answerOption>
+         <answerOption id="MF_Schmerzanamnese_5771228_1.8_1">
+            <valueString value="Mahlzeiten"/>
+         </answerOption>
+         <answerOption id="MF_Schmerzanamnese_5771228_1.8_2">
+            <valueString value="Tageszeit"/>
+         </answerOption>
+         <answerOption id="MF_Schmerzanamnese_5771228_1.8_3">
+            <valueString value="körperliche Belastung"/>
+         </answerOption>
+         <answerOption id="MF_Schmerzanamnese_5771228_1.8_4">
+            <valueString value="bestimmte Bewegungen"/>
+         </answerOption>
+         <answerOption id="MF_Schmerzanamnese_5771228_1.8_5">
+            <valueString value="Wetterumschwung"/>
+         </answerOption>
+         <answerOption id="MF_Schmerzanamnese_5771228_1.8_6">
+            <valueString value="Körperposition/​Lage"/>
+         </answerOption>
+         <!--Die Freitext-Oder-Option muss durch den Questionnaire-Renderer aufgrund "open-choice" eingefügt werden.-->
+         <!--<answerOption id="MF_Schmerzanamnese_5771228_1.8_others"><valueString value="oder:"/></answerOption>-->
+      </item>
+      <item>
+         <linkId value="MF_Migraene_5771201_1.1"/>
+         <prefix value="2.1"/>
+         <text value="Leiden Sie unter Migräne?"/>
+         <type value="boolean"/>
+         <required value="true"/>
+      </item>
+   </item>
+   <item>
+      <linkId value="PC-SystA_06-2021v1_Frage_V.0"/>
+      <prefix value="V."/>
+      <text value="Fragen für Frauen"/>
+      <type value="group"/>
+      <required value="true"/>
+      <item>
+         <linkId value="MF_Frauen_Entbindungen_fruehere_6250470_1.1"/>
+         <prefix value="1.1"/>
+         <text value="Hatten Sie schon einmal eine Entbindung/​Geburt?"/>
+         <type value="boolean"/>
+         <enableWhen>
+            <question value="baseDataDecimalGender"/>
+            <operator value="="/>
+            <answerString value="weiblich"/>
+         </enableWhen>
+         <required value="true"/>
+      </item>
+      <item>
+         <linkId value="MF_Frauen_Entbindungen_fruehere_6250470_1.2"/>
+         <prefix value="1.2"/>
+         <text value="Wenn ja, wann?"/>
+         <type value="string"/>
+         <enableWhen>
+            <question value="MF_Frauen_Entbindungen_fruehere_6250470_1.1"/>
+            <operator value="="/>
+            <answerBoolean value="true"/>
+         </enableWhen>
+         <required value="true"/>
+      </item>
+      <item>
+         <linkId value="MF_Frauen_Entbindungen_fruehere_6250470_1.3"/>
+         <prefix value="1.3"/>
+         <text value="Wenn ja, traten während oder nach der Geburt Komplikationen auf?"/>
+         <type value="open-choice"/>
+         <enableWhen>
+            <question value="MF_Frauen_Entbindungen_fruehere_6250470_1.1"/>
+            <operator value="="/>
+            <answerBoolean value="true"/>
+         </enableWhen>
+         <required value="true"/>
+         <repeats value="true"/>
+         <answerOption id="MF_Frauen_Entbindungen_fruehere_6250470_1.3_none">
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-optionExclusive">
+               <valueBoolean value="true"/>
+            </extension>
+            <valueString value="nein"/>
+         </answerOption>
+         <answerOption id="MF_Frauen_Entbindungen_fruehere_6250470_1.3_1">
+            <valueString value="verstärkte Blutungen"/>
+         </answerOption>
+         <answerOption id="MF_Frauen_Entbindungen_fruehere_6250470_1.3_2">
+            <valueString value="Nachblutungen"/>
+         </answerOption>
+         <answerOption id="MF_Frauen_Entbindungen_fruehere_6250470_1.3_3">
+            <valueString value="Notkaiserschnitt"/>
+         </answerOption>
+         <!--Die Freitext-Oder-Option muss durch den Questionnaire-Renderer aufgrund "open-choice" eingefügt werden.-->
+         <!--<answerOption id="MF_Frauen_Entbindungen_fruehere_6250470_1.3_others"><valueString value="oder:"/></answerOption>-->
+      </item>
+      <item>
+         <extension url="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression">
+            <valueExpression>
+               <language value="text/fhirpath"/>
+               <expression value="today() &gt;= $resource.item.where(linkId = 'dateOfBirth').answer.valueDate + 10 years and today() &lt;= $resource.item.where(linkId = 'dateOfBirth').answer.valueDate + 59 years"/>
+            </valueExpression>
+         </extension>
+         <linkId value="MF_Frauen_Fehlgeburt_5771134_1.1"/>
+         <prefix value="2.1"/>
+         <text value="Hatten Sie schon einmal eine Fehlgeburt?"/>
+         <type value="boolean"/>
+         <enableWhen>
+            <question value="baseDataDecimalGender"/>
+            <operator value="="/>
+            <answerString value="weiblich"/>
+         </enableWhen>
+         <required value="true"/>
+      </item>
+      <item>
+         <extension url="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression">
+            <valueExpression>
+               <language value="text/fhirpath"/>
+               <expression value="today() &gt;= $resource.item.where(linkId = 'dateOfBirth').answer.valueDate + 10 years and today() &lt;= $resource.item.where(linkId = 'dateOfBirth').answer.valueDate + 59 years"/>
+            </valueExpression>
+         </extension>
+         <linkId value="MF_Frauen_Schwanger_Besonderheiten_6251480_1.1"/>
+         <prefix value="3.1"/>
+         <text value="Waren Sie schon einmal schwanger?"/>
+         <type value="boolean"/>
+         <enableWhen>
+            <question value="baseDataDecimalGender"/>
+            <operator value="="/>
+            <answerString value="weiblich"/>
+         </enableWhen>
+         <required value="true"/>
+      </item>
+      <item>
+         <linkId value="MF_Frauen_Schwanger_Besonderheiten_6251480_1.2"/>
+         <prefix value="3.2"/>
+         <text value="Wenn ja, gab es Besonderheiten?"/>
+         <type value="open-choice"/>
+         <enableWhen>
+            <question value="MF_Frauen_Schwanger_Besonderheiten_6251480_1.1"/>
+            <operator value="="/>
+            <answerBoolean value="true"/>
+         </enableWhen>
+         <required value="true"/>
+         <repeats value="true"/>
+         <answerOption id="MF_Frauen_Schwanger_Besonderheiten_6251480_1.2_none">
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-optionExclusive">
+               <valueBoolean value="true"/>
+            </extension>
+            <valueString value="nein"/>
+         </answerOption>
+         <answerOption id="MF_Frauen_Schwanger_Besonderheiten_6251480_1.2_1">
+            <valueString value="Gelbsucht"/>
+         </answerOption>
+         <answerOption id="MF_Frauen_Schwanger_Besonderheiten_6251480_1.2_2">
+            <valueString value="Juckreiz"/>
+         </answerOption>
+         <answerOption id="MF_Frauen_Schwanger_Besonderheiten_6251480_1.2_3">
+            <valueString value="Ausschlag"/>
+         </answerOption>
+         <answerOption id="MF_Frauen_Schwanger_Besonderheiten_6251480_1.2_4">
+            <valueString value="Präeklampsie"/>
+         </answerOption>
+         <!--Die Freitext-Oder-Option muss durch den Questionnaire-Renderer aufgrund "open-choice" eingefügt werden.-->
+         <!--<answerOption id="MF_Frauen_Schwanger_Besonderheiten_6251480_1.2_others"><valueString value="oder:"/></answerOption>-->
+      </item>
+      <item>
+         <extension url="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression">
+            <valueExpression>
+               <language value="text/fhirpath"/>
+               <expression value="today() &gt;= $resource.item.where(linkId = 'dateOfBirth').answer.valueDate + 10 years and today() &lt;= $resource.item.where(linkId = 'dateOfBirth').answer.valueDate + 59 years"/>
+            </valueExpression>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/entryFormat">
+            <valueString value="JJJJ-MM-TT"/>
+         </extension>
+         <linkId value="MF_Frauen_Regelblutung_5737879_1.1"/>
+         <prefix value="4.1"/>
+         <text value="Wann war der 1. Tag der letzten Regelblutung?"/>
+         <type value="date"/>
+         <enableWhen>
+            <question value="baseDataDecimalGender"/>
+            <operator value="="/>
+            <answerString value="weiblich"/>
+         </enableWhen>
+         <required value="true"/>
+      </item>
+      <item>
+         <extension url="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression">
+            <valueExpression>
+               <language value="text/fhirpath"/>
+               <expression value="today() &gt;= $resource.item.where(linkId = 'dateOfBirth').answer.valueDate + 10 years and today() &lt;= $resource.item.where(linkId = 'dateOfBirth').answer.valueDate + 59 years"/>
+            </valueExpression>
+         </extension>
+         <linkId value="MF_Frauen_Regelblutung_verstaerkt_5771142_1.1"/>
+         <prefix value="5.1"/>
+         <text value="Kommt es zu verstärkter, ggf. schmerzhafter Regelblutung?"/>
+         <type value="boolean"/>
+         <enableWhen>
+            <question value="baseDataDecimalGender"/>
+            <operator value="="/>
+            <answerString value="weiblich"/>
+         </enableWhen>
+         <required value="true"/>
+      </item>
+      <item>
+         <extension url="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression">
+            <valueExpression>
+               <language value="text/fhirpath"/>
+               <expression value="today() &gt;= $resource.item.where(linkId = 'dateOfBirth').answer.valueDate + 10 years and today() &lt;= $resource.item.where(linkId = 'dateOfBirth').answer.valueDate + 59 years"/>
+            </valueExpression>
+         </extension>
+         <linkId value="MF_Frauen_Regelblutung_verlaengert_5771140_1.1"/>
+         <prefix value="6.1"/>
+         <text value="Dauern Ihre Regelblutungen länger als 7 Tage?"/>
+         <type value="boolean"/>
+         <enableWhen>
+            <question value="baseDataDecimalGender"/>
+            <operator value="="/>
+            <answerString value="weiblich"/>
+         </enableWhen>
+         <required value="true"/>
+      </item>
+      <item>
+         <extension url="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression">
+            <valueExpression>
+               <language value="text/fhirpath"/>
+               <expression value="today() &gt;= $resource.item.where(linkId = 'dateOfBirth').answer.valueDate + 10 years and today() &lt;= $resource.item.where(linkId = 'dateOfBirth').answer.valueDate + 59 years"/>
+            </valueExpression>
+         </extension>
+         <linkId value="MF_Frauen_Schwanger_5737899_1.1"/>
+         <prefix value="7.1"/>
+         <text value="Könnten Sie schwanger sein?"/>
+         <type value="boolean"/>
+         <enableWhen>
+            <question value="baseDataDecimalGender"/>
+            <operator value="="/>
+            <answerString value="weiblich"/>
+         </enableWhen>
+         <required value="true"/>
+      </item>
+      <item>
+         <extension url="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression">
+            <valueExpression>
+               <language value="text/fhirpath"/>
+               <expression value="today() &gt;= $resource.item.where(linkId = 'dateOfBirth').answer.valueDate + 10 years and today() &lt;= $resource.item.where(linkId = 'dateOfBirth').answer.valueDate + 59 years"/>
+            </valueExpression>
+         </extension>
+         <linkId value="MF_Frauen_Stillen_5740537_1.1"/>
+         <prefix value="8.1"/>
+         <text value="Stillen Sie?"/>
+         <type value="boolean"/>
+         <enableWhen>
+            <question value="baseDataDecimalGender"/>
+            <operator value="="/>
+            <answerString value="weiblich"/>
+         </enableWhen>
+         <required value="true"/>
+      </item>
+      <item>
+         <extension url="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression">
+            <valueExpression>
+               <language value="text/fhirpath"/>
+               <expression value="today() &gt;= $resource.item.where(linkId = 'dateOfBirth').answer.valueDate + 10 years and today() &lt;= $resource.item.where(linkId = 'dateOfBirth').answer.valueDate + 59 years"/>
+            </valueExpression>
+         </extension>
+         <linkId value="MF_Frauen_Verhuetungsmittel_6251485_1.1"/>
+         <prefix value="9.1"/>
+         <text value="Verwenden Sie Verhütungsmittel?"/>
+         <type value="open-choice"/>
+         <enableWhen>
+            <question value="baseDataDecimalGender"/>
+            <operator value="="/>
+            <answerString value="weiblich"/>
+         </enableWhen>
+         <required value="true"/>
+         <repeats value="true"/>
+         <answerOption id="MF_Frauen_Verhuetungsmittel_6251485_1.1_none">
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-optionExclusive">
+               <valueBoolean value="true"/>
+            </extension>
+            <valueString value="nein"/>
+         </answerOption>
+         <answerOption id="MF_Frauen_Verhuetungsmittel_6251485_1.1_1">
+            <valueString value="Antibabypille"/>
+         </answerOption>
+         <answerOption id="MF_Frauen_Verhuetungsmittel_6251485_1.1_2">
+            <valueString value="Hormonspirale"/>
+         </answerOption>
+         <answerOption id="MF_Frauen_Verhuetungsmittel_6251485_1.1_3">
+            <valueString value="Kupferspirale"/>
+         </answerOption>
+         <!--Die Freitext-Oder-Option muss durch den Questionnaire-Renderer aufgrund "open-choice" eingefügt werden.-->
+         <!--<answerOption id="MF_Frauen_Verhuetungsmittel_6251485_1.1_others"><valueString value="oder:"/></answerOption>-->
+      </item>
+   </item>
+   <item>
+      <linkId value="PC-SystA_06-2021v1_Frage_VI.0"/>
+      <prefix value="VI."/>
+      <text value="Fragen zu den Sinnesorganen"/>
+      <type value="group"/>
+      <required value="true"/>
+      <item>
+         <linkId value="MF_Schwerhoerigkeit_5771234_1.1"/>
+         <prefix value="1.1"/>
+         <text value="Leiden Sie unter Schwerhörigkeit?"/>
+         <type value="boolean"/>
+         <required value="true"/>
+      </item>
+      <item>
+         <linkId value="MF_Hoergeraet_5771181_1.1"/>
+         <prefix value="2.1"/>
+         <text value="Tragen Sie ein Hörgerät?"/>
+         <type value="boolean"/>
+         <required value="true"/>
+      </item>
+      <item>
+         <linkId value="MF_Gleichgewichtsstoerung_5771160_1.1"/>
+         <prefix value="3.1"/>
+         <text value="Bestehen Gleichgewichtsstörungen oder ein häufiges Schwindelgefühl?"/>
+         <type value="boolean"/>
+         <required value="true"/>
+      </item>
+      <item>
+         <extension url="http://fhir.thieme-compliance.de/StructureDefinition/Einwilligung/QuestionnaireErlaeuterung">
+            <valueString value="Eine Sehhilfe (Brille) ist nicht gemeint!"/>
+         </extension>
+         <linkId value="MF_Augen_6246178_1.1"/>
+         <prefix value="4.1"/>
+         <text value="Besteht eine Augenerkrankung?"/>
+         <type value="open-choice"/>
+         <required value="true"/>
+         <repeats value="true"/>
+         <answerOption id="MF_Augen_6246178_1.1_none">
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-optionExclusive">
+               <valueBoolean value="true"/>
+            </extension>
+            <valueString value="nein"/>
+         </answerOption>
+         <answerOption id="MF_Augen_6246178_1.1_1">
+            <extension url="http://fhir.thieme-compliance.de/StructureDefinition/Einwilligung/QuestionnaireErlaeuterung">
+               <valueString value="Linsentrübung, Katarakt"/>
+            </extension>
+            <valueString value="Grauer Star"/>
+         </answerOption>
+         <answerOption id="MF_Augen_6246178_1.1_2">
+            <extension url="http://fhir.thieme-compliance.de/StructureDefinition/Einwilligung/QuestionnaireErlaeuterung">
+               <valueString value="Glaukom"/>
+            </extension>
+            <valueString value="Grüner Star"/>
+         </answerOption>
+         <!--Die Freitext-Oder-Option muss durch den Questionnaire-Renderer aufgrund "open-choice" eingefügt werden.-->
+         <!--<answerOption id="MF_Augen_6246178_1.1_others"><valueString value="oder:"/></answerOption>-->
+      </item>
+      <item>
+         <linkId value="MF_Kontaktlinsen_5771193_1.1"/>
+         <prefix value="5.1"/>
+         <text value="Tragen Sie Kontaktlinsen?"/>
+         <type value="boolean"/>
+         <required value="true"/>
+      </item>
+      <item>
+         <linkId value="MF_Geschmackssinn_5771156_1.1"/>
+         <prefix value="6.1"/>
+         <text value="Bestehen Störungen des Geschmackssinns?"/>
+         <type value="boolean"/>
+         <required value="true"/>
+      </item>
+      <item>
+         <linkId value="MF_Riechsinn_5771224_1.1"/>
+         <prefix value="7.1"/>
+         <text value="Bestehen Störungen beim Riechen?"/>
+         <type value="boolean"/>
+         <required value="true"/>
+      </item>
+   </item>
+   <item>
+      <linkId value="PC-SystA_06-2021v1_Frage_VII.0"/>
+      <prefix value="VII."/>
+      <text value="Fragen zum Blut und zum Immunsystem"/>
+      <type value="group"/>
+      <required value="true"/>
+      <item>
+         <extension url="http://fhir.thieme-compliance.de/StructureDefinition/Einwilligung/QuestionnaireErlaeuterung">
+            <valueString value="Diese Information ist v.a. im Hinblick auf operative Eingriffe sehr wichtig!"/>
+         </extension>
+         <linkId value="MF_Blutung_6248206_1.1"/>
+         <prefix value="1.1"/>
+         <text value="Besteht eine erhöhte Blutungsneigung wie z.B. häufig Nasen-/​Zahnfleischbluten, blaue Flecken, längeres Bluten nach Verletzungen?"/>
+         <type value="boolean"/>
+         <required value="true"/>
+      </item>
+      <item>
+         <extension url="http://fhir.thieme-compliance.de/StructureDefinition/Einwilligung/QuestionnaireErlaeuterung">
+            <valueString value="Eine krankhafte Blutungsneigung kann erblich bedingt sein."/>
+         </extension>
+         <linkId value="MF_Blutungsneigung_Familie_6248209_1.1"/>
+         <prefix value="2.1"/>
+         <text value="Besteht in der Blutsverwandtschaft eine erhöhte Blutungsneigung?"/>
+         <type value="boolean"/>
+         <required value="true"/>
+      </item>
+      <item>
+         <extension url="http://fhir.thieme-compliance.de/StructureDefinition/Einwilligung/QuestionnaireErlaeuterung">
+            <valueString value="Eine solche Störung kann zu verstärkter Blutung und damit zu gravierenden Komplikationen führen."/>
+         </extension>
+         <linkId value="MF_Blutgerinnungsstoerung_6266366_1.1"/>
+         <prefix value="3.1"/>
+         <text value="Besteht eine Blutgerinnungsstörung?"/>
+         <type value="open-choice"/>
+         <required value="true"/>
+         <repeats value="true"/>
+         <answerOption id="MF_Blutgerinnungsstoerung_6266366_1.1_none">
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-optionExclusive">
+               <valueBoolean value="true"/>
+            </extension>
+            <valueString value="nein"/>
+         </answerOption>
+         <answerOption id="MF_Blutgerinnungsstoerung_6266366_1.1_1">
+            <valueString value="Hämophilie"/>
+         </answerOption>
+         <answerOption id="MF_Blutgerinnungsstoerung_6266366_1.1_2">
+            <valueString value="Thrombozytopenie"/>
+         </answerOption>
+         <answerOption id="MF_Blutgerinnungsstoerung_6266366_1.1_3">
+            <valueString value="Von-Willebrand-Jürgens-Syndrom"/>
+         </answerOption>
+         <answerOption id="MF_Blutgerinnungsstoerung_6266366_1.1_4">
+            <valueString value="Faktorenmangel"/>
+         </answerOption>
+         <!--Die Freitext-Oder-Option muss durch den Questionnaire-Renderer aufgrund "open-choice" eingefügt werden.-->
+         <!--<answerOption id="MF_Blutgerinnungsstoerung_6266366_1.1_others"><valueString value="oder:"/></answerOption>-->
+      </item>
+      <item>
+         <linkId value="MF_Bluterkrankung_6248202_1.1"/>
+         <prefix value="4.1"/>
+         <text value="Besteht/​Bestand eine Bluterkrankung?"/>
+         <type value="open-choice"/>
+         <required value="true"/>
+         <repeats value="true"/>
+         <answerOption id="MF_Bluterkrankung_6248202_1.1_none">
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-optionExclusive">
+               <valueBoolean value="true"/>
+            </extension>
+            <valueString value="nein"/>
+         </answerOption>
+         <answerOption id="MF_Bluterkrankung_6248202_1.1_1">
+            <extension url="http://fhir.thieme-compliance.de/StructureDefinition/Einwilligung/QuestionnaireErlaeuterung">
+               <valueString value="Blutarmut, Mangel an roten Blutkörperchen oder rotem Blutfarbstoff"/>
+            </extension>
+            <valueString value="Anämie"/>
+         </answerOption>
+         <answerOption id="MF_Bluterkrankung_6248202_1.1_2">
+            <extension url="http://fhir.thieme-compliance.de/StructureDefinition/Einwilligung/QuestionnaireErlaeuterung">
+               <valueString value="Blutkrebs"/>
+            </extension>
+            <valueString value="Leukämie"/>
+         </answerOption>
+         <answerOption id="MF_Bluterkrankung_6248202_1.1_3">
+            <extension url="http://fhir.thieme-compliance.de/StructureDefinition/Einwilligung/QuestionnaireErlaeuterung">
+               <valueString value="Eine bestimmte Form von Knochenmarkkrebs, auch bezeichnet als Plasmozytom."/>
+            </extension>
+            <valueString value="Multiples Myelom"/>
+         </answerOption>
+         <!--Die Freitext-Oder-Option muss durch den Questionnaire-Renderer aufgrund "open-choice" eingefügt werden.-->
+         <!--<answerOption id="MF_Bluterkrankung_6248202_1.1_others"><valueString value="oder:"/></answerOption>-->
+      </item>
+      <item>
+         <linkId value="MF_Immunsystem_6252363_1.1"/>
+         <prefix value="5.1"/>
+         <text value="Besteht eine Erkrankung des Immunsystems?"/>
+         <type value="open-choice"/>
+         <required value="true"/>
+         <repeats value="true"/>
+         <answerOption id="MF_Immunsystem_6252363_1.1_none">
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-optionExclusive">
+               <valueBoolean value="true"/>
+            </extension>
+            <valueString value="nein"/>
+         </answerOption>
+         <answerOption id="MF_Immunsystem_6252363_1.1_1">
+            <valueString value="Colitis ulcerosa"/>
+         </answerOption>
+         <answerOption id="MF_Immunsystem_6252363_1.1_2">
+            <valueString value="Morbus Crohn"/>
+         </answerOption>
+         <answerOption id="MF_Immunsystem_6252363_1.1_3">
+            <valueString value="Multiple Sklerose"/>
+         </answerOption>
+         <answerOption id="MF_Immunsystem_6252363_1.1_4">
+            <valueString value="Rheuma"/>
+         </answerOption>
+         <answerOption id="MF_Immunsystem_6252363_1.1_5">
+            <valueString value="Sklerodermie"/>
+         </answerOption>
+         <answerOption id="MF_Immunsystem_6252363_1.1_6">
+            <valueString value="Lupus erythematodes"/>
+         </answerOption>
+         <answerOption id="MF_Immunsystem_6252363_1.1_7">
+            <valueString value="Immunschwäche"/>
+         </answerOption>
+         <!--Die Freitext-Oder-Option muss durch den Questionnaire-Renderer aufgrund "open-choice" eingefügt werden.-->
+         <!--<answerOption id="MF_Immunsystem_6252363_1.1_others"><valueString value="oder:"/></answerOption>-->
+      </item>
+      <item>
+         <linkId value="MF_Krebserkrankung_5771195_1.1"/>
+         <prefix value="6.1"/>
+         <text value="Besteht/​Bestand eine Krebserkrankung?"/>
+         <type value="open-choice"/>
+         <required value="true"/>
+         <repeats value="true"/>
+         <answerOption id="MF_Krebserkrankung_5771195_1.1_none">
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-optionExclusive">
+               <valueBoolean value="true"/>
+            </extension>
+            <valueString value="nein"/>
+         </answerOption>
+         <answerOption id="MF_Krebserkrankung_5771195_1.1_1">
+            <valueString value="Darm"/>
+         </answerOption>
+         <answerOption id="MF_Krebserkrankung_5771195_1.1_2">
+            <valueString value="Brust"/>
+         </answerOption>
+         <answerOption id="MF_Krebserkrankung_5771195_1.1_3">
+            <valueString value="Haut"/>
+         </answerOption>
+         <answerOption id="MF_Krebserkrankung_5771195_1.1_4">
+            <valueString value="Gebärmutter"/>
+         </answerOption>
+         <answerOption id="MF_Krebserkrankung_5771195_1.1_5">
+            <valueString value="Prostata"/>
+         </answerOption>
+         <answerOption id="MF_Krebserkrankung_5771195_1.1_6">
+            <valueString value="Lunge"/>
+         </answerOption>
+         <answerOption id="MF_Krebserkrankung_5771195_1.1_7">
+            <valueString value="Leber"/>
+         </answerOption>
+         <answerOption id="MF_Krebserkrankung_5771195_1.1_8">
+            <valueString value="Bauchspeicheldrüse"/>
+         </answerOption>
+         <!--Die Freitext-Oder-Option muss durch den Questionnaire-Renderer aufgrund "open-choice" eingefügt werden.-->
+         <!--<answerOption id="MF_Krebserkrankung_5771195_1.1_others"><valueString value="oder:"/></answerOption>-->
+      </item>
+   </item>
+   <item>
+      <linkId value="PC-SystA_06-2021v1_Frage_VIII.0"/>
+      <prefix value="VIII."/>
+      <text value="Fragen zum zentralen Nervensystem"/>
+      <type value="group"/>
+      <required value="true"/>
+      <item>
+         <linkId value="MF_Nervensystem_6259080_1.1"/>
+         <prefix value="1.1"/>
+         <text value="Besteht/​Bestand eine Erkrankung des Nervensystems?"/>
+         <type value="open-choice"/>
+         <required value="true"/>
+         <repeats value="true"/>
+         <answerOption id="MF_Nervensystem_6259080_1.1_none">
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-optionExclusive">
+               <valueBoolean value="true"/>
+            </extension>
+            <valueString value="nein"/>
+         </answerOption>
+         <answerOption id="MF_Nervensystem_6259080_1.1_1">
+            <valueString value="Gehstörungen/​Lähmungen"/>
+         </answerOption>
+         <answerOption id="MF_Nervensystem_6259080_1.1_2">
+            <valueString value="Krampfleiden (Epilepsie)"/>
+         </answerOption>
+         <answerOption id="MF_Nervensystem_6259080_1.1_3">
+            <extension url="http://fhir.thieme-compliance.de/StructureDefinition/Einwilligung/QuestionnaireErlaeuterung">
+               <valueString value="Langsam fortschreitende Erkrankung des Gehirns"/>
+            </extension>
+            <valueString value="Parkinson"/>
+         </answerOption>
+         <answerOption id="MF_Nervensystem_6259080_1.1_4">
+            <valueString value="Gefühlsstörungen"/>
+         </answerOption>
+         <answerOption id="MF_Nervensystem_6259080_1.1_5">
+            <extension url="http://fhir.thieme-compliance.de/StructureDefinition/Einwilligung/QuestionnaireErlaeuterung">
+               <valueString value="Empfindungsstörungen (Kribbeln und Kältegefühl) oder Lähmungen in den Beinen, Füßen, seltener in den Armen"/>
+            </extension>
+            <valueString value="Polyneuropathie"/>
+         </answerOption>
+         <answerOption id="MF_Nervensystem_6259080_1.1_6">
+            <valueString value="Schmerzen"/>
+         </answerOption>
+         <!--Die Freitext-Oder-Option muss durch den Questionnaire-Renderer aufgrund "open-choice" eingefügt werden.-->
+         <!--<answerOption id="MF_Nervensystem_6259080_1.1_others"><valueString value="oder:"/></answerOption>-->
+      </item>
+      <item>
+         <linkId value="MF_Schlaganfall_5771226_1.1"/>
+         <prefix value="2.1"/>
+         <text value="Hatten Sie schon einmal einen Schlaganfall?"/>
+         <type value="boolean"/>
+         <required value="true"/>
+      </item>
+      <item>
+         <linkId value="MF_Schlaganfall_5771226_1.2"/>
+         <prefix value="2.2"/>
+         <text value="Wenn ja, sind Einschränkungen zurückgeblieben?"/>
+         <type value="open-choice"/>
+         <enableWhen>
+            <question value="MF_Schlaganfall_5771226_1.1"/>
+            <operator value="="/>
+            <answerBoolean value="true"/>
+         </enableWhen>
+         <required value="true"/>
+         <repeats value="true"/>
+         <answerOption id="MF_Schlaganfall_5771226_1.2_none">
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-optionExclusive">
+               <valueBoolean value="true"/>
+            </extension>
+            <valueString value="nein"/>
+         </answerOption>
+         <answerOption id="MF_Schlaganfall_5771226_1.2_1">
+            <valueString value="Gehstörungen/​Lähmungen"/>
+         </answerOption>
+         <answerOption id="MF_Schlaganfall_5771226_1.2_2">
+            <valueString value="Sprachstörungen"/>
+         </answerOption>
+         <!--Die Freitext-Oder-Option muss durch den Questionnaire-Renderer aufgrund "open-choice" eingefügt werden.-->
+         <!--<answerOption id="MF_Schlaganfall_5771226_1.2_others"><valueString value="oder:"/></answerOption>-->
+      </item>
+   </item>
+   <item>
+      <linkId value="PC-SystA_06-2021v1_Frage_IX.0"/>
+      <prefix value="IX."/>
+      <text value="Frage zur Psyche"/>
+      <type value="group"/>
+      <required value="true"/>
+      <item>
+         <extension url="http://fhir.thieme-compliance.de/StructureDefinition/Einwilligung/QuestionnaireErlaeuterung">
+            <valueString value="Bitte beantworten Sie diese Frage wahrheitsgemäß, da dies unter Umständen für Ihre eigene Sicherheit relevant sein kann."/>
+         </extension>
+         <linkId value="MF_Psyche_6259089_1.1"/>
+         <prefix value="1.1"/>
+         <text value="Leiden Sie an einer psychischen Erkrankung?"/>
+         <type value="open-choice"/>
+         <required value="true"/>
+         <repeats value="true"/>
+         <answerOption id="MF_Psyche_6259089_1.1_none">
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-optionExclusive">
+               <valueBoolean value="true"/>
+            </extension>
+            <valueString value="nein"/>
+         </answerOption>
+         <answerOption id="MF_Psyche_6259089_1.1_1">
+            <valueString value="Depression"/>
+         </answerOption>
+         <answerOption id="MF_Psyche_6259089_1.1_2">
+            <extension url="http://fhir.thieme-compliance.de/StructureDefinition/Einwilligung/QuestionnaireErlaeuterung">
+               <valueString value="Tiefe emotionale, geistige und körperliche Erschöpfung"/>
+            </extension>
+            <valueString value="Burn-out"/>
+         </answerOption>
+         <answerOption id="MF_Psyche_6259089_1.1_3">
+            <extension url="http://fhir.thieme-compliance.de/StructureDefinition/Einwilligung/QuestionnaireErlaeuterung">
+               <valueString value="Psychische Erkrankung, bei der die Betroffenen die Realität verändert wahrnehmen oder verarbeiten."/>
+            </extension>
+            <valueString value="Schizophrenie"/>
+         </answerOption>
+         <answerOption id="MF_Psyche_6259089_1.1_4">
+            <extension url="http://fhir.thieme-compliance.de/StructureDefinition/Einwilligung/QuestionnaireErlaeuterung">
+               <valueString value="Psychische Erkrankung mit gestörter Selbstwahrnehmung"/>
+            </extension>
+            <valueString value="Borderline-Syndrom"/>
+         </answerOption>
+         <answerOption id="MF_Psyche_6259089_1.1_5">
+            <valueString value="Angststörungen"/>
+         </answerOption>
+         <!--Die Freitext-Oder-Option muss durch den Questionnaire-Renderer aufgrund "open-choice" eingefügt werden.-->
+         <!--<answerOption id="MF_Psyche_6259089_1.1_others"><valueString value="oder:"/></answerOption>-->
+      </item>
+   </item>
+   <item>
+      <linkId value="PC-SystA_06-2021v1_Frage_X.0"/>
+      <prefix value="X."/>
+      <text value="Fragen zu Gefäßerkrankungen"/>
+      <type value="group"/>
+      <required value="true"/>
+      <item>
+         <extension url="http://fhir.thieme-compliance.de/StructureDefinition/Einwilligung/QuestionnaireErlaeuterung">
+            <valueString value="Embolie: z.B. Lungenembolie"/>
+         </extension>
+         <linkId value="MF_Thrombose_6262588_1.1"/>
+         <prefix value="1.1"/>
+         <text value="Kam es schon einmal zu einem Gefäßverschluss durch Blutgerinnsel (Thrombose/​Embolie)?"/>
+         <type value="boolean"/>
+         <required value="true"/>
+      </item>
+      <item>
+         <linkId value="MF_Gefaesse_6251489_1.1"/>
+         <prefix value="2.1"/>
+         <text value="Besteht/​Bestand eine (weitere) Gefäßerkrankung?"/>
+         <type value="open-choice"/>
+         <required value="true"/>
+         <repeats value="true"/>
+         <answerOption id="MF_Gefaesse_6251489_1.1_none">
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-optionExclusive">
+               <valueBoolean value="true"/>
+            </extension>
+            <valueString value="nein"/>
+         </answerOption>
+         <answerOption id="MF_Gefaesse_6251489_1.1_1">
+            <extension url="http://fhir.thieme-compliance.de/StructureDefinition/Einwilligung/QuestionnaireErlaeuterung">
+               <valueString value="Die Arterien sind durch krankhafte Veränderungen (v.a. Kalkablagerungen) verengt."/>
+            </extension>
+            <valueString value="Arteriosklerose"/>
+         </answerOption>
+         <answerOption id="MF_Gefaesse_6251489_1.1_2">
+            <valueString value="Krampfadern"/>
+         </answerOption>
+         <answerOption id="MF_Gefaesse_6251489_1.1_3">
+            <extension url="http://fhir.thieme-compliance.de/StructureDefinition/Einwilligung/QuestionnaireErlaeuterung">
+               <valueString value="Die Herzkranzgefäße versorgen den Herzmuskel mit Blut; eine Verengung führt zur koronaren Herzkrankheit (KHK)."/>
+            </extension>
+            <valueString value="Erkrankung der Herzkranzgefäße"/>
+         </answerOption>
+         <answerOption id="MF_Gefaesse_6251489_1.1_4">
+            <valueString value="Durchblutungsstörung"/>
+         </answerOption>
+         <answerOption id="MF_Gefaesse_6251489_1.1_5">
+            <extension url="http://fhir.thieme-compliance.de/StructureDefinition/Einwilligung/QuestionnaireErlaeuterung">
+               <valueString value="Krankhafte Erweiterung/​Aussackung einer Arterie (oft an der Bauchaorta, im Gehirn)"/>
+            </extension>
+            <valueString value="Aneurysma"/>
+         </answerOption>
+         <answerOption id="MF_Gefaesse_6251489_1.1_6">
+            <extension url="http://fhir.thieme-compliance.de/StructureDefinition/Einwilligung/QuestionnaireErlaeuterung">
+               <valueString value="Karotisstenose"/>
+            </extension>
+            <valueString value="Verengung der Halsschlagader"/>
+         </answerOption>
+         <!--Die Freitext-Oder-Option muss durch den Questionnaire-Renderer aufgrund "open-choice" eingefügt werden.-->
+         <!--<answerOption id="MF_Gefaesse_6251489_1.1_others"><valueString value="oder:"/></answerOption>-->
+      </item>
+   </item>
+   <item>
+      <linkId value="PC-SystA_06-2021v1_Frage_XI.0"/>
+      <prefix value="XI."/>
+      <text value="Fragen zu Herz und Kreislauf"/>
+      <type value="group"/>
+      <required value="true"/>
+      <item>
+         <linkId value="MF_Herz_6252352_1.1"/>
+         <prefix value="1.1"/>
+         <text value="Besteht/​Bestand eine (weitere) Herz-/​Kreislauf-Erkrankung?"/>
+         <type value="open-choice"/>
+         <required value="true"/>
+         <repeats value="true"/>
+         <answerOption id="MF_Herz_6252352_1.1_none">
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-optionExclusive">
+               <valueBoolean value="true"/>
+            </extension>
+            <valueString value="nein"/>
+         </answerOption>
+         <answerOption id="MF_Herz_6252352_1.1_1">
+            <extension url="http://fhir.thieme-compliance.de/StructureDefinition/Einwilligung/QuestionnaireErlaeuterung">
+               <valueString value="Durch Gefäßverkalkung kommt es zu einer Einengung der Herzkranzgefäße (Koronararterien). Dadurch kann ein Herzinfarkt entstehen."/>
+            </extension>
+            <valueString value="koronare Herzkrankheit"/>
+         </answerOption>
+         <answerOption id="MF_Herz_6252352_1.1_2">
+            <valueString value="Bluthochdruck"/>
+         </answerOption>
+         <answerOption id="MF_Herz_6252352_1.1_3">
+            <extension url="http://fhir.thieme-compliance.de/StructureDefinition/Einwilligung/QuestionnaireErlaeuterung">
+               <valueString value="z.B. Herzrasen, Herzstolpern"/>
+            </extension>
+            <valueString value="Rhythmusstörungen"/>
+         </answerOption>
+         <answerOption id="MF_Herz_6252352_1.1_4">
+            <valueString value="Schlaganfall"/>
+         </answerOption>
+         <answerOption id="MF_Herz_6252352_1.1_5">
+            <valueString value="Herzinfarkt"/>
+         </answerOption>
+         <answerOption id="MF_Herz_6252352_1.1_6">
+            <extension url="http://fhir.thieme-compliance.de/StructureDefinition/Einwilligung/QuestionnaireErlaeuterung">
+               <valueString value="Brustenge mit plötzlich auftretendem Schmerz hinter dem Brustbein"/>
+            </extension>
+            <valueString value="Angina pectoris"/>
+         </answerOption>
+         <answerOption id="MF_Herz_6252352_1.1_7">
+            <extension url="http://fhir.thieme-compliance.de/StructureDefinition/Einwilligung/QuestionnaireErlaeuterung">
+               <valueString value="Myokarditis, ein Entzündungsprozess im Herzmuskel"/>
+            </extension>
+            <valueString value="Herzmuskelentzündung"/>
+         </answerOption>
+         <answerOption id="MF_Herz_6252352_1.1_8">
+            <valueString value="Klappenfehler"/>
+         </answerOption>
+         <!--Die Freitext-Oder-Option muss durch den Questionnaire-Renderer aufgrund "open-choice" eingefügt werden.-->
+         <!--<answerOption id="MF_Herz_6252352_1.1_others"><valueString value="oder:"/></answerOption>-->
+      </item>
+      <item>
+         <linkId value="MF_Atemnot_6246175_1.1"/>
+         <prefix value="2.1"/>
+         <text value="Tritt Atemnot beim Treppensteigen auf?"/>
+         <type value="boolean"/>
+         <required value="true"/>
+      </item>
+      <item>
+         <linkId value="MF_Atemnot_6246175_1.2"/>
+         <prefix value="2.2"/>
+         <text value="Wenn ja, nach wie vielen Treppenstufen müssen Sie stehen bleiben?"/>
+         <type value="integer"/>
+         <enableWhen>
+            <question value="MF_Atemnot_6246175_1.1"/>
+            <operator value="="/>
+            <answerBoolean value="true"/>
+         </enableWhen>
+         <required value="true"/>
+         <maxLength value="3"/>
+      </item>
+   </item>
+   <item>
+      <linkId value="PC-SystA_06-2021v1_Frage_XII.0"/>
+      <prefix value="XII."/>
+      <text value="Fragen zur Lunge und zu den Atemwegen"/>
+      <type value="group"/>
+      <required value="true"/>
+      <item>
+         <linkId value="MF_Lunge_6254774_1.1"/>
+         <prefix value="1.1"/>
+         <text value="Besteht/​Bestand eine Atemwegs-/​Lungenerkrankung?"/>
+         <type value="open-choice"/>
+         <required value="true"/>
+         <repeats value="true"/>
+         <answerOption id="MF_Lunge_6254774_1.1_none">
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-optionExclusive">
+               <valueBoolean value="true"/>
+            </extension>
+            <valueString value="nein"/>
+         </answerOption>
+         <answerOption id="MF_Lunge_6254774_1.1_1">
+            <valueString value="chronische Bronchitis"/>
+         </answerOption>
+         <answerOption id="MF_Lunge_6254774_1.1_2">
+            <extension url="http://fhir.thieme-compliance.de/StructureDefinition/Einwilligung/QuestionnaireErlaeuterung">
+               <valueString value="Entzündung der Lunge durch Bakterien, Viren oder Pilze."/>
+            </extension>
+            <valueString value="Lungenentzündung"/>
+         </answerOption>
+         <answerOption id="MF_Lunge_6254774_1.1_3">
+            <extension url="http://fhir.thieme-compliance.de/StructureDefinition/Einwilligung/QuestionnaireErlaeuterung">
+               <valueString value="Chronische Erkrankung, bei der die Atemwege kurzzeitig oder dauerhaft verengt sind."/>
+            </extension>
+            <valueString value="Asthma bronchiale"/>
+         </answerOption>
+         <answerOption id="MF_Lunge_6254774_1.1_4">
+            <extension url="http://fhir.thieme-compliance.de/StructureDefinition/Einwilligung/QuestionnaireErlaeuterung">
+               <valueString value="Vergrößerung (Überblähung) der Lunge mit Atemnot und Reizhusten; Lungenemphysem"/>
+            </extension>
+            <valueString value="Lungenblähung"/>
+         </answerOption>
+         <answerOption id="MF_Lunge_6254774_1.1_5">
+            <extension url="http://fhir.thieme-compliance.de/StructureDefinition/Einwilligung/QuestionnaireErlaeuterung">
+               <valueString value="z.B. Lungenzysten, angeborenes Emphysem"/>
+            </extension>
+            <valueString value="angeborene Fehlbildung"/>
+         </answerOption>
+         <!--Die Freitext-Oder-Option muss durch den Questionnaire-Renderer aufgrund "open-choice" eingefügt werden.-->
+         <!--<answerOption id="MF_Lunge_6254774_1.1_others"><valueString value="oder:"/></answerOption>-->
+      </item>
+      <item>
+         <linkId value="MF_Schnarchen_Schlafapnoe_6262571_1.1"/>
+         <prefix value="2.1"/>
+         <text value="Treten nächtliche Atemstörungen auf?"/>
+         <type value="open-choice"/>
+         <required value="true"/>
+         <repeats value="true"/>
+         <answerOption id="MF_Schnarchen_Schlafapnoe_6262571_1.1_none">
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-optionExclusive">
+               <valueBoolean value="true"/>
+            </extension>
+            <valueString value="nein"/>
+         </answerOption>
+         <answerOption id="MF_Schnarchen_Schlafapnoe_6262571_1.1_1">
+            <valueString value="starkes Schnarchen"/>
+         </answerOption>
+         <answerOption id="MF_Schnarchen_Schlafapnoe_6262571_1.1_2">
+            <extension url="http://fhir.thieme-compliance.de/StructureDefinition/Einwilligung/QuestionnaireErlaeuterung">
+               <valueString value="Wiederkehrende Atemaussetzer während des Schlafs"/>
+            </extension>
+            <valueString value="Schlafapnoe"/>
+         </answerOption>
+         <!--Die Freitext-Oder-Option muss durch den Questionnaire-Renderer aufgrund "open-choice" eingefügt werden.-->
+         <!--<answerOption id="MF_Schnarchen_Schlafapnoe_6262571_1.1_others"><valueString value="oder:"/></answerOption>-->
+      </item>
+   </item>
+   <item>
+      <linkId value="PC-SystA_06-2021v1_Frage_XIII.0"/>
+      <prefix value="XIII."/>
+      <text value="Fragen zur Haut"/>
+      <type value="group"/>
+      <required value="true"/>
+      <item>
+         <linkId value="MF_Haut_6251501_1.1"/>
+         <prefix value="1.1"/>
+         <text value="Besteht eine Hauterkrankung?"/>
+         <type value="open-choice"/>
+         <required value="true"/>
+         <repeats value="true"/>
+         <answerOption id="MF_Haut_6251501_1.1_none">
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-optionExclusive">
+               <valueBoolean value="true"/>
+            </extension>
+            <valueString value="nein"/>
+         </answerOption>
+         <answerOption id="MF_Haut_6251501_1.1_1">
+            <valueString value="Ausschlag"/>
+         </answerOption>
+         <answerOption id="MF_Haut_6251501_1.1_2">
+            <valueString value="Schuppenflechte"/>
+         </answerOption>
+         <answerOption id="MF_Haut_6251501_1.1_3">
+            <valueString value="Tumor"/>
+         </answerOption>
+         <!--Die Freitext-Oder-Option muss durch den Questionnaire-Renderer aufgrund "open-choice" eingefügt werden.-->
+         <!--<answerOption id="MF_Haut_6251501_1.1_others"><valueString value="oder:"/></answerOption>-->
+      </item>
+      <item>
+         <linkId value="MF_Narben_6259077_1.1"/>
+         <prefix value="2.1"/>
+         <text value="Kam es schon einmal zu einer Narbenwucherung wie z.B. Keloid?"/>
+         <type value="boolean"/>
+         <required value="true"/>
+      </item>
+   </item>
+   <item>
+      <linkId value="PC-SystA_06-2021v1_Frage_XIV.0"/>
+      <prefix value="XIV."/>
+      <text value="Fragen zu Muskeln und Skelett"/>
+      <type value="group"/>
+      <required value="true"/>
+      <item>
+         <linkId value="MF_Muskel_Skelett_6259071_1.1"/>
+         <prefix value="1.1"/>
+         <text value="Besteht/​Bestand eine Muskel- oder Skeletterkrankung?"/>
+         <type value="open-choice"/>
+         <required value="true"/>
+         <repeats value="true"/>
+         <answerOption id="MF_Muskel_Skelett_6259071_1.1_none">
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-optionExclusive">
+               <valueBoolean value="true"/>
+            </extension>
+            <valueString value="nein"/>
+         </answerOption>
+         <answerOption id="MF_Muskel_Skelett_6259071_1.1_1">
+            <extension url="http://fhir.thieme-compliance.de/StructureDefinition/Einwilligung/QuestionnaireErlaeuterung">
+               <valueString value="Rückgang der Muskelmasse mit daraus resultierender fehlender Kraftentwicklung des Muskels"/>
+            </extension>
+            <valueString value="Muskelschwäche"/>
+         </answerOption>
+         <answerOption id="MF_Muskel_Skelett_6259071_1.1_2">
+            <extension url="http://fhir.thieme-compliance.de/StructureDefinition/Einwilligung/QuestionnaireErlaeuterung">
+               <valueString value="z.B. Arthrose"/>
+            </extension>
+            <valueString value="Gelenkerkrankung"/>
+         </answerOption>
+         <answerOption id="MF_Muskel_Skelett_6259071_1.1_3">
+            <extension url="http://fhir.thieme-compliance.de/StructureDefinition/Einwilligung/QuestionnaireErlaeuterung">
+               <valueString value="Abnahme der Knochendichte; die Knochen verlieren an Festigkeit und brechen leichter (sog. „Knochenschwund“)"/>
+            </extension>
+            <valueString value="Osteoporose"/>
+         </answerOption>
+         <answerOption id="MF_Muskel_Skelett_6259071_1.1_4">
+            <extension url="http://fhir.thieme-compliance.de/StructureDefinition/Einwilligung/QuestionnaireErlaeuterung">
+               <valueString value="Krankhafte Erweichung des Knochens"/>
+            </extension>
+            <valueString value="Osteomalazie"/>
+         </answerOption>
+         <!--Die Freitext-Oder-Option muss durch den Questionnaire-Renderer aufgrund "open-choice" eingefügt werden.-->
+         <!--<answerOption id="MF_Muskel_Skelett_6259071_1.1_others"><valueString value="oder:"/></answerOption>-->
+      </item>
+      <item>
+         <linkId value="MF_Wirbelsaeule_5771252_1.1"/>
+         <prefix value="2.1"/>
+         <text value="Besteht eine Schädigung der Wirbelsäule?"/>
+         <type value="open-choice"/>
+         <required value="true"/>
+         <repeats value="true"/>
+         <answerOption id="MF_Wirbelsaeule_5771252_1.1_none">
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-optionExclusive">
+               <valueBoolean value="true"/>
+            </extension>
+            <valueString value="nein"/>
+         </answerOption>
+         <answerOption id="MF_Wirbelsaeule_5771252_1.1_1">
+            <valueString value="Bandscheibenschaden"/>
+         </answerOption>
+         <answerOption id="MF_Wirbelsaeule_5771252_1.1_2">
+            <valueString value="Enge des Wirbelkanals (Spinalkanalstenose)"/>
+         </answerOption>
+         <!--Die Freitext-Oder-Option muss durch den Questionnaire-Renderer aufgrund "open-choice" eingefügt werden.-->
+         <!--<answerOption id="MF_Wirbelsaeule_5771252_1.1_others"><valueString value="oder:"/></answerOption>-->
+      </item>
+      <item>
+         <linkId value="MF_Gelenkbeschwerden_5771154_1.1"/>
+         <prefix value="3.1"/>
+         <text value="Bestehen Gelenkbeschwerden?"/>
+         <type value="open-choice"/>
+         <required value="true"/>
+         <repeats value="true"/>
+         <answerOption id="MF_Gelenkbeschwerden_5771154_1.1_none">
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-optionExclusive">
+               <valueBoolean value="true"/>
+            </extension>
+            <valueString value="nein"/>
+         </answerOption>
+         <answerOption id="MF_Gelenkbeschwerden_5771154_1.1_1">
+            <valueString value="Hüfte"/>
+         </answerOption>
+         <answerOption id="MF_Gelenkbeschwerden_5771154_1.1_2">
+            <valueString value="Schulter"/>
+         </answerOption>
+         <answerOption id="MF_Gelenkbeschwerden_5771154_1.1_3">
+            <valueString value="Finger"/>
+         </answerOption>
+         <answerOption id="MF_Gelenkbeschwerden_5771154_1.1_4">
+            <valueString value="Knie"/>
+         </answerOption>
+         <answerOption id="MF_Gelenkbeschwerden_5771154_1.1_5">
+            <valueString value="Zehen"/>
+         </answerOption>
+         <answerOption id="MF_Gelenkbeschwerden_5771154_1.1_6">
+            <valueString value="Ellenbogen"/>
+         </answerOption>
+         <answerOption id="MF_Gelenkbeschwerden_5771154_1.1_7">
+            <valueString value="Sprunggelenk"/>
+         </answerOption>
+         <!--Die Freitext-Oder-Option muss durch den Questionnaire-Renderer aufgrund "open-choice" eingefügt werden.-->
+         <!--<answerOption id="MF_Gelenkbeschwerden_5771154_1.1_others"><valueString value="oder:"/></answerOption>-->
+      </item>
+      <item>
+         <linkId value="MF_Bauchwandschwaeche_5772665_1.1"/>
+         <prefix value="4.1"/>
+         <text value="Besteht eine Schwäche der Bauchwand?"/>
+         <type value="open-choice"/>
+         <required value="true"/>
+         <repeats value="true"/>
+         <answerOption id="MF_Bauchwandschwaeche_5772665_1.1_none">
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-optionExclusive">
+               <valueBoolean value="true"/>
+            </extension>
+            <valueString value="nein"/>
+         </answerOption>
+         <answerOption id="MF_Bauchwandschwaeche_5772665_1.1_1">
+            <valueString value="Bauchwandbruch"/>
+         </answerOption>
+         <answerOption id="MF_Bauchwandschwaeche_5772665_1.1_2">
+            <valueString value="Leistenbruch"/>
+         </answerOption>
+         <answerOption id="MF_Bauchwandschwaeche_5772665_1.1_3">
+            <valueString value="Narbenbruch"/>
+         </answerOption>
+         <!--Die Freitext-Oder-Option muss durch den Questionnaire-Renderer aufgrund "open-choice" eingefügt werden.-->
+         <!--<answerOption id="MF_Bauchwandschwaeche_5772665_1.1_others"><valueString value="oder:"/></answerOption>-->
+      </item>
+   </item>
+   <item>
+      <linkId value="PC-SystA_06-2021v1_Frage_XV.0"/>
+      <prefix value="XV."/>
+      <text value="Frage zu den Zähnen/​dem Zahnstatus"/>
+      <type value="group"/>
+      <required value="true"/>
+      <item>
+         <linkId value="MF_Zahnstatus_6262597_1.1"/>
+         <prefix value="1.1"/>
+         <text value="Gibt es Besonderheiten beim Zustand der Zähne?"/>
+         <type value="open-choice"/>
+         <required value="true"/>
+         <repeats value="true"/>
+         <answerOption id="MF_Zahnstatus_6262597_1.1_none">
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-optionExclusive">
+               <valueBoolean value="true"/>
+            </extension>
+            <valueString value="nein"/>
+         </answerOption>
+         <answerOption id="MF_Zahnstatus_6262597_1.1_1">
+            <valueString value="lockere Zähne"/>
+         </answerOption>
+         <answerOption id="MF_Zahnstatus_6262597_1.1_2">
+            <valueString value="Zahnspange"/>
+         </answerOption>
+         <answerOption id="MF_Zahnstatus_6262597_1.1_3">
+            <valueString value="Prothese"/>
+         </answerOption>
+         <answerOption id="MF_Zahnstatus_6262597_1.1_4">
+            <valueString value="Brücke"/>
+         </answerOption>
+         <answerOption id="MF_Zahnstatus_6262597_1.1_5">
+            <valueString value="Krone"/>
+         </answerOption>
+         <answerOption id="MF_Zahnstatus_6262597_1.1_6">
+            <valueString value="Implantat"/>
+         </answerOption>
+         <answerOption id="MF_Zahnstatus_6262597_1.1_7">
+            <valueString value="Retainer"/>
+         </answerOption>
+         <answerOption id="MF_Zahnstatus_6262597_1.1_8">
+            <valueString value="Parodontose"/>
+         </answerOption>
+         <!--Die Freitext-Oder-Option muss durch den Questionnaire-Renderer aufgrund "open-choice" eingefügt werden.-->
+         <!--<answerOption id="MF_Zahnstatus_6262597_1.1_others"><valueString value="oder:"/></answerOption>-->
+      </item>
+   </item>
+   <item>
+      <linkId value="PC-SystA_06-2021v1_Frage_XVI.0"/>
+      <prefix value="XVI."/>
+      <text value="Fragen zur Verdauung"/>
+      <type value="group"/>
+      <required value="true"/>
+      <item>
+         <linkId value="MF_Verdauung_5766844_1.1"/>
+         <prefix value="1.1"/>
+         <text value="Besteht/​Bestand eine Erkrankung des Verdauungssystems?"/>
+         <type value="open-choice"/>
+         <required value="true"/>
+         <repeats value="true"/>
+         <answerOption id="MF_Verdauung_5766844_1.1_none">
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-optionExclusive">
+               <valueBoolean value="true"/>
+            </extension>
+            <valueString value="nein"/>
+         </answerOption>
+         <answerOption id="MF_Verdauung_5766844_1.1_1">
+            <valueString value="Speiseröhre"/>
+         </answerOption>
+         <answerOption id="MF_Verdauung_5766844_1.1_2">
+            <valueString value="Magen"/>
+         </answerOption>
+         <answerOption id="MF_Verdauung_5766844_1.1_3">
+            <valueString value="Darm"/>
+         </answerOption>
+         <!--Die Freitext-Oder-Option muss durch den Questionnaire-Renderer aufgrund "open-choice" eingefügt werden.-->
+         <!--<answerOption id="MF_Verdauung_5766844_1.1_others"><valueString value="oder:"/></answerOption>-->
+      </item>
+      <item>
+         <linkId value="MF_Beschwerden_Nahrungsaufnahme_5771095_1.1"/>
+         <prefix value="2.1"/>
+         <text value="Bestehen derzeit Beschwerden bei der Nahrungsaufnahme?"/>
+         <type value="open-choice"/>
+         <required value="true"/>
+         <repeats value="true"/>
+         <answerOption id="MF_Beschwerden_Nahrungsaufnahme_5771095_1.1_none">
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-optionExclusive">
+               <valueBoolean value="true"/>
+            </extension>
+            <valueString value="nein"/>
+         </answerOption>
+         <answerOption id="MF_Beschwerden_Nahrungsaufnahme_5771095_1.1_1">
+            <valueString value="Appetitlosigkeit"/>
+         </answerOption>
+         <answerOption id="MF_Beschwerden_Nahrungsaufnahme_5771095_1.1_2">
+            <valueString value="Schluckstörungen"/>
+         </answerOption>
+         <answerOption id="MF_Beschwerden_Nahrungsaufnahme_5771095_1.1_3">
+            <valueString value="Schmerzen"/>
+         </answerOption>
+         <!--Die Freitext-Oder-Option muss durch den Questionnaire-Renderer aufgrund "open-choice" eingefügt werden.-->
+         <!--<answerOption id="MF_Beschwerden_Nahrungsaufnahme_5771095_1.1_others"><valueString value="oder:"/></answerOption>-->
+      </item>
+      <item>
+         <linkId value="MF_Beschwerden_Verdauung_5771097_1.1"/>
+         <prefix value="3.1"/>
+         <text value="Bestehen derzeit Beschwerden bei der Verdauung?"/>
+         <type value="open-choice"/>
+         <required value="true"/>
+         <repeats value="true"/>
+         <answerOption id="MF_Beschwerden_Verdauung_5771097_1.1_none">
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-optionExclusive">
+               <valueBoolean value="true"/>
+            </extension>
+            <valueString value="nein"/>
+         </answerOption>
+         <answerOption id="MF_Beschwerden_Verdauung_5771097_1.1_1">
+            <valueString value="Verstopfung"/>
+         </answerOption>
+         <answerOption id="MF_Beschwerden_Verdauung_5771097_1.1_2">
+            <valueString value="Durchfälle"/>
+         </answerOption>
+         <answerOption id="MF_Beschwerden_Verdauung_5771097_1.1_3">
+            <valueString value="Blähungen"/>
+         </answerOption>
+         <answerOption id="MF_Beschwerden_Verdauung_5771097_1.1_4">
+            <valueString value="Schmerzen"/>
+         </answerOption>
+         <answerOption id="MF_Beschwerden_Verdauung_5771097_1.1_5">
+            <valueString value="Beimengungen im Stuhlgang"/>
+         </answerOption>
+         <answerOption id="MF_Beschwerden_Verdauung_5771097_1.1_6">
+            <valueString value="Stuhlhalteschwäche"/>
+         </answerOption>
+         <!--Die Freitext-Oder-Option muss durch den Questionnaire-Renderer aufgrund "open-choice" eingefügt werden.-->
+         <!--<answerOption id="MF_Beschwerden_Verdauung_5771097_1.1_others"><valueString value="oder:"/></answerOption>-->
+      </item>
+      <item>
+         <linkId value="MF_Sodbrennen_6262575_1.1"/>
+         <prefix value="4.1"/>
+         <text value="Tritt häufiger Sodbrennen auf?"/>
+         <type value="boolean"/>
+         <required value="true"/>
+      </item>
+      <item>
+         <linkId value="MF_Refluxkrankheit_5771207_1.1"/>
+         <prefix value="5.1"/>
+         <text value="Besteht eine Refluxkrankheit?"/>
+         <type value="boolean"/>
+         <required value="true"/>
+      </item>
+      <item>
+         <linkId value="MF_Zwerchfellbruch_5771269_1.1"/>
+         <prefix value="6.1"/>
+         <text value="Besteht ein Zwerchfellbruch?"/>
+         <type value="boolean"/>
+         <required value="true"/>
+      </item>
+   </item>
+   <item>
+      <linkId value="PC-SystA_06-2021v1_Frage_XVII.0"/>
+      <prefix value="XVII."/>
+      <text value="Frage zu den Oberbauchorganen"/>
+      <type value="group"/>
+      <required value="true"/>
+      <item>
+         <linkId value="MF_Leber_Galle_6254771_1.1"/>
+         <prefix value="1.1"/>
+         <text value="Bestand eine Erkrankung der Oberbauchorgane?"/>
+         <type value="open-choice"/>
+         <required value="true"/>
+         <repeats value="true"/>
+         <answerOption id="MF_Leber_Galle_6254771_1.1_none">
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-optionExclusive">
+               <valueBoolean value="true"/>
+            </extension>
+            <valueString value="nein"/>
+         </answerOption>
+         <answerOption id="MF_Leber_Galle_6254771_1.1_1">
+            <valueString value="Leberentzündung/​Hepatitis"/>
+         </answerOption>
+         <answerOption id="MF_Leber_Galle_6254771_1.1_2">
+            <extension url="http://fhir.thieme-compliance.de/StructureDefinition/Einwilligung/QuestionnaireErlaeuterung">
+               <valueString value="Krankhaft erhöhter Fettgehalt des Gewebes der Leber (Leberverfettung)"/>
+            </extension>
+            <valueString value="Fettleber"/>
+         </answerOption>
+         <answerOption id="MF_Leber_Galle_6254771_1.1_3">
+            <extension url="http://fhir.thieme-compliance.de/StructureDefinition/Einwilligung/QuestionnaireErlaeuterung">
+               <valueString value="Leberverhärtung durch eine chronische Leberentzündung"/>
+            </extension>
+            <valueString value="Zirrhose"/>
+         </answerOption>
+         <answerOption id="MF_Leber_Galle_6254771_1.1_4">
+            <valueString value="Gallenkoliken/​-steine"/>
+         </answerOption>
+         <answerOption id="MF_Leber_Galle_6254771_1.1_5">
+            <valueString value="Gelbsucht"/>
+         </answerOption>
+         <answerOption id="MF_Leber_Galle_6254771_1.1_6">
+            <extension url="http://fhir.thieme-compliance.de/StructureDefinition/Einwilligung/QuestionnaireErlaeuterung">
+               <valueString value="Bauchspeicheldrüsenentzündung"/>
+            </extension>
+            <valueString value="Pankreatitis"/>
+         </answerOption>
+         <!--Die Freitext-Oder-Option muss durch den Questionnaire-Renderer aufgrund "open-choice" eingefügt werden.-->
+         <!--<answerOption id="MF_Leber_Galle_6254771_1.1_others"><valueString value="oder:"/></answerOption>-->
+      </item>
+   </item>
+   <item>
+      <linkId value="PC-SystA_06-2021v1_Frage_XVIII.0"/>
+      <prefix value="XVIII."/>
+      <text value="Frage zu den Nieren/​ableitenden Harnorganen"/>
+      <type value="group"/>
+      <required value="true"/>
+      <item>
+         <linkId value="MF_Niere_Harn_6259083_1.1"/>
+         <prefix value="1.1"/>
+         <text value="Besteht/​Bestand eine Erkrankung oder Fehlbildung der Nieren bzw. Harnorgane?"/>
+         <type value="open-choice"/>
+         <required value="true"/>
+         <repeats value="true"/>
+         <answerOption id="MF_Niere_Harn_6259083_1.1_none">
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-optionExclusive">
+               <valueBoolean value="true"/>
+            </extension>
+            <valueString value="nein"/>
+         </answerOption>
+         <answerOption id="MF_Niere_Harn_6259083_1.1_1">
+            <extension url="http://fhir.thieme-compliance.de/StructureDefinition/Einwilligung/QuestionnaireErlaeuterung">
+               <valueString value="Die Konzentration von bestimmten Stoffwechselendprodukten (z.B. Kreatinin, Harnstoff, Harnsäure) ist im Blut erhöht. Dadurch kommt es zur Unterfunktion einer oder beider Nieren (Niereninsuffizienz)."/>
+            </extension>
+            <valueString value="Nierenfunktionsstörung"/>
+         </answerOption>
+         <answerOption id="MF_Niere_Harn_6259083_1.1_2">
+            <valueString value="Nierensteine"/>
+         </answerOption>
+         <answerOption id="MF_Niere_Harn_6259083_1.1_3">
+            <extension url="http://fhir.thieme-compliance.de/StructureDefinition/Einwilligung/QuestionnaireErlaeuterung">
+               <valueString value="z.B. Blasenentzündung"/>
+            </extension>
+            <valueString value="chronischer Harnwegsinfekt"/>
+         </answerOption>
+         <answerOption id="MF_Niere_Harn_6259083_1.1_4">
+            <valueString value="Nierenentzündung"/>
+         </answerOption>
+         <answerOption id="MF_Niere_Harn_6259083_1.1_5">
+            <valueString value="angeborene Fehlbildung (z.B. Doppelniere)"/>
+         </answerOption>
+         <answerOption id="MF_Niere_Harn_6259083_1.1_6">
+            <valueString value="Blasenentleerungsstörung/​verzögerte Blasenentleerung"/>
+         </answerOption>
+         <!--Die Freitext-Oder-Option muss durch den Questionnaire-Renderer aufgrund "open-choice" eingefügt werden.-->
+         <!--<answerOption id="MF_Niere_Harn_6259083_1.1_others"><valueString value="oder:"/></answerOption>-->
+      </item>
+   </item>
+   <item>
+      <linkId value="PC-SystA_06-2021v1_Frage_XIX.0"/>
+      <prefix value="XIX."/>
+      <text value="Fragen für Männer"/>
+      <type value="group"/>
+      <required value="true"/>
+      <item>
+         <linkId value="MF_Maenner_Prostata_5771745_1.1"/>
+         <prefix value="1.1"/>
+         <text value="Besteht/​Bestand eine Prostataerkrankung?"/>
+         <type value="open-choice"/>
+         <enableWhen>
+            <question value="baseDataDecimalGender"/>
+            <operator value="="/>
+            <answerString value="männlich"/>
+         </enableWhen>
+         <required value="true"/>
+         <repeats value="true"/>
+         <answerOption id="MF_Maenner_Prostata_5771745_1.1_none">
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-optionExclusive">
+               <valueBoolean value="true"/>
+            </extension>
+            <valueString value="nein"/>
+         </answerOption>
+         <answerOption id="MF_Maenner_Prostata_5771745_1.1_1">
+            <valueString value="Prostatavergrößerung"/>
+         </answerOption>
+         <answerOption id="MF_Maenner_Prostata_5771745_1.1_2">
+            <valueString value="Prostataentzündung"/>
+         </answerOption>
+         <answerOption id="MF_Maenner_Prostata_5771745_1.1_3">
+            <valueString value="Prostatakrebs"/>
+         </answerOption>
+         <!--Die Freitext-Oder-Option muss durch den Questionnaire-Renderer aufgrund "open-choice" eingefügt werden.-->
+         <!--<answerOption id="MF_Maenner_Prostata_5771745_1.1_others"><valueString value="oder:"/></answerOption>-->
+      </item>
+      <item>
+         <linkId value="MF_Maenner_Erektionsstoerung_5750779_1.1"/>
+         <prefix value="2.1"/>
+         <text value="Leiden Sie unter Störungen der Sexualfunktion?"/>
+         <type value="open-choice"/>
+         <enableWhen>
+            <question value="baseDataDecimalGender"/>
+            <operator value="="/>
+            <answerString value="männlich"/>
+         </enableWhen>
+         <required value="true"/>
+         <repeats value="true"/>
+         <answerOption id="MF_Maenner_Erektionsstoerung_5750779_1.1_none">
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-optionExclusive">
+               <valueBoolean value="true"/>
+            </extension>
+            <valueString value="nein"/>
+         </answerOption>
+         <answerOption id="MF_Maenner_Erektionsstoerung_5750779_1.1_1">
+            <valueString value="mangelnde Gliedsteife (Erektionsstörung)"/>
+         </answerOption>
+         <answerOption id="MF_Maenner_Erektionsstoerung_5750779_1.1_2">
+            <valueString value="Störungen des Samenergusses"/>
+         </answerOption>
+         <!--Die Freitext-Oder-Option muss durch den Questionnaire-Renderer aufgrund "open-choice" eingefügt werden.-->
+         <!--<answerOption id="MF_Maenner_Erektionsstoerung_5750779_1.1_others"><valueString value="oder:"/></answerOption>-->
+      </item>
+   </item>
+   <item>
+      <linkId value="PC-SystA_06-2021v1_Frage_XX.0"/>
+      <prefix value="XX."/>
+      <text value="Fragen zum endokrinen System"/>
+      <type value="group"/>
+      <required value="true"/>
+      <item>
+         <linkId value="MF_Schilddruese_6259092_1.1"/>
+         <prefix value="1.1"/>
+         <text value="Besteht/​Bestand eine Schilddrüsenerkrankung?"/>
+         <type value="open-choice"/>
+         <required value="true"/>
+         <repeats value="true"/>
+         <answerOption id="MF_Schilddruese_6259092_1.1_none">
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-optionExclusive">
+               <valueBoolean value="true"/>
+            </extension>
+            <valueString value="nein"/>
+         </answerOption>
+         <answerOption id="MF_Schilddruese_6259092_1.1_1">
+            <extension url="http://fhir.thieme-compliance.de/StructureDefinition/Einwilligung/QuestionnaireErlaeuterung">
+               <valueString value="Die Schilddrüse bildet zu viele Hormone. Mögliche Symptome sind Ruhelosigkeit, Zittern, schneller Herzschlag, Gewichtsverlust, übermäßiges Schwitzen."/>
+            </extension>
+            <valueString value="Überfunktion"/>
+         </answerOption>
+         <answerOption id="MF_Schilddruese_6259092_1.1_2">
+            <extension url="http://fhir.thieme-compliance.de/StructureDefinition/Einwilligung/QuestionnaireErlaeuterung">
+               <valueString value="Die Schilddrüse bildet zu wenig Hormone. Mögliche Symptome sind Müdigkeit, Gewichtszunahme, Gedächtnisprobleme, trockene Haut, Kropf. Die Schilddrüse ist durch Jodmangel oft vergrößert."/>
+            </extension>
+            <valueString value="Unterfunktion"/>
+         </answerOption>
+         <answerOption id="MF_Schilddruese_6259092_1.1_3">
+            <extension url="http://fhir.thieme-compliance.de/StructureDefinition/Einwilligung/QuestionnaireErlaeuterung">
+               <valueString value="Sichtbare Vergrößerung der Schilddrüse"/>
+            </extension>
+            <valueString value="Kropf"/>
+         </answerOption>
+         <answerOption id="MF_Schilddruese_6259092_1.1_4">
+            <extension url="http://fhir.thieme-compliance.de/StructureDefinition/Einwilligung/QuestionnaireErlaeuterung">
+               <valueString value="Autoimmunerkrankung, die zu einer chronischen Entzündung der Schilddrüse führt."/>
+            </extension>
+            <valueString value="Hashimoto"/>
+         </answerOption>
+         <!--Die Freitext-Oder-Option muss durch den Questionnaire-Renderer aufgrund "open-choice" eingefügt werden.-->
+         <!--<answerOption id="MF_Schilddruese_6259092_1.1_others"><valueString value="oder:"/></answerOption>-->
+      </item>
+      <item>
+         <linkId value="MF_Stoffwechsel_6262582_1.1"/>
+         <prefix value="2.1"/>
+         <text value="Besteht eine Stoffwechselerkrankung?"/>
+         <type value="open-choice"/>
+         <required value="true"/>
+         <repeats value="true"/>
+         <answerOption id="MF_Stoffwechsel_6262582_1.1_none">
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-optionExclusive">
+               <valueBoolean value="true"/>
+            </extension>
+            <valueString value="nein"/>
+         </answerOption>
+         <answerOption id="MF_Stoffwechsel_6262582_1.1_1">
+            <extension url="http://fhir.thieme-compliance.de/StructureDefinition/Einwilligung/QuestionnaireErlaeuterung">
+               <valueString value="Diabetes; chronische Stoffwechselerkrankung"/>
+            </extension>
+            <valueString value="Zuckerkrankheit"/>
+         </answerOption>
+         <answerOption id="MF_Stoffwechsel_6262582_1.1_2">
+            <extension url="http://fhir.thieme-compliance.de/StructureDefinition/Einwilligung/QuestionnaireErlaeuterung">
+               <valueString value="Stoffwechselstörung, die vor allem schmerzhafte Entzündungen in den Gelenken verursacht. Ursache ist zu viel Harnsäure im Blut."/>
+            </extension>
+            <valueString value="Gicht"/>
+         </answerOption>
+         <!--Die Freitext-Oder-Option muss durch den Questionnaire-Renderer aufgrund "open-choice" eingefügt werden.-->
+         <!--<answerOption id="MF_Stoffwechsel_6262582_1.1_others"><valueString value="oder:"/></answerOption>-->
+      </item>
+      <item>
+         <linkId value="MF_Erkrankungen_endokrine_5771113_1.1"/>
+         <prefix value="3.1"/>
+         <text value="Sind weitere endokrine Erkrankungen bekannt?"/>
+         <type value="open-choice"/>
+         <required value="true"/>
+         <repeats value="true"/>
+         <answerOption id="MF_Erkrankungen_endokrine_5771113_1.1_none">
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-optionExclusive">
+               <valueBoolean value="true"/>
+            </extension>
+            <valueString value="nein"/>
+         </answerOption>
+         <answerOption id="MF_Erkrankungen_endokrine_5771113_1.1_1">
+            <valueString value="Über-/​Unterfunktion der Nebenschilddrüse"/>
+         </answerOption>
+         <answerOption id="MF_Erkrankungen_endokrine_5771113_1.1_2">
+            <valueString value="Morbus Cushing"/>
+         </answerOption>
+         <answerOption id="MF_Erkrankungen_endokrine_5771113_1.1_3">
+            <valueString value="Hypophysenerkrankung"/>
+         </answerOption>
+         <!--Die Freitext-Oder-Option muss durch den Questionnaire-Renderer aufgrund "open-choice" eingefügt werden.-->
+         <!--<answerOption id="MF_Erkrankungen_endokrine_5771113_1.1_others"><valueString value="oder:"/></answerOption>-->
+      </item>
+      <item>
+         <linkId value="MF_Erkrankungen_weitere_5736281_1.1"/>
+         <prefix value="4.1"/>
+         <text value="Bestehen weitere Erkrankungen?"/>
+         <type value="boolean"/>
+         <required value="true"/>
+      </item>
+      <item>
+         <linkId value="MF_Erkrankungen_weitere_5736281_1.2"/>
+         <prefix value="4.2"/>
+         <text value="Wenn ja, welche?"/>
+         <type value="string"/>
+         <enableWhen>
+            <question value="MF_Erkrankungen_weitere_5736281_1.1"/>
+            <operator value="="/>
+            <answerBoolean value="true"/>
+         </enableWhen>
+         <required value="true"/>
+      </item>
+   </item>
+   <item>
+      <linkId value="PC-SystA_06-2021v1_Frage_XXI.0"/>
+      <prefix value="XXI."/>
+      <text value="Fragen zu Vorbehandlungen/​Voruntersuchungen"/>
+      <type value="group"/>
+      <required value="true"/>
+      <item>
+         <linkId value="MF_Behandlungen_fruehere_5732620_1.1"/>
+         <prefix value="1.1"/>
+         <text value="Ist in den letzten Wochen eine andere ärztliche Behandlung erfolgt?"/>
+         <type value="boolean"/>
+         <required value="true"/>
+      </item>
+      <item>
+         <linkId value="MF_Behandlungen_fruehere_5732620_1.2"/>
+         <prefix value="1.2"/>
+         <text value="Wenn ja, weswegen?"/>
+         <type value="string"/>
+         <enableWhen>
+            <question value="MF_Behandlungen_fruehere_5732620_1.1"/>
+            <operator value="="/>
+            <answerBoolean value="true"/>
+         </enableWhen>
+         <required value="true"/>
+      </item>
+      <item>
+         <extension url="http://fhir.thieme-compliance.de/StructureDefinition/Einwilligung/QuestionnaireErlaeuterung">
+            <valueString value="Bitte nennen Sie alle Medikamente (auch pflanzliche, rezeptfreie, Tropfen, Salben etc.), die Sie einnehmen bzw. anwenden!"/>
+         </extension>
+         <linkId value="MF_Medikamente_6254778_1.1"/>
+         <prefix value="2.1"/>
+         <text value="Werden Medikamente eingenommen?"/>
+         <type value="open-choice"/>
+         <required value="true"/>
+         <repeats value="true"/>
+         <answerOption id="MF_Medikamente_6254778_1.1_none">
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-optionExclusive">
+               <valueBoolean value="true"/>
+            </extension>
+            <valueString value="nein"/>
+         </answerOption>
+         <answerOption id="MF_Medikamente_6254778_1.1_1">
+            <extension url="http://fhir.thieme-compliance.de/StructureDefinition/Einwilligung/QuestionnaireErlaeuterung">
+               <valueString value="Dazu gehören auch z.B. Plavix®, Pradaxa®, Xarelto®, Eliquis®, Lixiana®, Heparin."/>
+            </extension>
+            <valueString value="gerinnungshemmende Mittel (z.B. Marcumar®, Aspirin)"/>
+         </answerOption>
+         <answerOption id="MF_Medikamente_6254778_1.1_2">
+            <extension url="http://fhir.thieme-compliance.de/StructureDefinition/Einwilligung/QuestionnaireErlaeuterung">
+               <valueString value="z.B. Ibuprofen, Diclofenac, Aspirin (ASS), Paracetamol"/>
+            </extension>
+            <valueString value="Schmerzmittel"/>
+         </answerOption>
+         <answerOption id="MF_Medikamente_6254778_1.1_3">
+            <extension url="http://fhir.thieme-compliance.de/StructureDefinition/Einwilligung/QuestionnaireErlaeuterung">
+               <valueString value="Medikamente zur Behandlung der Zuckerkrankheit (Diabetes). Metformin kann zur Übersäuerung des Blutes führen. Vor Maßnahmen mit Kontrastmittel muss Metformin ggf. abgesetzt werden!"/>
+            </extension>
+            <valueString value="Antidiabetika (v.a. metforminhaltige)"/>
+         </answerOption>
+         <answerOption id="MF_Medikamente_6254778_1.1_4">
+            <extension url="http://fhir.thieme-compliance.de/StructureDefinition/Einwilligung/QuestionnaireErlaeuterung">
+               <valueString value="z.B. Betablocker, ACE-Hemmer, Entwässerungstabletten (Diuretika)"/>
+            </extension>
+            <valueString value="Herz-/​Kreislauf-Medikamente"/>
+         </answerOption>
+         <answerOption id="MF_Medikamente_6254778_1.1_5">
+            <extension url="http://fhir.thieme-compliance.de/StructureDefinition/Einwilligung/QuestionnaireErlaeuterung">
+               <valueString value="z.B. Pille, Hormontherapie bei Prostatakrebs oder Brustkrebs"/>
+            </extension>
+            <valueString value="Hormonpräparate"/>
+         </answerOption>
+         <answerOption id="MF_Medikamente_6254778_1.1_6">
+            <extension url="http://fhir.thieme-compliance.de/StructureDefinition/Einwilligung/QuestionnaireErlaeuterung">
+               <valueString value="z.B. Benzodiazepine"/>
+            </extension>
+            <valueString value="Schlaf- oder Beruhigungsmittel"/>
+         </answerOption>
+         <answerOption id="MF_Medikamente_6254778_1.1_7">
+            <extension url="http://fhir.thieme-compliance.de/StructureDefinition/Einwilligung/QuestionnaireErlaeuterung">
+               <valueString value="z.B. Amlodipin, Ramipril"/>
+            </extension>
+            <valueString value="blutdrucksenkende Mittel"/>
+         </answerOption>
+         <!--Die Freitext-Oder-Option muss durch den Questionnaire-Renderer aufgrund "open-choice" eingefügt werden.-->
+         <!--<answerOption id="MF_Medikamente_6254778_1.1_others"><valueString value="oder:"/></answerOption>-->
+      </item>
+      <item>
+         <linkId value="MF_Medikamente_Immunsystem_6259068_1.1"/>
+         <prefix value="3.1"/>
+         <text value="Werden Medikamente eingenommen, die das Immunsystem und dadurch die Abwehrkraft des Körpers hemmen?"/>
+         <type value="open-choice"/>
+         <required value="true"/>
+         <repeats value="true"/>
+         <answerOption id="MF_Medikamente_Immunsystem_6259068_1.1_none">
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-optionExclusive">
+               <valueBoolean value="true"/>
+            </extension>
+            <valueString value="nein"/>
+         </answerOption>
+         <answerOption id="MF_Medikamente_Immunsystem_6259068_1.1_1">
+            <valueString value="Kortison"/>
+         </answerOption>
+         <answerOption id="MF_Medikamente_Immunsystem_6259068_1.1_2">
+            <valueString value="Rheumamittel"/>
+         </answerOption>
+         <answerOption id="MF_Medikamente_Immunsystem_6259068_1.1_3">
+            <valueString value="Immunsuppressiva"/>
+         </answerOption>
+         <!--Die Freitext-Oder-Option muss durch den Questionnaire-Renderer aufgrund "open-choice" eingefügt werden.-->
+         <!--<answerOption id="MF_Medikamente_Immunsystem_6259068_1.1_others"><valueString value="oder:"/></answerOption>-->
+      </item>
+      <item>
+         <linkId value="MF_Arzneimittel_6246169_1.1"/>
+         <prefix value="4.1"/>
+         <text value="Werden pflanzliche Mittel/​Ergänzungspräparate eingenommen?"/>
+         <type value="open-choice"/>
+         <required value="true"/>
+         <repeats value="true"/>
+         <answerOption id="MF_Arzneimittel_6246169_1.1_none">
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-optionExclusive">
+               <valueBoolean value="true"/>
+            </extension>
+            <valueString value="nein"/>
+         </answerOption>
+         <answerOption id="MF_Arzneimittel_6246169_1.1_1">
+            <valueString value="Johanniskraut"/>
+         </answerOption>
+         <answerOption id="MF_Arzneimittel_6246169_1.1_2">
+            <valueString value="Ginkgo"/>
+         </answerOption>
+         <answerOption id="MF_Arzneimittel_6246169_1.1_3">
+            <valueString value="Vitamine"/>
+         </answerOption>
+         <!--Die Freitext-Oder-Option muss durch den Questionnaire-Renderer aufgrund "open-choice" eingefügt werden.-->
+         <!--<answerOption id="MF_Arzneimittel_6246169_1.1_others"><valueString value="oder:"/></answerOption>-->
+      </item>
+      <item>
+         <linkId value="MF_Operationen_fruehere_6259086_1.1"/>
+         <prefix value="5.1"/>
+         <text value="Wurde schon einmal eine Operation durchgeführt?"/>
+         <type value="boolean"/>
+         <required value="true"/>
+      </item>
+      <item>
+         <linkId value="MF_Operationen_fruehere_6259086_1.2"/>
+         <prefix value="5.2"/>
+         <text value="Wenn ja, welche?"/>
+         <type value="string"/>
+         <enableWhen>
+            <question value="MF_Operationen_fruehere_6259086_1.1"/>
+            <operator value="="/>
+            <answerBoolean value="true"/>
+         </enableWhen>
+         <required value="true"/>
+      </item>
+      <item>
+         <extension url="http://fhir.thieme-compliance.de/StructureDefinition/Einwilligung/QuestionnaireErlaeuterung">
+            <valueString value="z.B. Blutungen, Wundheilungsstörungen, Infektionen, Narkoseprobleme"/>
+         </extension>
+         <linkId value="MF_Operationen_fruehere_6259086_1.3"/>
+         <prefix value="5.3"/>
+         <text value="Wenn ja, traten Komplikationen auf?"/>
+         <type value="boolean"/>
+         <enableWhen>
+            <question value="MF_Operationen_fruehere_6259086_1.1"/>
+            <operator value="="/>
+            <answerBoolean value="true"/>
+         </enableWhen>
+         <required value="true"/>
+      </item>
+      <item>
+         <linkId value="MF_Operationen_fruehere_6259086_1.4"/>
+         <prefix value="5.4"/>
+         <text value="Wenn ja, welche?"/>
+         <type value="string"/>
+         <enableWhen>
+            <question value="MF_Operationen_fruehere_6259086_1.3"/>
+            <operator value="="/>
+            <answerBoolean value="true"/>
+         </enableWhen>
+         <required value="true"/>
+      </item>
+      <item>
+         <linkId value="MF_Betaeubungsverfahren_fruehere_6248196_1.1"/>
+         <prefix value="6.1"/>
+         <text value="Wurde schon einmal eine Betäubung durchgeführt?"/>
+         <type value="open-choice"/>
+         <required value="true"/>
+         <repeats value="true"/>
+         <answerOption id="MF_Betaeubungsverfahren_fruehere_6248196_1.1_none">
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-optionExclusive">
+               <valueBoolean value="true"/>
+            </extension>
+            <valueString value="nein"/>
+         </answerOption>
+         <answerOption id="MF_Betaeubungsverfahren_fruehere_6248196_1.1_1">
+            <extension url="http://fhir.thieme-compliance.de/StructureDefinition/Einwilligung/QuestionnaireErlaeuterung">
+               <valueString value="Vollständige Ausschaltung des Schmerzempfindens und des Bewusstseins, umgangssprachlich auch Vollnarkose genannt."/>
+            </extension>
+            <valueString value="Narkose"/>
+         </answerOption>
+         <answerOption id="MF_Betaeubungsverfahren_fruehere_6248196_1.1_2">
+            <extension url="http://fhir.thieme-compliance.de/StructureDefinition/Einwilligung/QuestionnaireErlaeuterung">
+               <valueString value="Schmerzausschaltung/​Betäubung eines bestimmten Körperbereichs"/>
+            </extension>
+            <valueString value="Regionalanästhesie"/>
+         </answerOption>
+         <answerOption id="MF_Betaeubungsverfahren_fruehere_6248196_1.1_3">
+            <extension url="http://fhir.thieme-compliance.de/StructureDefinition/Einwilligung/QuestionnaireErlaeuterung">
+               <valueString value="Betäubung eines kleinen Bereichs an der Körperoberfläche"/>
+            </extension>
+            <valueString value="örtliche Betäubung (z.B. beim Zahnarzt)"/>
+         </answerOption>
+         <answerOption id="MF_Betaeubungsverfahren_fruehere_6248196_1.1_4">
+            <extension url="http://fhir.thieme-compliance.de/StructureDefinition/Einwilligung/QuestionnaireErlaeuterung">
+               <valueString value="Gabe von Beruhigungsmitteln, um einen schlafähnlichen Zustand zu erreichen."/>
+            </extension>
+            <valueString value="Sedierung"/>
+         </answerOption>
+         <!--Die Freitext-Oder-Option muss durch den Questionnaire-Renderer aufgrund "open-choice" eingefügt werden.-->
+         <!--<answerOption id="MF_Betaeubungsverfahren_fruehere_6248196_1.1_others"><valueString value="oder:"/></answerOption>-->
+      </item>
+      <item>
+         <linkId value="MF_Betaeubungsverfahren_fruehere_6248196_1.3"/>
+         <prefix value="6.3"/>
+         <text value="Wenn ja, gab es dabei Komplikationen?"/>
+         <type value="boolean"/>
+         <enableWhen>
+            <question value="MF_Betaeubungsverfahren_fruehere_6248196_1.1"/>
+            <operator value="!="/>
+            <answerString value="nein"/>
+         </enableWhen>
+         <required value="true"/>
+      </item>
+      <item>
+         <linkId value="MF_Betaeubungsverfahren_fruehere_6248196_1.4"/>
+         <prefix value="6.4"/>
+         <text value="Wenn ja, welche?"/>
+         <type value="string"/>
+         <enableWhen>
+            <question value="MF_Betaeubungsverfahren_fruehere_6248196_1.3"/>
+            <operator value="="/>
+            <answerBoolean value="true"/>
+         </enableWhen>
+         <required value="true"/>
+      </item>
+      <item>
+         <linkId value="MF_Hyperthermie_maligne_6252356_1.1"/>
+         <prefix value="7.1"/>
+         <text value="Besteht eine Veranlagung zu hohem Fieber bei/​nach einer Narkose (maligne Hyperthermie)?"/>
+         <type value="boolean"/>
+         <required value="true"/>
+      </item>
+      <item>
+         <linkId value="MF_Hyperthermie_maligne_Familie_5771183_1.1"/>
+         <prefix value="8.1"/>
+         <text value="Trat bei Blutsverwandten bei/​nach einer Narkose eine maligne Hyperthermie auf?"/>
+         <type value="boolean"/>
+         <required value="true"/>
+      </item>
+      <item>
+         <linkId value="MF_Bluttransfusion_5733411_1.1"/>
+         <prefix value="9.1"/>
+         <text value="Ist schon einmal eine Übertragung von Blut/​Blutbestandteilen (Transfusion) erfolgt?"/>
+         <type value="boolean"/>
+         <required value="true"/>
+      </item>
+      <item>
+         <linkId value="MF_Roentgenuntersuchung_5760210_1.1"/>
+         <prefix value="10.1"/>
+         <text value="Wurden in den letzten 10 Jahren bildgebende Verfahren durchgeführt?"/>
+         <type value="open-choice"/>
+         <required value="true"/>
+         <repeats value="true"/>
+         <answerOption id="MF_Roentgenuntersuchung_5760210_1.1_none">
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-optionExclusive">
+               <valueBoolean value="true"/>
+            </extension>
+            <valueString value="nein"/>
+         </answerOption>
+         <answerOption id="MF_Roentgenuntersuchung_5760210_1.1_1">
+            <valueString value="Röntgenuntersuchung"/>
+         </answerOption>
+         <answerOption id="MF_Roentgenuntersuchung_5760210_1.1_2">
+            <valueString value="Computertomografie"/>
+         </answerOption>
+         <answerOption id="MF_Roentgenuntersuchung_5760210_1.1_3">
+            <valueString value="Kernspintomografie"/>
+         </answerOption>
+         <!--Die Freitext-Oder-Option muss durch den Questionnaire-Renderer aufgrund "open-choice" eingefügt werden.-->
+         <!--<answerOption id="MF_Roentgenuntersuchung_5760210_1.1_others"><valueString value="oder:"/></answerOption>-->
+      </item>
+      <item>
+         <linkId value="MF_Roentgenuntersuchung_5760210_1.3"/>
+         <prefix value="10.3"/>
+         <text value="Wenn ja, in welchem Körperbereich?"/>
+         <type value="open-choice"/>
+         <enableWhen>
+            <question value="MF_Roentgenuntersuchung_5760210_1.1"/>
+            <operator value="!="/>
+            <answerString value="nein"/>
+         </enableWhen>
+         <required value="true"/>
+         <repeats value="true"/>
+         <answerOption id="MF_Roentgenuntersuchung_5760210_1.3_1">
+            <valueString value="Oberkörper"/>
+         </answerOption>
+         <answerOption id="MF_Roentgenuntersuchung_5760210_1.3_2">
+            <valueString value="Bauch"/>
+         </answerOption>
+         <answerOption id="MF_Roentgenuntersuchung_5760210_1.3_3">
+            <valueString value="Wirbelsäule"/>
+         </answerOption>
+         <answerOption id="MF_Roentgenuntersuchung_5760210_1.3_4">
+            <valueString value="Kopf"/>
+         </answerOption>
+         <answerOption id="MF_Roentgenuntersuchung_5760210_1.3_5">
+            <valueString value="Extremitäten"/>
+         </answerOption>
+         <!--Die Freitext-Oder-Option muss durch den Questionnaire-Renderer aufgrund "open-choice" eingefügt werden.-->
+         <!--<answerOption id="MF_Roentgenuntersuchung_5760210_1.3_others"><valueString value="oder:"/></answerOption>-->
+      </item>
+      <item>
+         <linkId value="MF_Roentgenuntersuchung_5760210_1.4"/>
+         <prefix value="10.4"/>
+         <text value="Wenn ja, Name der Klinik/​Praxis?"/>
+         <type value="string"/>
+         <enableWhen>
+            <question value="MF_Roentgenuntersuchung_5760210_1.1"/>
+            <operator value="!="/>
+            <answerString value="nein"/>
+         </enableWhen>
+         <required value="true"/>
+      </item>
+      <item>
+         <extension url="http://fhir.thieme-compliance.de/StructureDefinition/Einwilligung/QuestionnaireErlaeuterung">
+            <valueString value="Kontrastmittel wird verwendet, um die inneren Organe besser darstellen zu können."/>
+         </extension>
+         <linkId value="MF_Kontrastmittel_6254765_1.1"/>
+         <prefix value="11.1"/>
+         <text value="Wurden bereits Untersuchungen mit Kontrastmittel durchgeführt?"/>
+         <type value="boolean"/>
+         <required value="true"/>
+      </item>
+      <item>
+         <linkId value="MF_Kontrastmittel_6254765_1.2"/>
+         <prefix value="11.2"/>
+         <text value="Wenn ja, traten Komplikationen auf?"/>
+         <type value="open-choice"/>
+         <enableWhen>
+            <question value="MF_Kontrastmittel_6254765_1.1"/>
+            <operator value="="/>
+            <answerBoolean value="true"/>
+         </enableWhen>
+         <required value="true"/>
+         <repeats value="true"/>
+         <answerOption id="MF_Kontrastmittel_6254765_1.2_none">
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-optionExclusive">
+               <valueBoolean value="true"/>
+            </extension>
+            <valueString value="nein"/>
+         </answerOption>
+         <answerOption id="MF_Kontrastmittel_6254765_1.2_1">
+            <valueString value="Hautausschlag"/>
+         </answerOption>
+         <answerOption id="MF_Kontrastmittel_6254765_1.2_2">
+            <valueString value="Kreislaufreaktionen"/>
+         </answerOption>
+         <answerOption id="MF_Kontrastmittel_6254765_1.2_3">
+            <valueString value="Schock"/>
+         </answerOption>
+         <!--Die Freitext-Oder-Option muss durch den Questionnaire-Renderer aufgrund "open-choice" eingefügt werden.-->
+         <!--<answerOption id="MF_Kontrastmittel_6254765_1.2_others"><valueString value="oder:"/></answerOption>-->
+      </item>
+      <item>
+         <linkId value="MF_Strahlentherapie_5762796_1.1"/>
+         <prefix value="12.1"/>
+         <text value="Hatten Sie schon einmal eine Strahlenbehandlung?"/>
+         <type value="boolean"/>
+         <required value="true"/>
+      </item>
+      <item>
+         <linkId value="MF_Chemotherapie_6248212_1.1"/>
+         <prefix value="13.1"/>
+         <text value="Wurde schon einmal eine Chemotherapie durchgeführt?"/>
+         <type value="boolean"/>
+         <required value="true"/>
+      </item>
+      <item>
+         <extension url="http://fhir.thieme-compliance.de/StructureDefinition/Einwilligung/QuestionnaireErlaeuterung">
+            <valueString value="Bei einer solchen Untersuchung werden mit einem starren oder biegsamen Instrument die Organe von innen betrachtet, z.B. Magenspiegelung, Darmspiegelung."/>
+         </extension>
+         <linkId value="MF_Untersuchung_endoskopisch_6262591_1.1"/>
+         <prefix value="14.1"/>
+         <text value="Wurde schon einmal eine endoskopische Untersuchung/​Behandlung durchgeführt?"/>
+         <type value="open-choice"/>
+         <required value="true"/>
+         <repeats value="true"/>
+         <answerOption id="MF_Untersuchung_endoskopisch_6262591_1.1_none">
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-optionExclusive">
+               <valueBoolean value="true"/>
+            </extension>
+            <valueString value="nein"/>
+         </answerOption>
+         <answerOption id="MF_Untersuchung_endoskopisch_6262591_1.1_1">
+            <valueString value="Magen"/>
+         </answerOption>
+         <answerOption id="MF_Untersuchung_endoskopisch_6262591_1.1_2">
+            <valueString value="Darm"/>
+         </answerOption>
+         <answerOption id="MF_Untersuchung_endoskopisch_6262591_1.1_3">
+            <valueString value="Speiseröhre"/>
+         </answerOption>
+         <answerOption id="MF_Untersuchung_endoskopisch_6262591_1.1_4">
+            <valueString value="Bauchhöhle"/>
+         </answerOption>
+         <answerOption id="MF_Untersuchung_endoskopisch_6262591_1.1_5">
+            <valueString value="Gelenke"/>
+         </answerOption>
+         <answerOption id="MF_Untersuchung_endoskopisch_6262591_1.1_6">
+            <valueString value="Atemwege"/>
+         </answerOption>
+         <answerOption id="MF_Untersuchung_endoskopisch_6262591_1.1_7">
+            <valueString value="Kehlkopf"/>
+         </answerOption>
+         <answerOption id="MF_Untersuchung_endoskopisch_6262591_1.1_8">
+            <valueString value="Harnröhre"/>
+         </answerOption>
+         <answerOption id="MF_Untersuchung_endoskopisch_6262591_1.1_9">
+            <valueString value="Harnblase"/>
+         </answerOption>
+         <!--Die Freitext-Oder-Option muss durch den Questionnaire-Renderer aufgrund "open-choice" eingefügt werden.-->
+         <!--<answerOption id="MF_Untersuchung_endoskopisch_6262591_1.1_others"><valueString value="oder:"/></answerOption>-->
+      </item>
+      <item>
+         <linkId value="MF_Untersuchung_endoskopisch_6262591_1.3"/>
+         <prefix value="14.3"/>
+         <text value="Wenn ja, gab es dabei Komplikationen?"/>
+         <type value="boolean"/>
+         <enableWhen>
+            <question value="MF_Untersuchung_endoskopisch_6262591_1.1"/>
+            <operator value="!="/>
+            <answerString value="nein"/>
+         </enableWhen>
+         <required value="true"/>
+      </item>
+      <item>
+         <linkId value="MF_Untersuchung_endoskopisch_6262591_1.4"/>
+         <prefix value="14.4"/>
+         <text value="Wenn ja, welche?"/>
+         <type value="string"/>
+         <enableWhen>
+            <question value="MF_Untersuchung_endoskopisch_6262591_1.3"/>
+            <operator value="="/>
+            <answerBoolean value="true"/>
+         </enableWhen>
+         <required value="true"/>
+      </item>
+      <item>
+         <extension url="http://fhir.thieme-compliance.de/StructureDefinition/Einwilligung/QuestionnaireErlaeuterung">
+            <valueString value="Wir fragen dies, weil zwischen einer Impfung und einem operativen Eingriff ein gewisser zeitlicher Mindestabstand sein sollte."/>
+         </extension>
+         <linkId value="MF_Impfungen_6252367_1.1"/>
+         <prefix value="15.1"/>
+         <text value="Wurde in den letzten 2 Wochen eine Impfung durchgeführt?"/>
+         <type value="boolean"/>
+         <required value="true"/>
+      </item>
+      <item>
+         <linkId value="MF_Impfungen_6252367_1.2"/>
+         <prefix value="15.2"/>
+         <text value="Wenn ja, wogegen?"/>
+         <type value="string"/>
+         <enableWhen>
+            <question value="MF_Impfungen_6252367_1.1"/>
+            <operator value="="/>
+            <answerBoolean value="true"/>
+         </enableWhen>
+         <required value="true"/>
+      </item>
+      <item>
+         <extension url="http://fhir.thieme-compliance.de/StructureDefinition/Einwilligung/QuestionnaireErlaeuterung">
+            <valueString value="In den Körper eingepflanztes künstliches Material"/>
+         </extension>
+         <linkId value="MF_Implantate_6252379_1.1"/>
+         <prefix value="16.1"/>
+         <text value="Befinden sich Implantate im Körper?"/>
+         <type value="open-choice"/>
+         <required value="true"/>
+         <repeats value="true"/>
+         <answerOption id="MF_Implantate_6252379_1.1_none">
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-optionExclusive">
+               <valueBoolean value="true"/>
+            </extension>
+            <valueString value="nein"/>
+         </answerOption>
+         <answerOption id="MF_Implantate_6252379_1.1_1">
+            <valueString value="Schrittmacher"/>
+         </answerOption>
+         <answerOption id="MF_Implantate_6252379_1.1_2">
+            <valueString value="Defibrillator"/>
+         </answerOption>
+         <answerOption id="MF_Implantate_6252379_1.1_3">
+            <valueString value="Herzklappe"/>
+         </answerOption>
+         <answerOption id="MF_Implantate_6252379_1.1_4">
+            <extension url="http://fhir.thieme-compliance.de/StructureDefinition/Einwilligung/QuestionnaireErlaeuterung">
+               <valueString value="Gefäßstütze"/>
+            </extension>
+            <valueString value="Stent"/>
+         </answerOption>
+         <answerOption id="MF_Implantate_6252379_1.1_5">
+            <valueString value="künstliches Gelenk"/>
+         </answerOption>
+         <answerOption id="MF_Implantate_6252379_1.1_6">
+            <extension url="http://fhir.thieme-compliance.de/StructureDefinition/Einwilligung/QuestionnaireErlaeuterung">
+               <valueString value="z.B. Brust, Gesäß, Wade, Hoden"/>
+            </extension>
+            <valueString value="Silikon"/>
+         </answerOption>
+         <answerOption id="MF_Implantate_6252379_1.1_7">
+            <extension url="http://fhir.thieme-compliance.de/StructureDefinition/Einwilligung/QuestionnaireErlaeuterung">
+               <valueString value="z.B. bei Brustvergrößerung oder als künstliche Bandscheibe"/>
+            </extension>
+            <valueString value="Hydrogel"/>
+         </answerOption>
+         <answerOption id="MF_Implantate_6252379_1.1_8">
+            <valueString value="Zähne"/>
+         </answerOption>
+         <answerOption id="MF_Implantate_6252379_1.1_9">
+            <extension url="http://fhir.thieme-compliance.de/StructureDefinition/Einwilligung/QuestionnaireErlaeuterung">
+               <valueString value="z.B. Schrauben, Metallplatten/​-stifte"/>
+            </extension>
+            <valueString value="Metall"/>
+         </answerOption>
+         <!--Die Freitext-Oder-Option muss durch den Questionnaire-Renderer aufgrund "open-choice" eingefügt werden.-->
+         <!--<answerOption id="MF_Implantate_6252379_1.1_others"><valueString value="oder:"/></answerOption>-->
+      </item>
+   </item>
+   <item>
+      <linkId value="PC-SystA_06-2021v1_Frage_XXII.0"/>
+      <prefix value="XXII."/>
+      <text value="Fragen zu wichtigen Unterlagen"/>
+      <type value="group"/>
+      <required value="true"/>
+      <item>
+         <linkId value="MF_Ausweise_Paesse_medizinische_6246181_1.1"/>
+         <prefix value="1.1"/>
+         <text value="Liegen medizinische Ausweise/​Pässe vor?"/>
+         <type value="open-choice"/>
+         <required value="true"/>
+         <repeats value="true"/>
+         <answerOption id="MF_Ausweise_Paesse_medizinische_6246181_1.1_1">
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-optionExclusive">
+               <valueBoolean value="true"/>
+            </extension>
+            <valueString value="Keine"/>
+         </answerOption>
+         <answerOption id="MF_Ausweise_Paesse_medizinische_6246181_1.1_2">
+            <valueString value="Allergieausweis"/>
+         </answerOption>
+         <answerOption id="MF_Ausweise_Paesse_medizinische_6246181_1.1_3">
+            <valueString value="Anästhesieausweis"/>
+         </answerOption>
+         <answerOption id="MF_Ausweise_Paesse_medizinische_6246181_1.1_4">
+            <valueString value="Röntgenpass"/>
+         </answerOption>
+         <answerOption id="MF_Ausweise_Paesse_medizinische_6246181_1.1_5">
+            <valueString value="Implantatausweis (z.B. Herzschrittmacher)"/>
+         </answerOption>
+         <answerOption id="MF_Ausweise_Paesse_medizinische_6246181_1.1_6">
+            <valueString value="Notfallausweis"/>
+         </answerOption>
+         <answerOption id="MF_Ausweise_Paesse_medizinische_6246181_1.1_7">
+            <valueString value="Blutspendeausweis"/>
+         </answerOption>
+         <answerOption id="MF_Ausweise_Paesse_medizinische_6246181_1.1_8">
+            <valueString value="Diabetikerausweis"/>
+         </answerOption>
+         <answerOption id="MF_Ausweise_Paesse_medizinische_6246181_1.1_9">
+            <valueString value="Marcumarausweis"/>
+         </answerOption>
+         <!--Die Freitext-Oder-Option muss durch den Questionnaire-Renderer aufgrund "open-choice" eingefügt werden.-->
+         <!--<answerOption id="MF_Ausweise_Paesse_medizinische_6246181_1.1_10"><valueString value="Andere: "/></answerOption>-->
+      </item>
+      <item>
+         <linkId value="MF_Befunde_Roentgenbilder_fruehere_5771091_1.1"/>
+         <prefix value="2.1"/>
+         <text value="Liegen frühere Befunde/​Röntgenbilder vor?"/>
+         <type value="boolean"/>
+         <required value="true"/>
+      </item>
+      <item>
+         <linkId value="MF_Vorsorgeregelung_5771250_1.1"/>
+         <prefix value="3.1"/>
+         <text value="Haben Sie Vorsorgeregelungen getroffen?"/>
+         <type value="open-choice"/>
+         <required value="true"/>
+         <repeats value="true"/>
+         <answerOption id="MF_Vorsorgeregelung_5771250_1.1_none">
+            <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-optionExclusive">
+               <valueBoolean value="true"/>
+            </extension>
+            <valueString value="nein"/>
+         </answerOption>
+         <answerOption id="MF_Vorsorgeregelung_5771250_1.1_1">
+            <valueString value="Patientenverfügung"/>
+         </answerOption>
+         <answerOption id="MF_Vorsorgeregelung_5771250_1.1_2">
+            <valueString value="Betreuungsverfügung"/>
+         </answerOption>
+         <answerOption id="MF_Vorsorgeregelung_5771250_1.1_3">
+            <valueString value="Vorsorgevollmacht"/>
+         </answerOption>
+         <!--Die Freitext-Oder-Option muss durch den Questionnaire-Renderer aufgrund "open-choice" eingefügt werden.-->
+         <!--<answerOption id="MF_Vorsorgeregelung_5771250_1.1_others"><valueString value="oder:"/></answerOption>-->
+      </item>
+   </item>
+</Questionnaire>

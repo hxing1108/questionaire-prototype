@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Stylesheet-Version: fragengruppe_2_FHIR-Questionnaire.xsl – V0.0.40 – 2021-08-02, 20:59 Uhr-->
+<!--Stylesheet-Version: clean_up_FHIR-Questionnaire.xsl – V0.0.9 – 2020-12-10, 15:52 Uhr-->
+<!--Stylesheet-Version: humanReadable_FHIR-Questionnaire.xsl – V0.0.5 – 2021-08-02, 21:41 Uhr-->
+<Questionnaire xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xmlns="http://hl7.org/fhir"
+               xmlns:h="http://www.w3.org/1999/xhtml"
+               xsi:schemaLocation="../XSD_4.0.1/questionnaire.xsd">
+   <id value="D-RD17-CZ-07-2019"/>
+   <meta>
+      <profile value="http://thieme-compliance.de/fhir/StructureDefinition/Questionnaire"/>
+   </meta>
+   <language value="cs"/>
+   <text>
+      <status value="generated"/>
+      <h:div xml:lang="cs">
+         <h:h1 xml:lang="de-DE">Röntgenuntersuchung</h:h1>
+         <h:table>
+            <h:thead xml:lang="de-DE">
+               <h:tr>
+                  <h:th>Nr.</h:th>
+                  <h:th>Frage</h:th>
+                  <h:th>Antwort</h:th>
+               </h:tr>
+            </h:thead>
+            <h:tbody>
+               <h:tr>
+                  <h:td/>
+                  <h:td>Uveďte své datum narození.</h:td>
+                  <h:td>
+                     <h:hr/>
+                  </h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>
+                     <h:b/>
+                  </h:td>
+                  <h:td>
+                     <h:b>Uveďte svou výšku (v cm), hmotnost (v kg) a své pohlaví.</h:b>
+                  </h:td>
+                  <h:td/>
+               </h:tr>
+               <h:tr>
+                  <h:td/>
+                  <h:td>Výška:</h:td>
+                  <h:td>
+                     <h:hr/>
+                  </h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td/>
+                  <h:td>Hmotnost:</h:td>
+                  <h:td>
+                     <h:hr/>
+                  </h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td/>
+                  <h:td>Pohlaví:</h:td>
+                  <h:td>☐ ženské<h:br/>☐ mužské</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>1.1</h:td>
+                  <h:td>Byla pacientovi už někdy rentgenována stejná část těla?</h:td>
+                  <h:td>☐ ne<h:br/>☐ ano</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>1.2</h:td>
+                  <h:td>Pokud ano, kdy a kde?</h:td>
+                  <h:td>
+                     <h:hr/>
+                  </h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>
+                     <h:b>II.</h:b>
+                  </h:td>
+                  <h:td>
+                     <h:b>Doplňující otázky pro ženy v reprodukčním věku</h:b>
+                  </h:td>
+                  <h:td/>
+               </h:tr>
+               <h:tr>
+                  <h:td>1.1</h:td>
+                  <h:td>Může být pacientka těhotná?</h:td>
+                  <h:td>☐ ne<h:br/>☐ ano</h:td>
+               </h:tr>
+               <h:tr>
+                  <h:td>2.1</h:td>
+                  <h:td>Který den pacientce začala předchozí menstruace?</h:td>
+                  <h:td>
+                     <h:hr/>
+                  </h:td>
+               </h:tr>
+            </h:tbody>
+         </h:table>
+      </h:div>
+   </text>
+   <url value="http://thieme-compliance.de/fhir/Questionnaire/D-RD17-CZ"/>
+   <identifier>
+      <use value="official"/>
+      <system value="http://thieme-compliance.de/fhir/identifier/EcpBogencode"/>
+      <value value="D-RD17"/>
+   </identifier>
+   <identifier>
+      <use value="usual"/>
+      <system value="http://thieme-compliance.de/fhir/identifier/TcgBogencode"/>
+      <value value="RD 17"/>
+   </identifier>
+   <identifier>
+      <use value="secondary"/>
+      <system value="http://thieme-compliance.de/fhir/identifier/TcgBogencode"/>
+      <value value="RD17"/>
+   </identifier>
+   <identifier>
+      <use value="secondary"/>
+      <system value="http://thieme-compliance.de/fhir/identifier/SapArtikelnummer"/>
+      <value value="CZ005017"/>
+   </identifier>
+   <version value="07/2019"/>
+   <name value="RD 17"/>
+   <title value="Röntgenuntersuchung"/>
+   <status value="active"/>
+   <experimental value="true"/>
+   <subjectType value="Patient"/>
+   <date value="2021-10-05T23:52:32.514+02:00"/>
+   <publisher value="Thieme Compliance GmbH, Am Weichselgarten 30a, 91058 Erlangen"/>
+   <contact>
+      <name value="Homepage"/>
+      <telecom>
+         <system value="url"/>
+         <value value="www.thieme-compliance.de"/>
+      </telecom>
+   </contact>
+   <contact>
+      <name value="E-Mail"/>
+      <telecom>
+         <system value="email"/>
+         <value value="service@thieme-compliance.de"/>
+      </telecom>
+   </contact>
+   <contact>
+      <name value="Telefon"/>
+      <telecom>
+         <system value="phone"/>
+         <value value="+49 (0)9131 93406-40"/>
+      </telecom>
+   </contact>
+   <contact>
+      <name value="Fax"/>
+      <telecom>
+         <system value="fax"/>
+         <value value="+49 (0)9131 93406-70"/>
+      </telecom>
+   </contact>
+   <description value="Rentgenové vyšetření dokáže s velkou jistotou odhalit patologické změny a poranění, ale také zkontrolovat výsledek léčení. Tento informativní leták („RD 17“) pacientovi stručně objasňuje průběh standardního rentgenového vyšetření a podrobně ho informuje o riziku ozáření a možné ochraně před zářením (mj. v případě těhotenství)."/>
+   <jurisdiction>
+      <coding>
+         <system value="urn:iso:std:iso:3166"/>
+         <code value="AT"/>
+      </coding>
+      <coding>
+         <system value="http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen"/>
+         <code value="A"/>
+      </coding>
+   </jurisdiction>
+   <jurisdiction>
+      <coding>
+         <system value="urn:iso:std:iso:3166"/>
+         <code value="CH"/>
+      </coding>
+      <coding>
+         <system value="http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen"/>
+         <code value="CH"/>
+      </coding>
+   </jurisdiction>
+   <jurisdiction>
+      <coding>
+         <system value="urn:iso:std:iso:3166"/>
+         <code value="DE"/>
+      </coding>
+      <coding>
+         <system value="http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen"/>
+         <code value="D"/>
+      </coding>
+   </jurisdiction>
+   <jurisdiction>
+      <coding>
+         <system value="urn:iso:std:iso:3166"/>
+         <code value="IT"/>
+      </coding>
+      <coding>
+         <system value="http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen"/>
+         <code value="I"/>
+      </coding>
+   </jurisdiction>
+   <copyright value="© 2019 Thieme Compliance GmbH"/>
+   <approvalDate value="2019-07"/>
+   <lastReviewDate value="2020-01"/>
+   <item>
+      <extension url="http://hl7.org/fhir/StructureDefinition/entryFormat">
+         <valueString value="RRRR-MM-DD"/>
+      </extension>
+      <linkId value="dateOfBirth"/>
+      <text value="Uveďte své datum narození."/>
+      <type value="date"/>
+      <required value="true"/>
+   </item>
+   <item>
+      <linkId value="baseDataDecimal"/>
+      <text value="Uveďte svou výšku (v cm), hmotnost (v kg) a své pohlaví."/>
+      <type value="group"/>
+      <required value="true"/>
+      <item>
+         <linkId value="baseDataDecimalHeight"/>
+         <text value="Výška:"/>
+         <type value="integer"/>
+         <required value="true"/>
+         <maxLength value="3"/>
+      </item>
+      <item>
+         <linkId value="baseDataDecimalWeight"/>
+         <text value="Hmotnost:"/>
+         <type value="decimal"/>
+         <required value="true"/>
+      </item>
+      <item>
+         <linkId value="baseDataDecimalGender"/>
+         <text value="Pohlaví:"/>
+         <type value="choice"/>
+         <required value="true"/>
+         <repeats value="false"/>
+         <answerOption id="baseDataDecimalGender_female">
+            <valueString value="ženské"/>
+         </answerOption>
+         <answerOption id="baseDataDecimalGender_male">
+            <valueString value="mužské"/>
+         </answerOption>
+      </item>
+   </item>
+   <item>
+      <linkId value="D-RD17-CZ_07-2019_Frage_I.0"/>
+      <type value="group"/>
+      <required value="true"/>
+      <item>
+         <linkId value="D-RD17-CZ_07-2019_Frage_I.1.1"/>
+         <prefix value="1.1"/>
+         <text value="Byla pacientovi už někdy rentgenována stejná část těla?"/>
+         <type value="boolean"/>
+         <required value="true"/>
+      </item>
+      <item>
+         <linkId value="D-RD17-CZ_07-2019_Frage_I.1.2"/>
+         <prefix value="1.2"/>
+         <text value="Pokud ano, kdy a kde?"/>
+         <type value="text"/>
+         <enableWhen>
+            <question value="D-RD17-CZ_07-2019_Frage_I.1.1"/>
+            <operator value="="/>
+            <answerBoolean value="true"/>
+         </enableWhen>
+         <required value="true"/>
+      </item>
+   </item>
+   <item>
+      <linkId value="D-RD17-CZ_07-2019_Frage_II.0"/>
+      <prefix value="II."/>
+      <text value="Doplňující otázky pro ženy v reprodukčním věku"/>
+      <type value="group"/>
+      <required value="true"/>
+      <item>
+         <linkId value="cs-DE_MF_Frauen_Schwanger_5091327_1.1"/>
+         <prefix value="1.1"/>
+         <text value="Může být pacientka těhotná?"/>
+         <type value="boolean"/>
+         <enableWhen>
+            <question value="baseDataDecimalGender"/>
+            <operator value="="/>
+            <answerString value="ženské"/>
+         </enableWhen>
+         <required value="true"/>
+      </item>
+      <item>
+         <extension url="http://hl7.org/fhir/StructureDefinition/entryFormat">
+            <valueString value="RRRR-MM-DD"/>
+         </extension>
+         <linkId value="cs-DE_MF_Frauen_Regelblutung_5091496_1.1"/>
+         <prefix value="2.1"/>
+         <text value="Který den pacientce začala předchozí menstruace?"/>
+         <type value="date"/>
+         <enableWhen>
+            <question value="baseDataDecimalGender"/>
+            <operator value="="/>
+            <answerString value="ženské"/>
+         </enableWhen>
+         <required value="true"/>
+      </item>
+   </item>
+</Questionnaire>

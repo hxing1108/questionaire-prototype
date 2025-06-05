@@ -1,0 +1,20 @@
+/*!
+ * The buffer module from node.js, for the browser.
+ *
+ * @author   Feross Aboukhadijeh <https://feross.org>
+ * @license  MIT
+ */
+
+/*! For license information please see acrofield-codec.js.LICENSE.txt */
+
+/*! For license information please see signature-lib.js.LICENSE.txt */
+
+/*! http://mths.be/fromcodepoint v0.1.0 by @mathias */
+
+/*! ieee754. BSD-3-Clause License. Feross Aboukhadijeh <https://feross.org/opensource> */
+
+/*! safe-buffer. MIT License. Feross Aboukhadijeh <https://feross.org/opensource> */
+
+//! moment.js
+
+//! moment.js locale configuration

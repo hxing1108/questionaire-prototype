@@ -1,0 +1,32 @@
+<Questionnaire xmlns="http://hl7.org/fhir">
+	<id value="81ae262e-f997-4b1a-8c19-9dd2ebced947"/>
+	<language value="de-DE"/>
+	<version value="02/2025"/>
+	<name value="SimpleForm"/>
+	<status value="draft"/>
+	<url value="my/xxSimpleForm_02/2025-81ae262e-f997-4b1a-8c19-9dd2ebced947"/>
+	<identifier>
+	</identifier>
+	<item xmlns="">
+		<linkId value="12df0c06-379b-498a-a61d-fe22e6bb64ea"/>
+		<text value="Placeholder text"/>
+		<type value="group"/>
+		<required value="false"/>
+		<item>
+			<extension xmlns="http://medidok.de/fhir" url="http://medidok.de/fhir/extensions/fhir-gdt">
+				<valueCodeableConcept>
+					<coding>
+						<system value="GDT" />
+						<code value="0123" />
+						<display value="boolean" />
+					</coding>
+					<text value="GDT comment" />
+				</valueCodeableConcept>
+			</extension>
+			<linkId value="3c5c5bac-9d7c-415d-a0b3-5b6eb6784a7e"/>
+			<text value="Default text to change"/>
+			<type value="boolean"/>
+			<required value="false"/>
+		</item>
+	</item>
+</Questionnaire>

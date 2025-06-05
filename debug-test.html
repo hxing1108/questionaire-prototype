@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FHIR Debug Test</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      .log {
+        background: #f5f5f5;
+        padding: 10px;
+        border-radius: 5px;
+        margin: 10px 0;
+        max-height: 300px;
+        overflow-y: auto;
+      }
+      .success {
+        color: green;
+      }
+      .error {
+        color: red;
+      }
+      .info {
+        color: blue;
+      }
+      button {
+        padding: 10px 20px;
+        margin: 5px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>FHIR System Debug Test</h1>
+
+    <div>
+      <button onclick="testFHIRLoading()">Test FHIR Loading</button>
+      <button onclick="testCustomElements()">Test Custom Elements</button>
+      <button onclick="testXMLLoading()">Test XML Loading</button>
+      <button onclick="clearLog()">Clear Log</button>
+    </div>
+
+    <div class="log" id="log"></div>
+
+    <div
+      id="test-container"
+      style="border: 1px solid #ccc; padding: 20px; margin: 20px 0"
+    >
+      <h3>Test Container</h3>
+      <fhir-form-widget id="test-widget"></fhir-form-widget>
+    </div>
+
+    <!-- Load FHIR system first -->
+    <script src="./app.js"></script>
+
+    <script>
+      function log(message, type = 'info') {
+        const logDiv = document.getElementById('log');
+        const entry = document.createElement('div');
+        entry.className = type;
+        entry.textContent = `[${new Date().toLocaleTimeString()}] ${message}`;
+        logDiv.appendChild(entry);
+        logDiv.scrollTop = logDiv.scrollHeight;
+        console.log(message);
+      }
+
+      function clearLog() {
+        document.getElementById('log').innerHTML = '';
+      }
+
+      function testFHIRLoading() {
+        log('=== Testing FHIR System Loading ===');
+
+        // Check if app.js loaded
+        log(`Window object exists: ${typeof window !== 'undefined'}`, 'info');
+        log(`Custom elements available: ${!!window.customElements}`, 'info');
+
+        // Check for FHIR-related globals
+        const globals = Object.keys(window).filter(
+          (key) =>
+            key.toLowerCase().includes('fhir') ||
+            key.toLowerCase().includes('widget') ||
+            key.toLowerCase().includes('form') ||
+            key.toLowerCase().includes('medidok')
+        );
+        log(`Potential FHIR globals: ${globals.join(', ')}`, 'info');
+
+        // Inspect FhirForm if it exists
+        if (window.FhirForm) {
+          log('FhirForm found! Inspecting...', 'success');
+          log(`FhirForm type: ${typeof window.FhirForm}`, 'info');
+          log(
+            `FhirForm constructor: ${window.FhirForm.constructor.name}`,
+            'info'
+          );
+
+          // Since it's an object, let's explore its properties
+          const props = Object.getOwnPropertyNames(window.FhirForm);
+          log(`FhirForm properties: ${props.join(', ')}`, 'info');
+
+          // Look for constructor-like properties
+          const constructorProps = props.filter(
+            (prop) =>
+              prop.toLowerCase().includes('widget') ||
+              prop.toLowerCase().includes('form') ||
+              prop.toLowerCase().includes('constructor') ||
+              prop.toLowerCase().includes('class') ||
+              typeof window.FhirForm[prop] === 'function'
+          );
+          log(
+            `Constructor-like properties: ${constructorProps.join(', ')}`,
+            'info'
+          );
+
+          // Try each function property
+          constructorProps.forEach((prop) => {
+            const value = window.FhirForm[prop];
+            log(`${prop}: ${typeof value} - ${value.constructor.name}`, 'info');
+
+            if (typeof value === 'function') {
+              try {
+                log(
+                  `${prop} is a function, checking if it's a constructor...`,
+                  'info'
+                );
+                // Check if it extends HTMLElement or has prototype
+                if (value.prototype) {
+                  const protoProps = Object.getOwnPropertyNames(
+                    value.prototype
+                  ).slice(0, 5);
+                  log(
+                    `${prop}.prototype methods: ${protoProps.join(', ')}`,
+                    'info'
+                  );
+
+                  // Try to register this as custom element
+                  if (!window.customElements.get('fhir-form-widget')) {
+                    try {
+                      window.customElements.define('fhir-form-widget', value);
+                      log(
+                        `Successfully registered fhir-form-widget using ${prop}!`,
+                        'success'
+                      );
+                    } catch (e) {
+                      log(
+                        `Failed to register with ${prop}: ${e.message}`,
+                        'error'
+                      );
+                    }
+                  }
+                }
+              } catch (e) {
+                log(`Error inspecting ${prop}: ${e.message}`, 'error');
+              }
+            }
+          });
+        }
+
+        // Inspect mediDOK if it exists
+        if (window.mediDOK) {
+          log('mediDOK found! Inspecting...', 'success');
+          log(`mediDOK type: ${typeof window.mediDOK}`, 'info');
+
+          // List all properties in mediDOK
+          const mediDOKProps = Object.getOwnPropertyNames(window.mediDOK);
+          log(`mediDOK properties: ${mediDOKProps.join(', ')}`, 'info');
+
+          if (window.mediDOK.FhirQuestionnaries) {
+            log('mediDOK.FhirQuestionnaries found!', 'success');
+            log(
+              `FhirQuestionnaries type: ${typeof window.mediDOK
+                .FhirQuestionnaries}`,
+              'info'
+            );
+
+            const fhirProps = Object.getOwnPropertyNames(
+              window.mediDOK.FhirQuestionnaries
+            );
+            log(
+              `FhirQuestionnaries properties: ${fhirProps.join(', ')}`,
+              'info'
+            );
+
+            // Look for constructor-like properties
+            const fhirConstructors = fhirProps.filter((prop) => {
+              const value = window.mediDOK.FhirQuestionnaries[prop];
+              return (
+                typeof value === 'function' ||
+                prop.toLowerCase().includes('widget') ||
+                prop.toLowerCase().includes('form') ||
+                prop.toLowerCase().includes('element')
+              );
+            });
+
+            log(
+              `FhirQuestionnaries constructor-like props: ${fhirConstructors.join(
+                ', '
+              )}`,
+              'info'
+            );
+
+            // Try each potential constructor
+            fhirConstructors.forEach((prop) => {
+              const value = window.mediDOK.FhirQuestionnaries[prop];
+              log(
+                `${prop}: ${typeof value} - ${value.constructor.name}`,
+                'info'
+              );
+
+              if (typeof value === 'function' && value.prototype) {
+                const protoProps = Object.getOwnPropertyNames(
+                  value.prototype
+                ).slice(0, 8);
+                log(`${prop}.prototype: ${protoProps.join(', ')}`, 'info');
+
+                // Try to register this as custom element
+                if (!window.customElements.get('fhir-form-widget')) {
+                  try {
+                    window.customElements.define('fhir-form-widget', value);
+                    log(
+                      `Successfully registered fhir-form-widget using mediDOK.FhirQuestionnaries.${prop}!`,
+                      'success'
+                    );
+                  } catch (e) {
+                    log(
+                      `Failed to register with ${prop}: ${e.message}`,
+                      'error'
+                    );
+                  }
+                }
+              }
+            });
+          }
+        }
+
+        // Also check if FhirForm has initialization methods
+        log('Checking FhirForm for initialization methods...', 'info');
+        const fhirFormProps = Object.getOwnPropertyNames(window.FhirForm);
+        const initMethods = fhirFormProps.filter((prop) => {
+          const value = window.FhirForm[prop];
+          return (
+            typeof value === 'function' &&
+            (prop.toLowerCase().includes('init') ||
+              prop.toLowerCase().includes('create') ||
+              prop.toLowerCase().includes('build') ||
+              prop.toLowerCase().includes('load') ||
+              prop.toLowerCase().includes('widget'))
+          );
+        });
+
+        log(`FhirForm init-like methods: ${initMethods.join(', ')}`, 'info');
+
+        // Try calling potential initialization methods
+        initMethods.forEach((method) => {
+          try {
+            log(`Trying to call FhirForm.${method}()...`, 'info');
+            const result = window.FhirForm[method]();
+            log(`FhirForm.${method}() returned: ${typeof result}`, 'info');
+          } catch (e) {
+            log(`FhirForm.${method}() failed: ${e.message}`, 'error');
+          }
+        });
+
+        // Try to manually register fhir-form-widget
+        log('Attempting to register fhir-form-widget...', 'info');
+
+        try {
+          // Method 1: Check if FhirForm can be used as custom element
+          if (window.FhirForm && typeof window.FhirForm === 'function') {
+            if (!window.customElements.get('fhir-form-widget')) {
+              window.customElements.define('fhir-form-widget', window.FhirForm);
+              log('Registered fhir-form-widget using FhirForm!', 'success');
+            }
+          }
+        } catch (e) {
+          log(`Failed to register with FhirForm: ${e.message}`, 'error');
+        }
+
+        try {
+          // Method 2: Check mediDOK.FhirQuestionnaries
+          if (window.mediDOK && window.mediDOK.FhirQuestionnaries) {
+            const FhirClass = window.mediDOK.FhirQuestionnaries;
+            if (
+              typeof FhirClass === 'function' &&
+              !window.customElements.get('fhir-form-widget')
+            ) {
+              window.customElements.define('fhir-form-widget', FhirClass);
+              log(
+                'Registered fhir-form-widget using mediDOK.FhirQuestionnaries!',
+                'success'
+              );
+            }
+          }
+        } catch (e) {
+          log(`Failed to register with mediDOK: ${e.message}`, 'error');
+        }
+
+        // Check custom elements registry again
+        if (window.customElements) {
+          try {
+            const fhirWidget = window.customElements.get('fhir-form-widget');
+            if (fhirWidget) {
+              log('fhir-form-widget is now registered!', 'success');
+              log(`Constructor: ${fhirWidget.name}`, 'info');
+            } else {
+              log('fhir-form-widget still not found in registry', 'error');
+
+              // List all registered custom elements
+              const allElements = [];
+              try {
+                // This is a hack to see what's registered
+                const originalDefine = window.customElements.define;
+                window.customElements.define = function (name, constructor) {
+                  allElements.push(name);
+                  return originalDefine.call(this, name, constructor);
+                };
+              } catch (e) {
+                // Ignore
+              }
+
+              log(`All registered elements: ${allElements.join(', ')}`, 'info');
+            }
+          } catch (e) {
+            log(`Error checking custom elements: ${e.message}`, 'error');
+          }
+        }
+      }
+
+      function testCustomElements() {
+        log('=== Testing Custom Elements ===');
+
+        try {
+          const widget = document.getElementById('test-widget');
+          log(`Widget element exists: ${!!widget}`, 'info');
+          log(`Widget tagName: ${widget.tagName}`, 'info');
+          log(`Widget constructor: ${widget.constructor.name}`, 'info');
+
+          // Check widget properties and methods
+          const props = Object.getOwnPropertyNames(widget).slice(0, 10);
+          log(`Widget properties (first 10): ${props.join(', ')}`, 'info');
+
+          const methods = Object.getOwnPropertyNames(
+            Object.getPrototypeOf(widget)
+          )
+            .filter((name) => typeof widget[name] === 'function')
+            .slice(0, 10);
+          log(`Widget methods (first 10): ${methods.join(', ')}`, 'info');
+        } catch (e) {
+          log(`Error testing widget: ${e.message}`, 'error');
+        }
+      }
+
+      async function testXMLLoading() {
+        log('=== Testing XML Loading ===');
+
+        try {
+          const response = await fetch(
+            'samples/RD17_cs-DE_FHIR-Questionnaire.xml'
+          );
+          if (response.ok) {
+            const xmlText = await response.text();
+            log(
+              `XML loaded successfully, length: ${xmlText.length}`,
+              'success'
+            );
+            log(`XML starts with: ${xmlText.substring(0, 100)}...`, 'info');
+
+            // Try to load into widget
+            const widget = document.getElementById('test-widget');
+            if (widget) {
+              // Try different loading methods
+              if (typeof widget.loadFromString === 'function') {
+                log('Trying loadFromString method...', 'info');
+                widget.loadFromString(xmlText);
+              } else if (typeof widget.setContent === 'function') {
+                log('Trying setContent method...', 'info');
+                widget.setContent(xmlText);
+              } else if (widget.setAttribute) {
+                log('Trying src attribute...', 'info');
+                widget.setAttribute(
+                  'src',
+                  'samples/RD17_cs-DE_FHIR-Questionnaire.xml'
+                );
+              } else {
+                log('No loading methods found', 'error');
+              }
+
+              // Listen for events
+              widget.addEventListener('load', () =>
+                log('Widget load event fired', 'success')
+              );
+              widget.addEventListener('contentReady', () =>
+                log('Widget contentReady event fired', 'success')
+              );
+              widget.addEventListener('error', (e) =>
+                log(`Widget error: ${e.message}`, 'error')
+              );
+            }
+          } else {
+            log(`Failed to load XML: ${response.status}`, 'error');
+          }
+        } catch (e) {
+          log(`XML loading error: ${e.message}`, 'error');
+        }
+      }
+
+      // Auto-run tests when page loads
+      document.addEventListener('DOMContentLoaded', () => {
+        log('Page loaded, waiting for FHIR system...', 'info');
+
+        setTimeout(() => {
+          testFHIRLoading();
+        }, 1000);
+      });
+
+      // Listen for errors
+      window.addEventListener('error', (e) => {
+        log(`Global error: ${e.message} at ${e.filename}:${e.lineno}`, 'error');
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test FHIR Question Extraction</title>
+    <script src="./app.js"></script>
+    <script src="./typeform-presenter.js"></script>
+</head>
+<body>
+    <h1>Test FHIR Question Extraction</h1>
+    <button onclick="testExtraction()">Load D-IP7-02-2020.xml</button>
+    <div id="results"></div>
+    
+    <script>
+        async function testExtraction() {
+            try {
+                // Load the XML file
+                const response = await fetch('./samples/D-IP7-02-2020.xml');
+                const xmlContent = await response.text();
+                
+                // Wait for FHIR system
+                await waitForFHIR();
+                
+                // Create a typeform presenter
+                const presenter = document.createElement('typeform-presenter');
+                document.body.appendChild(presenter);
+                
+                // Wait for it to initialize
+                await new Promise(resolve => setTimeout(resolve, 2000));
+                
+                // Load the questionnaire
+                presenter.loadFromString(xmlContent);
+                
+                // Wait for extraction
+                await new Promise(resolve => setTimeout(resolve, 3000));
+                
+                console.log('Questions found:', presenter.questions.length);
+                presenter.questions.forEach((q, i) => {
+                    const linkId = q.getAttribute('linkid') || 'null';
+                    const info = presenter.extractQuestionInfo(q);
+                    console.log(`Question ${i+1}: linkId="${linkId}", label="${info.label.substring(0, 50)}..."`);
+                });
+                
+                document.getElementById('results').innerHTML = 
+                    `<p>Found ${presenter.questions.length} questions. Check console for details.</p>`;
+                    
+            } catch (error) {
+                console.error('Test failed:', error);
+                document.getElementById('results').innerHTML = 
+                    `<p style="color: red;">Test failed: ${error.message}</p>`;
+            }
+        }
+        
+        function waitForFHIR() {
+            return new Promise((resolve, reject) => {
+                let attempts = 0;
+                const checkInterval = setInterval(() => {
+                    attempts++;
+                    const hasSystem = window.FhirForm || window.mediDOK || 
+                                     (window.customElements && window.customElements.get('fhir-form'));
+                    
+                    if (hasSystem) {
+                        console.log('FHIR system ready');
+                        clearInterval(checkInterval);
+                        resolve();
+                    } else if (attempts > 100) {
+                        clearInterval(checkInterval);
+                        console.log('FHIR timeout, proceeding anyway');
+                        resolve();
+                    }
+                }, 100);
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FHIR Questionnaire - Typeform Style</title>
+
+    <!-- Load FHIR system -->
+    <script
+      src="./app.js"
+      onload="console.log('app.js loaded successfully')"
+      onerror="console.error('Failed to load app.js')"
+    ></script>
+
+    <!-- Load Typeform presenter -->
+    <script
+      src="./typeform-presenter.js"
+      onload="console.log('typeform-presenter.js loaded successfully')"
+      onerror="console.error('Failed to load typeform-presenter.js')"
+    ></script>
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+          sans-serif;
+        background: #f8fafc;
+      }
+
+      /* File uploader styles */
+      .uploader-container {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+      }
+
+      .uploader-card {
+        background: white;
+        border-radius: 12px;
+        padding: 3rem;
+        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+        max-width: 500px;
+        width: 100%;
+        text-align: center;
+      }
+
+      .uploader-title {
+        font-size: 1.75rem;
+        font-weight: 600;
+        color: #1f2937;
+        margin-bottom: 0.5rem;
+      }
+
+      .uploader-subtitle {
+        color: #6b7280;
+        margin-bottom: 2rem;
+      }
+
+      .file-drop-zone {
+        border: 2px dashed #d1d5db;
+        border-radius: 8px;
+        padding: 3rem 2rem;
+        margin: 2rem 0;
+        cursor: pointer;
+        transition: all 0.2s;
+        background: #f9fafb;
+      }
+
+      .file-drop-zone:hover,
+      .file-drop-zone.dragover {
+        border-color: #3b82f6;
+        background: #eff6ff;
+      }
+
+      .file-drop-zone.dragover {
+        border-style: solid;
+      }
+
+      .upload-icon {
+        font-size: 3rem;
+        color: #9ca3af;
+        margin-bottom: 1rem;
+      }
+
+      .upload-text {
+        color: #374151;
+        font-size: 1.125rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .upload-subtext {
+        color: #6b7280;
+        font-size: 0.875rem;
+      }
+
+      .upload-button {
+        background: #3b82f6;
+        color: white;
+        border: none;
+        padding: 0.75rem 2rem;
+        border-radius: 8px;
+        font-size: 1rem;
+        cursor: pointer;
+        margin-top: 1rem;
+        transition: background 0.2s;
+      }
+
+      .upload-button:hover {
+        background: #2563eb;
+      }
+
+      .sample-files {
+        margin-top: 2rem;
+        padding-top: 2rem;
+        border-top: 1px solid #e5e7eb;
+      }
+
+      .sample-files h3 {
+        font-size: 1.125rem;
+        color: #374151;
+        margin-bottom: 1rem;
+      }
+
+      .sample-file {
+        display: inline-block;
+        margin: 0.25rem;
+        padding: 0.5rem 1rem;
+        background: #f3f4f6;
+        border-radius: 6px;
+        color: #4b5563;
+        text-decoration: none;
+        font-size: 0.875rem;
+        transition: background 0.2s;
+        cursor: pointer;
+      }
+
+      .sample-file:hover {
+        background: #e5e7eb;
+      }
+
+      .hidden {
+        display: none !important;
+      }
+
+      .loading {
+        padding: 2rem;
+        text-align: center;
+        color: #6b7280;
+      }
+
+      .error {
+        background: #fef2f2;
+        border: 1px solid #fecaca;
+        color: #dc2626;
+        padding: 1rem;
+        border-radius: 8px;
+        margin: 1rem 0;
+      }
+
+      /* Optional: Add custom branding colors */
+      /* typeform-presenter {
+        --primary: 24 100% 50%;
+        --primary-foreground: 0 0% 100%;
+      } */
+    </style>
+  </head>
+  <body>
+    <!-- File uploader UI -->
+    <div id="uploaderContainer" class="uploader-container">
+      <div class="uploader-card">
+        <h1 class="uploader-title">FHIR Questionnaire Demo</h1>
+        <p class="uploader-subtitle">
+          Upload a FHIR XML questionnaire file to see the Typeform-style
+          interface
+        </p>
+
+        <div
+          id="fileDropZone"
+          class="file-drop-zone"
+          onclick="document.getElementById('fileInput').click()"
+        >
+          <div class="upload-icon">📁</div>
+          <div class="upload-text">Drop your FHIR XML file here</div>
+          <div class="upload-subtext">or click to browse</div>
+          <button type="button" class="upload-button">Choose File</button>
+        </div>
+
+        <input type="file" id="fileInput" accept=".xml" style="display: none" />
+
+        <div id="errorMessage" class="error hidden"></div>
+
+        <div class="sample-files">
+          <h3>Or try sample questionnaires:</h3>
+          <div id="sampleFiles">
+            <span
+              class="sample-file"
+              data-file="samples/RD17_cs-DE_FHIR-Questionnaire.xml"
+            >
+              German Clinical Questionnaire
+            </span>
+            <span
+              class="sample-file"
+              data-file="samples/SystA_en-GB_FHIR-Questionnaire.xml"
+            >
+              English Systematic Assessment
+            </span>
+            <span class="sample-file" data-file="samples/Form-with-GDT.xml">
+              Form with GDT Extension
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Loading state -->
+    <div id="loadingContainer" class="loading hidden">
+      <div>Loading questionnaire...</div>
+    </div>
+
+    <!-- Questionnaire container (hidden initially) -->
+    <div id="questionnaireContainer" class="hidden">
+      <typeform-presenter id="typeformPresenter">
+        <fhir-form-widget id="fhirWidget"></fhir-form-widget>
+      </typeform-presenter>
+    </div>
+
+    <script>
+      // Debug script to check FHIR loading immediately
+      window.addEventListener('load', () => {
+        console.log('=== FHIR Debug Info (window load) ===');
+        console.log('FhirForm:', window.FhirForm);
+        console.log('mediDOK:', window.mediDOK);
+        console.log(
+          'All globals with "fhir":',
+          Object.keys(window).filter((k) => k.toLowerCase().includes('fhir'))
+        );
+        console.log(
+          'All globals with "medidok":',
+          Object.keys(window).filter((k) => k.toLowerCase().includes('medidok'))
+        );
+        console.log('customElements:', window.customElements);
+        console.log(
+          'fhir-form-widget registered:',
+          window.customElements?.get('fhir-form-widget')
+        );
+
+        // Wait a bit and check again
+        setTimeout(() => {
+          console.log('=== FHIR Debug Info (delayed check) ===');
+          console.log('FhirForm:', window.FhirForm);
+          console.log('mediDOK:', window.mediDOK);
+        }, 3000);
+      });
+    </script>
+
+    <script>
+      class FHIRUploaderDemo {
+        constructor() {
+          this.initializeUploader();
+          this.setupEventListeners();
+        }
+
+        initializeUploader() {
+          this.uploaderContainer = document.getElementById('uploaderContainer');
+          this.loadingContainer = document.getElementById('loadingContainer');
+          this.questionnaireContainer = document.getElementById(
+            'questionnaireContainer'
+          );
+          this.fileDropZone = document.getElementById('fileDropZone');
+          this.fileInput = document.getElementById('fileInput');
+          this.errorMessage = document.getElementById('errorMessage');
+          this.typeformPresenter = document.getElementById('typeformPresenter');
+          this.fhirWidget = document.getElementById('fhirWidget');
+        }
+
+        setupEventListeners() {
+          // File input change
+          this.fileInput.addEventListener('change', (e) => {
+            const file = e.target.files[0];
+            if (file) {
+              this.loadFile(file);
+            }
+          });
+
+          // Drag and drop
+          this.fileDropZone.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            this.fileDropZone.classList.add('dragover');
+          });
+
+          this.fileDropZone.addEventListener('dragleave', (e) => {
+            e.preventDefault();
+            this.fileDropZone.classList.remove('dragover');
+          });
+
+          this.fileDropZone.addEventListener('drop', (e) => {
+            e.preventDefault();
+            this.fileDropZone.classList.remove('dragover');
+
+            const files = e.dataTransfer.files;
+            if (files.length > 0) {
+              this.loadFile(files[0]);
+            }
+          });
+
+          // Sample file clicks
+          document.querySelectorAll('.sample-file').forEach((btn) => {
+            btn.addEventListener('click', () => {
+              const filePath = btn.getAttribute('data-file');
+              this.loadSampleFile(filePath);
+            });
+          });
+
+          // Form completion listener
+          this.typeformPresenter.addEventListener('formComplete', (event) => {
+            console.log('Form completed!', event.detail);
+            this.showSuccess(event.detail);
+          });
+        }
+
+        async loadFile(file) {
+          if (!file.name.toLowerCase().endsWith('.xml')) {
+            this.showError('Please select an XML file.');
+            return;
+          }
+
+          try {
+            this.showLoading();
+
+            const text = await file.text();
+            await this.loadQuestionnaire(text);
+          } catch (error) {
+            console.error('Error loading file:', error);
+            this.showError('Error loading file: ' + error.message);
+            this.showUploader();
+          }
+        }
+
+        async loadSampleFile(filePath) {
+          try {
+            this.showLoading();
+
+            const response = await fetch(filePath);
+            if (!response.ok) {
+              throw new Error(
+                `Failed to load sample file: ${response.statusText}`
+              );
+            }
+
+            const text = await response.text();
+            await this.loadQuestionnaire(text);
+          } catch (error) {
+            console.error('Error loading sample file:', error);
+            this.showError(
+              "Error loading sample file. Make sure you're running this from a web server."
+            );
+            this.showUploader();
+          }
+        }
+
+        async loadQuestionnaire(xmlContent) {
+          try {
+            // Wait for FHIR system to be ready
+            await this.waitForFHIRSystem();
+
+            // Wait for typeform presenter to be ready
+            await this.waitForTypeformPresenter();
+
+            // Load the questionnaire content
+            this.typeformPresenter.loadFromString(xmlContent);
+
+            // Wait for content to be ready
+            await this.waitForContentReady();
+
+            this.showQuestionnaire();
+          } catch (error) {
+            console.error('Error rendering questionnaire:', error);
+            this.showError('Error rendering questionnaire: ' + error.message);
+            this.showUploader();
+          }
+        }
+
+        waitForFHIRSystem() {
+          return new Promise((resolve, reject) => {
+            // Check if FHIR system is already loaded
+            if (
+              window.customElements &&
+              window.customElements.get('fhir-form-widget')
+            ) {
+              console.log('FHIR custom element already registered');
+              resolve();
+              return;
+            }
+
+            // Also check for global FHIR objects as fallback
+            if (window.FhirForm || window.mediDOK || window.FhirFormWidget) {
+              console.log('FHIR globals detected, proceeding');
+              resolve();
+              return;
+            }
+
+            // Wait for it to load
+            let attempts = 0;
+            const maxAttempts = 300; // Increase timeout to 30 seconds
+            const checkInterval = setInterval(() => {
+              attempts++;
+
+              // Check for the correct custom element name
+              const hasFhirFormWidget = window.customElements && window.customElements.get('fhir-form-widget');
+              const hasFhirForm = window.customElements && window.customElements.get('fhir-form');
+              const hasCustomElement = hasFhirFormWidget || hasFhirForm;
+              
+              const hasGlobals = window.FhirForm || window.mediDOK || window.FhirFormWidget;
+              const hasFhirGlobal = window.fhirFormWidget || window.formWidget;
+
+              console.log(`FHIR check attempt ${attempts}:`, {
+                hasCustomElement: !!hasCustomElement,
+                hasFhirFormWidget: !!hasFhirFormWidget,
+                hasFhirForm: !!hasFhirForm,
+                hasGlobals: !!hasGlobals,
+                hasFhirGlobal: !!hasFhirGlobal,
+                FhirForm: !!window.FhirForm,
+                mediDOK: !!window.mediDOK,
+                FhirFormWidget: !!window.FhirFormWidget,
+                customElementsReady: !!window.customElements
+              });
+
+              // Check if custom elements are defined
+              if (window.customElements) {
+                try {
+                  const definedElements = [];
+                  // Some browsers don't expose customElements._registry
+                  const testElements = ['fhir-form-widget', 'fhir-form', 'medidok-form'];
+                  testElements.forEach(name => {
+                    if (window.customElements.get(name)) {
+                      definedElements.push(name);
+                    }
+                  });
+                  if (definedElements.length > 0) {
+                    console.log('Defined custom elements:', definedElements);
+                  }
+                } catch (e) {
+                  // Ignore errors
+                }
+              }
+
+              if (hasCustomElement || hasGlobals || hasFhirGlobal) {
+                console.log('FHIR system detected!');
+                clearInterval(checkInterval);
+                resolve();
+              } else if (attempts > maxAttempts) {
+                clearInterval(checkInterval);
+                
+                // Log all available globals for debugging
+                const allGlobals = Object.keys(window);
+                const fhirRelatedGlobals = allGlobals.filter(
+                  (key) =>
+                    key.toLowerCase().includes('fhir') ||
+                    key.toLowerCase().includes('medidok') ||
+                    key.toLowerCase().includes('form') ||
+                    key.toLowerCase().includes('widget')
+                );
+                
+                console.error(
+                  'FHIR system failed to load. Available globals:',
+                  fhirRelatedGlobals
+                );
+                
+                // Even if not detected, try to proceed anyway
+                console.log('Proceeding anyway after timeout...');
+                resolve();
+              }
+            }, 100);
+          });
+        }
+
+        waitForTypeformPresenter() {
+          return new Promise((resolve, reject) => {
+            // Check if typeform presenter is ready
+            if (
+              this.typeformPresenter &&
+              this.typeformPresenter.fhirSystemReady
+            ) {
+              console.log('Typeform presenter already ready');
+              resolve();
+              return;
+            }
+
+            // Wait for it to be ready
+            let attempts = 0;
+            const maxAttempts = 200; // Increase timeout to 20 seconds
+            const checkInterval = setInterval(() => {
+              attempts++;
+
+              console.log(`Typeform presenter check attempt ${attempts}:`, {
+                hasPresenter: !!this.typeformPresenter,
+                fhirSystemReady: this.typeformPresenter?.fhirSystemReady,
+              });
+
+              if (
+                this.typeformPresenter &&
+                this.typeformPresenter.fhirSystemReady
+              ) {
+                console.log('Typeform presenter ready!');
+                clearInterval(checkInterval);
+                resolve();
+              } else if (attempts > maxAttempts) {
+                clearInterval(checkInterval);
+                console.warn(
+                  'Typeform presenter timeout, but continuing anyway...'
+                );
+                // Don't reject, just continue
+                resolve();
+              }
+            }, 100);
+          });
+        }
+
+        waitForContentReady() {
+          return new Promise((resolve) => {
+            const handler = () => {
+              this.typeformPresenter.removeEventListener(
+                'contentReady',
+                handler
+              );
+              resolve();
+            };
+
+            this.typeformPresenter.addEventListener('contentReady', handler);
+
+            // Also listen for formComplete as an alternative
+            const completeHandler = () => {
+              resolve();
+            };
+            this.typeformPresenter.addEventListener(
+              'formComplete',
+              completeHandler
+            );
+
+            // Fallback timeout
+            setTimeout(resolve, 3000);
+          });
+        }
+
+        showUploader() {
+          this.uploaderContainer.classList.remove('hidden');
+          this.loadingContainer.classList.add('hidden');
+          this.questionnaireContainer.classList.add('hidden');
+        }
+
+        showLoading() {
+          this.uploaderContainer.classList.add('hidden');
+          this.loadingContainer.classList.remove('hidden');
+          this.questionnaireContainer.classList.add('hidden');
+          this.hideError();
+        }
+
+        showQuestionnaire() {
+          this.uploaderContainer.classList.add('hidden');
+          this.loadingContainer.classList.add('hidden');
+          this.questionnaireContainer.classList.remove('hidden');
+          this.hideError();
+        }
+
+        showError(message) {
+          this.errorMessage.textContent = message;
+          this.errorMessage.classList.remove('hidden');
+        }
+
+        hideError() {
+          this.errorMessage.classList.add('hidden');
+        }
+
+        showSuccess(data) {
+          // You can implement a success screen here
+          console.log('Questionnaire completed successfully!', data);
+
+          // Optionally show a success message and reset
+          setTimeout(() => {
+            if (
+              confirm(
+                'Questionnaire completed! Would you like to try another one?'
+              )
+            ) {
+              this.showUploader();
+            }
+          }, 2000);
+        }
+      }
+
+      // Initialize when DOM is ready
+      document.addEventListener('DOMContentLoaded', () => {
+        new FHIRUploaderDemo();
+      });
+    </script>
+  </body>
+</html>

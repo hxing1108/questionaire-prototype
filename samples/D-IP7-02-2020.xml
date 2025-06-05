@@ -1,0 +1,916 @@
+<Questionnaire xmlns="http://hl7.org/fhir">
+    <id value="D-IP7-02-2020" />
+    <meta>
+        <profile value="http://thieme-compliance.de/fhir/StructureDefinition/Questionnaire" />
+    </meta>
+    <language value="de-DE" />
+    <text>
+        <status value="generated" />
+        <div xmlns="http://www.w3.org/1999/xhtml" lang="de-DE">
+            <h1>Nierenpunktion/​-biopsie</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nr.</th>
+                        <th>Frage</th>
+                        <th>Antwort</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td />
+                        <td>Bitte geben Sie Ihr Geburtsdatum an.</td>
+                        <td>
+                            <hr />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <b />
+                        </td>
+                        <td>
+                            <b>Bitte geben Sie Ihre Größe (in cm), Ihr Gewicht (in kg) sowie Ihr
+                                Geschlecht an.</b>
+                        </td>
+                        <td />
+                    </tr>
+                    <tr>
+                        <td />
+                        <td>Größe:</td>
+                        <td>
+                            <hr />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td />
+                        <td>Gewicht:</td>
+                        <td>
+                            <hr />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td />
+                        <td>Geschlecht:</td>
+                        <td>☐ weiblich<br />☐ männlich</td>
+                    </tr>
+                    <tr>
+                        <td>1.1</td>
+                        <td>Werden Medikamente eingenommen?</td>
+                        <td>☐ nein<br />☐ gerinnungshemmende Mittel (z.B. Marcumar®, Aspirin®)<br />☐
+                            Schmerzmittel<br />☐ Antidiabetika (v.a. metforminhaltige)<br />☐
+                            Herz-/​Kreislauf-Medikamente<br />☐ Hormonpräparate<br />☐ Schlaf- oder
+                            Beruhigungsmittel<br />☐ blutdrucksenkende Mittel</td>
+                    </tr>
+                    <tr>
+                        <td>2.1</td>
+                        <td>Besteht eine Allergie?</td>
+                        <td>☐ nein<br />☐ Medikamente (z.B. Antibiotika, Novalgin, Paracetamol)<br />☐
+                            Betäubungsmittel<br />☐ Röntgenkontrastmittel<br />☐ Latex<br />☐
+                            Desinfektionsmittel<br />☐ Jod<br />☐ Pflaster<br />☐ Kunststoffe</td>
+                    </tr>
+                    <tr>
+                        <td>3.1</td>
+                        <td>Besteht bei Ihnen eine erhöhte Blutungsneigung wie z.B. häufig
+                            Nasen-/​Zahnfleischbluten, blaue Flecken, Nachbluten nach Operationen?</td>
+                        <td>☐ nein<br />☐ ja</td>
+                    </tr>
+                    <tr>
+                        <td>4.1</td>
+                        <td>Besteht/​Bestand eine Infektionskrankheit?</td>
+                        <td>☐ nein<br />☐ Hepatitis<br />☐ HIV/​AIDS<br />☐ Hirnhautentzündung<br />☐
+                            Tuberkulose</td>
+                    </tr>
+                    <tr>
+                        <td>5.1</td>
+                        <td>Besteht/​Bestand eine Herz-Kreislauf-Erkrankung?</td>
+                        <td>☐ nein<br />☐ koronare Herzkrankheit<br />☐ Bluthochdruck<br />☐
+                            Rhythmusstörungen<br />☐ Schlaganfall<br />☐ Herzinfarkt<br />☐ Angina
+                            pectoris<br />☐ Herzmuskelentzündung<br />☐ Klappenfehler</td>
+                    </tr>
+                    <tr>
+                        <td>6.1</td>
+                        <td>Besteht/​Bestand eine Atemwegs-/​Lungenerkrankung?</td>
+                        <td>☐ nein<br />☐ chronische Bronchitis<br />☐ Lungenentzündung<br />☐
+                            Asthma bronchiale<br />☐ Lungenblähung<br />☐ angeborene Fehlbildung</td>
+                    </tr>
+                    <tr>
+                        <td>7.1</td>
+                        <td>Leiden Sie unter Luftnot, vor allem im flachen Liegen?</td>
+                        <td>☐ nein<br />☐ ja</td>
+                    </tr>
+                    <tr>
+                        <td>8.1</td>
+                        <td>Leiden Sie an Platzangst (Klaustrophobie)?</td>
+                        <td>☐ nein<br />☐ ja</td>
+                    </tr>
+                    <tr>
+                        <td>9.1</td>
+                        <td>Haben Sie Angst vor Spritzen?</td>
+                        <td>☐ nein<br />☐ ja</td>
+                    </tr>
+                    <tr>
+                        <td>10.1</td>
+                        <td>Ist eine Lagerung auf dem Bauch möglich?</td>
+                        <td>☐ nein<br />☐ ja</td>
+                    </tr>
+                    <tr>
+                        <td>11.1</td>
+                        <td>Befinden sich Implantate im Körper?</td>
+                        <td>☐ nein<br />☐ Schrittmacher<br />☐ Defibrillator<br />☐ Herzklappe<br />☐
+                            Stent<br />☐ künstliches Gelenk<br />☐ Silikon<br />☐ Hydrogel<br />☐
+                            Zähne<br />☐ Metall</td>
+                    </tr>
+                    <tr>
+                        <td>12.1</td>
+                        <td>Besteht/​Bestand eine Erkrankung des Nervensystems?</td>
+                        <td>☐ nein<br />☐ Gehstörungen/​Lähmungen<br />☐ Krampfleiden (Epilepsie)<br />☐
+                            Parkinson<br />☐ Gefühlsstörungen<br />☐ Polyneuropathie<br />☐
+                            Schmerzen</td>
+                    </tr>
+                    <tr>
+                        <td>13.1</td>
+                        <td>Besteht eine Stoffwechselerkrankung?</td>
+                        <td>☐ nein<br />☐ Zuckerkrankheit<br />☐ Gicht</td>
+                    </tr>
+                    <tr>
+                        <td>14.1</td>
+                        <td>Besteht/​Bestand eine Erkrankung oder Fehlbildung der Nieren bzw.
+                            Harnorgane?</td>
+                        <td>☐ nein<br />☐ Nierenfunktionsstörung<br />☐ Nierensteine<br />☐
+                            chronischer Harnwegsinfekt<br />☐ Nierenentzündung<br />☐ angeborene
+                            Fehlbildung (z.B. Doppelniere)<br />☐
+                            Blasenentleerungsstörung/​verzögerte Blasenentleerung</td>
+                    </tr>
+                    <tr>
+                        <td>15.1</td>
+                        <td>Sind Sie dialysepflichtig?</td>
+                        <td>☐ nein<br />☐ ja</td>
+                    </tr>
+                    <tr>
+                        <td>16.1</td>
+                        <td>Wurde Ihnen eine Niere transplantiert?</td>
+                        <td>☐ nein<br />☐ ja</td>
+                    </tr>
+                    <tr>
+                        <td>16.2</td>
+                        <td>Wenn ja, wann?</td>
+                        <td>
+                            <hr />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>17.1</td>
+                        <td>Wurde Ihnen eine Niere entfernt?</td>
+                        <td>☐ nein<br />☐ ja</td>
+                    </tr>
+                    <tr>
+                        <td>17.2</td>
+                        <td>Wenn ja, wann?</td>
+                        <td>
+                            <hr />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>18.1</td>
+                        <td>Wurde schon einmal eine Nierenbiopsie durchgeführt?</td>
+                        <td>☐ nein<br />☐ ja</td>
+                    </tr>
+                    <tr>
+                        <td>18.2</td>
+                        <td>Wenn ja, haben sich dabei Besonderheiten ergeben?</td>
+                        <td>☐ nein<br />☐ Feststellung einer behandlungs- oder kontrollbedürftigen
+                            Erkrankung<br />☐ Komplikationen<br />☐ vorzeitiger Abbruch</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <b>II.</b>
+                        </td>
+                        <td>
+                            <b>Zusatzfragen bei Frauen</b>
+                        </td>
+                        <td />
+                    </tr>
+                    <tr>
+                        <td>1.1</td>
+                        <td>Könnten Sie schwanger sein?</td>
+                        <td>☐ nein<br />☐ ja</td>
+                    </tr>
+                    <tr>
+                        <td>2.1</td>
+                        <td>Wann war der 1. Tag der letzten Regelblutung?</td>
+                        <td>
+                            <hr />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3.1</td>
+                        <td>Verwenden Sie Verhütungsmittel?</td>
+                        <td>☐ nein<br />☐ Antibabypille<br />☐ Hormonspirale<br />☐ Kupferspirale</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </text>
+    <url value="http://thieme-compliance.de/fhir/Questionnaire/D-IP7" />
+    <identifier>
+        <use value="official" />
+        <system value="http://thieme-compliance.de/fhir/identifier/EcpBogencode" />
+        <value value="D-IP7" />
+    </identifier>
+    <identifier>
+        <use value="usual" />
+        <system value="http://thieme-compliance.de/fhir/identifier/TcgBogencode" />
+        <value value="IP 7" />
+    </identifier>
+    <identifier>
+        <use value="secondary" />
+        <system value="http://thieme-compliance.de/fhir/identifier/TcgBogencode" />
+        <value value="IP07" />
+    </identifier>
+    <identifier>
+        <use value="secondary" />
+        <system value="http://thieme-compliance.de/fhir/identifier/TcgBogencode" />
+        <value value="IP7" />
+    </identifier>
+    <identifier>
+        <use value="secondary" />
+        <system value="http://thieme-compliance.de/fhir/identifier/SapArtikelnummer" />
+        <value value="DE006047" />
+    </identifier>
+    <version value="02/2020" />
+    <name value="IP 7" />
+    <title value="Nierenpunktion/​-biopsie" />
+    <status value="active" />
+    <experimental value="true" />
+    <subjectType value="Patient" />
+    <date value="2021-10-05T23:39:55.258+02:00" />
+    <publisher value="Thieme Compliance GmbH, Am Weichselgarten 30a, 91058 Erlangen" />
+    <contact>
+        <name value="Homepage" />
+        <telecom>
+            <system value="url" />
+            <value value="www.thieme-compliance.de" />
+        </telecom>
+    </contact>
+    <contact>
+        <name value="E-Mail" />
+        <telecom>
+            <system value="email" />
+            <value value="service@thieme-compliance.de" />
+        </telecom>
+    </contact>
+    <contact>
+        <name value="Telefon" />
+        <telecom>
+            <system value="phone" />
+            <value value="+49 (0)9131 93406-40" />
+        </telecom>
+    </contact>
+    <contact>
+        <name value="Fax" />
+        <telecom>
+            <system value="fax" />
+            <value value="+49 (0)9131 93406-70" />
+        </telecom>
+    </contact>
+    <description
+        value="Der Aufklärungsbogen „Gewebeentnahme aus der Niere (IP 7)“ wird herangezogen, um eine Nierenerkrankung abzuklären, oder nach einer Nierentransplantation, um eine Abstoßungsreaktion der Niere zu erkennen. In der Farbabbildung zur Nierenpunktion bzw. Nierenbiopsie ist ein spezieller Ultraschallpunktionskopf, an dem das Punktionsgerät befestigt wird, dargestellt." />
+    <jurisdiction>
+        <coding>
+            <system value="urn:iso:std:iso:3166" />
+            <code value="AT" />
+        </coding>
+        <coding>
+            <system value="http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen" />
+            <code value="A" />
+        </coding>
+    </jurisdiction>
+    <jurisdiction>
+        <coding>
+            <system value="urn:iso:std:iso:3166" />
+            <code value="CH" />
+        </coding>
+        <coding>
+            <system value="http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen" />
+            <code value="CH" />
+        </coding>
+    </jurisdiction>
+    <jurisdiction>
+        <coding>
+            <system value="urn:iso:std:iso:3166" />
+            <code value="DE" />
+        </coding>
+        <coding>
+            <system value="http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen" />
+            <code value="D" />
+        </coding>
+    </jurisdiction>
+    <jurisdiction>
+        <coding>
+            <system value="urn:iso:std:iso:3166" />
+            <code value="IT" />
+        </coding>
+        <coding>
+            <system value="http://fhir.de/CodeSystem/deuev/anlage-8-laenderkennzeichen" />
+            <code value="I" />
+        </coding>
+    </jurisdiction>
+    <copyright value="© 2020 Thieme Compliance GmbH" />
+    <approvalDate value="2020-02" />
+    <lastReviewDate value="2020-04" />
+    <item>
+        <extension url="http://hl7.org/fhir/StructureDefinition/entryFormat">
+            <valueString value="JJJJ-MM-TT" />
+        </extension>
+        <linkId value="dateOfBirth" />
+        <text value="Bitte geben Sie Ihr Geburtsdatum an." />
+        <type value="date" />
+        <required value="true" />
+    </item>
+    <item>
+        <linkId value="baseDataDecimal" />
+        <text
+            value="Bitte geben Sie Ihre Größe (in cm), Ihr Gewicht (in kg) sowie Ihr Geschlecht an." />
+        <type value="group" />
+        <required value="true" />
+        <item>
+            <linkId value="baseDataDecimalHeight" />
+            <text value="Größe:" />
+            <type value="integer" />
+            <required value="true" />
+            <maxLength value="3" />
+        </item>
+        <item>
+            <linkId value="baseDataDecimalWeight" />
+            <text value="Gewicht:" />
+            <type value="decimal" />
+            <required value="true" />
+        </item>
+        <item>
+            <linkId value="baseDataDecimalGender" />
+            <text value="Geschlecht:" />
+            <type value="choice" />
+            <required value="true" />
+            <repeats value="false" />
+            <answerOption id="baseDataDecimalGender_female">
+                <valueString value="weiblich" />
+            </answerOption>
+            <answerOption id="baseDataDecimalGender_male">
+                <valueString value="männlich" />
+            </answerOption>
+        </item>
+    </item>
+    <item>
+        <linkId value="D-IP7_02-2020_Frage_I.0" />
+        <type value="group" />
+        <required value="true" />
+        <item>
+            <linkId value="MF_Medikamente_5750789_1.1" />
+            <prefix value="1.1" />
+            <text value="Werden Medikamente eingenommen?" />
+            <type value="open-choice" />
+            <required value="true" />
+            <repeats value="true" />
+            <answerOption id="MF_Medikamente_5750789_1.1_none">
+                <extension
+                    url="http://hl7.org/fhir/StructureDefinition/questionnaire-optionExclusive">
+                    <valueBoolean value="true" />
+                </extension>
+                <valueString value="nein" />
+            </answerOption>
+            <answerOption id="MF_Medikamente_5750789_1.1_1">
+                <valueString value="gerinnungshemmende Mittel (z.B. Marcumar®, Aspirin®)" />
+            </answerOption>
+            <answerOption id="MF_Medikamente_5750789_1.1_2">
+                <valueString value="Schmerzmittel" />
+            </answerOption>
+            <answerOption id="MF_Medikamente_5750789_1.1_3">
+                <valueString value="Antidiabetika (v.a. metforminhaltige)" />
+            </answerOption>
+            <answerOption id="MF_Medikamente_5750789_1.1_4">
+                <valueString value="Herz-/​Kreislauf-Medikamente" />
+            </answerOption>
+            <answerOption id="MF_Medikamente_5750789_1.1_5">
+                <valueString value="Hormonpräparate" />
+            </answerOption>
+            <answerOption id="MF_Medikamente_5750789_1.1_6">
+                <valueString value="Schlaf- oder Beruhigungsmittel" />
+            </answerOption>
+            <answerOption id="MF_Medikamente_5750789_1.1_7">
+                <valueString value="blutdrucksenkende Mittel" />
+            </answerOption><!--Die
+            Freitext&#45;Oder&#45;Option muss durch den Questionnaire&#45;Renderer aufgrund
+            "open&#45;choice" eingefügt werden.--><!--<answerOption
+            id="MF_Medikamente_5750789_1.1_others"><valueString value="oder:"/></answerOption>-->
+        </item>
+        <item>
+            <linkId value="MF_Allergie_5729708_1.1" />
+            <prefix value="2.1" />
+            <text value="Besteht eine Allergie?" />
+            <type value="open-choice" />
+            <required value="true" />
+            <repeats value="true" />
+            <answerOption id="MF_Allergie_5729708_1.1_none">
+                <extension
+                    url="http://hl7.org/fhir/StructureDefinition/questionnaire-optionExclusive">
+                    <valueBoolean value="true" />
+                </extension>
+                <valueString value="nein" />
+            </answerOption>
+            <answerOption id="MF_Allergie_5729708_1.1_1">
+                <valueString value="Medikamente (z.B. Antibiotika, Novalgin, Paracetamol)" />
+            </answerOption>
+            <answerOption id="MF_Allergie_5729708_1.1_2">
+                <valueString value="Betäubungsmittel" />
+            </answerOption>
+            <answerOption id="MF_Allergie_5729708_1.1_3">
+                <valueString value="Röntgenkontrastmittel" />
+            </answerOption>
+            <answerOption id="MF_Allergie_5729708_1.1_4">
+                <valueString value="Latex" />
+            </answerOption>
+            <answerOption id="MF_Allergie_5729708_1.1_5">
+                <valueString value="Desinfektionsmittel" />
+            </answerOption>
+            <answerOption id="MF_Allergie_5729708_1.1_6">
+                <valueString value="Jod" />
+            </answerOption>
+            <answerOption id="MF_Allergie_5729708_1.1_7">
+                <valueString value="Pflaster" />
+            </answerOption>
+            <answerOption id="MF_Allergie_5729708_1.1_8">
+                <valueString value="Kunststoffe" />
+            </answerOption><!--Die
+            Freitext&#45;Oder&#45;Option muss durch den Questionnaire&#45;Renderer aufgrund
+            "open&#45;choice" eingefügt werden.--><!--<answerOption
+            id="MF_Allergie_5729708_1.1_others"><valueString value="oder:"/></answerOption>-->
+        </item>
+        <item>
+            <linkId value="MF_Blutung_5733419_1.1" />
+            <prefix value="3.1" />
+            <text
+                value="Besteht bei Ihnen eine erhöhte Blutungsneigung wie z.B. häufig Nasen-/​Zahnfleischbluten, blaue Flecken, Nachbluten nach Operationen?" />
+            <type value="boolean" />
+            <required value="true" />
+        </item>
+        <item>
+            <linkId value="MF_Infektionskrankheit_5745052_1.1" />
+            <prefix value="4.1" />
+            <text value="Besteht/​Bestand eine Infektionskrankheit?" />
+            <type value="open-choice" />
+            <required value="true" />
+            <repeats value="true" />
+            <answerOption id="MF_Infektionskrankheit_5745052_1.1_none">
+                <extension
+                    url="http://hl7.org/fhir/StructureDefinition/questionnaire-optionExclusive">
+                    <valueBoolean value="true" />
+                </extension>
+                <valueString value="nein" />
+            </answerOption>
+            <answerOption id="MF_Infektionskrankheit_5745052_1.1_1">
+                <valueString value="Hepatitis" />
+            </answerOption>
+            <answerOption id="MF_Infektionskrankheit_5745052_1.1_2">
+                <valueString value="HIV/​AIDS" />
+            </answerOption>
+            <answerOption id="MF_Infektionskrankheit_5745052_1.1_3">
+                <valueString value="Hirnhautentzündung" />
+            </answerOption>
+            <answerOption id="MF_Infektionskrankheit_5745052_1.1_4">
+                <valueString value="Tuberkulose" />
+            </answerOption><!--Die
+            Freitext&#45;Oder&#45;Option muss durch den Questionnaire&#45;Renderer aufgrund
+            "open&#45;choice" eingefügt werden.--><!--<answerOption
+            id="MF_Infektionskrankheit_5745052_1.1_others"><valueString
+            value="oder:"/></answerOption>-->
+        </item>
+        <item>
+            <linkId value="MF_Herz_5742561_1.1" />
+            <prefix value="5.1" />
+            <text value="Besteht/​Bestand eine Herz-Kreislauf-Erkrankung?" />
+            <type value="open-choice" />
+            <required value="true" />
+            <repeats value="true" />
+            <answerOption id="MF_Herz_5742561_1.1_none">
+                <extension
+                    url="http://hl7.org/fhir/StructureDefinition/questionnaire-optionExclusive">
+                    <valueBoolean value="true" />
+                </extension>
+                <valueString value="nein" />
+            </answerOption>
+            <answerOption id="MF_Herz_5742561_1.1_1">
+                <valueString value="koronare Herzkrankheit" />
+            </answerOption>
+            <answerOption id="MF_Herz_5742561_1.1_2">
+                <valueString value="Bluthochdruck" />
+            </answerOption>
+            <answerOption id="MF_Herz_5742561_1.1_3">
+                <valueString value="Rhythmusstörungen" />
+            </answerOption>
+            <answerOption id="MF_Herz_5742561_1.1_4">
+                <valueString value="Schlaganfall" />
+            </answerOption>
+            <answerOption id="MF_Herz_5742561_1.1_5">
+                <valueString value="Herzinfarkt" />
+            </answerOption>
+            <answerOption id="MF_Herz_5742561_1.1_6">
+                <valueString value="Angina pectoris" />
+            </answerOption>
+            <answerOption id="MF_Herz_5742561_1.1_7">
+                <valueString value="Herzmuskelentzündung" />
+            </answerOption>
+            <answerOption id="MF_Herz_5742561_1.1_8">
+                <valueString value="Klappenfehler" />
+            </answerOption><!--Die
+            Freitext&#45;Oder&#45;Option muss durch den Questionnaire&#45;Renderer aufgrund
+            "open&#45;choice" eingefügt werden.--><!--<answerOption
+            id="MF_Herz_5742561_1.1_others"><valueString value="oder:"/></answerOption>-->
+        </item>
+        <item>
+            <linkId value="MF_Lunge_5750774_1.1" />
+            <prefix value="6.1" />
+            <text value="Besteht/​Bestand eine Atemwegs-/​Lungenerkrankung?" />
+            <type value="open-choice" />
+            <required value="true" />
+            <repeats value="true" />
+            <answerOption id="MF_Lunge_5750774_1.1_none">
+                <extension
+                    url="http://hl7.org/fhir/StructureDefinition/questionnaire-optionExclusive">
+                    <valueBoolean value="true" />
+                </extension>
+                <valueString value="nein" />
+            </answerOption>
+            <answerOption id="MF_Lunge_5750774_1.1_1">
+                <valueString value="chronische Bronchitis" />
+            </answerOption>
+            <answerOption id="MF_Lunge_5750774_1.1_2">
+                <valueString value="Lungenentzündung" />
+            </answerOption>
+            <answerOption id="MF_Lunge_5750774_1.1_3">
+                <valueString value="Asthma bronchiale" />
+            </answerOption>
+            <answerOption id="MF_Lunge_5750774_1.1_4">
+                <valueString value="Lungenblähung" />
+            </answerOption>
+            <answerOption id="MF_Lunge_5750774_1.1_5">
+                <valueString value="angeborene Fehlbildung" />
+            </answerOption><!--Die
+            Freitext&#45;Oder&#45;Option muss durch den Questionnaire&#45;Renderer aufgrund
+            "open&#45;choice" eingefügt werden.--><!--<answerOption
+            id="MF_Lunge_5750774_1.1_others"><valueString value="oder:"/></answerOption>-->
+        </item>
+        <item>
+            <linkId value="D-IP7_02-2020_Frage_I.7.1" />
+            <prefix value="7.1" />
+            <text value="Leiden Sie unter Luftnot, vor allem im flachen Liegen?" />
+            <type value="boolean" />
+            <required value="true" />
+        </item>
+        <item>
+            <linkId value="D-IP7_02-2020_Frage_I.8.1" />
+            <prefix value="8.1" />
+            <text value="Leiden Sie an Platzangst (Klaustrophobie)?" />
+            <type value="boolean" />
+            <required value="true" />
+        </item>
+        <item>
+            <linkId value="D-IP7_02-2020_Frage_I.9.1" />
+            <prefix value="9.1" />
+            <text value="Haben Sie Angst vor Spritzen?" />
+            <type value="boolean" />
+            <required value="true" />
+        </item>
+        <item>
+            <linkId value="D-IP7_02-2020_Frage_I.10.1" />
+            <prefix value="10.1" />
+            <text value="Ist eine Lagerung auf dem Bauch möglich?" />
+            <type value="boolean" />
+            <required value="true" />
+        </item>
+        <item>
+            <linkId value="MF_Implantate_5745045_1.1" />
+            <prefix value="11.1" />
+            <text value="Befinden sich Implantate im Körper?" />
+            <type value="open-choice" />
+            <required value="true" />
+            <repeats value="true" />
+            <answerOption id="MF_Implantate_5745045_1.1_none">
+                <extension
+                    url="http://hl7.org/fhir/StructureDefinition/questionnaire-optionExclusive">
+                    <valueBoolean value="true" />
+                </extension>
+                <valueString value="nein" />
+            </answerOption>
+            <answerOption id="MF_Implantate_5745045_1.1_1">
+                <valueString value="Schrittmacher" />
+            </answerOption>
+            <answerOption id="MF_Implantate_5745045_1.1_2">
+                <valueString value="Defibrillator" />
+            </answerOption>
+            <answerOption id="MF_Implantate_5745045_1.1_3">
+                <valueString value="Herzklappe" />
+            </answerOption>
+            <answerOption id="MF_Implantate_5745045_1.1_4">
+                <valueString value="Stent" />
+            </answerOption>
+            <answerOption id="MF_Implantate_5745045_1.1_5">
+                <valueString value="künstliches Gelenk" />
+            </answerOption>
+            <answerOption id="MF_Implantate_5745045_1.1_6">
+                <valueString value="Silikon" />
+            </answerOption>
+            <answerOption id="MF_Implantate_5745045_1.1_7">
+                <valueString value="Hydrogel" />
+            </answerOption>
+            <answerOption id="MF_Implantate_5745045_1.1_8">
+                <valueString value="Zähne" />
+            </answerOption>
+            <answerOption id="MF_Implantate_5745045_1.1_9">
+                <valueString value="Metall" />
+            </answerOption><!--Die
+            Freitext&#45;Oder&#45;Option muss durch den Questionnaire&#45;Renderer aufgrund
+            "open&#45;choice" eingefügt werden.--><!--<answerOption
+            id="MF_Implantate_5745045_1.1_others"><valueString value="oder:"/></answerOption>-->
+        </item>
+        <item>
+            <linkId value="MF_Nervensystem_5755621_1.1" />
+            <prefix value="12.1" />
+            <text value="Besteht/​Bestand eine Erkrankung des Nervensystems?" />
+            <type value="open-choice" />
+            <required value="true" />
+            <repeats value="true" />
+            <answerOption id="MF_Nervensystem_5755621_1.1_none">
+                <extension
+                    url="http://hl7.org/fhir/StructureDefinition/questionnaire-optionExclusive">
+                    <valueBoolean value="true" />
+                </extension>
+                <valueString value="nein" />
+            </answerOption>
+            <answerOption id="MF_Nervensystem_5755621_1.1_1">
+                <valueString value="Gehstörungen/​Lähmungen" />
+            </answerOption>
+            <answerOption id="MF_Nervensystem_5755621_1.1_2">
+                <valueString value="Krampfleiden (Epilepsie)" />
+            </answerOption>
+            <answerOption id="MF_Nervensystem_5755621_1.1_3">
+                <valueString value="Parkinson" />
+            </answerOption>
+            <answerOption id="MF_Nervensystem_5755621_1.1_4">
+                <valueString value="Gefühlsstörungen" />
+            </answerOption>
+            <answerOption id="MF_Nervensystem_5755621_1.1_5">
+                <valueString value="Polyneuropathie" />
+            </answerOption>
+            <answerOption id="MF_Nervensystem_5755621_1.1_6">
+                <valueString value="Schmerzen" />
+            </answerOption><!--Die
+            Freitext&#45;Oder&#45;Option muss durch den Questionnaire&#45;Renderer aufgrund
+            "open&#45;choice" eingefügt werden.--><!--<answerOption
+            id="MF_Nervensystem_5755621_1.1_others"><valueString value="oder:"/></answerOption>-->
+        </item>
+        <item>
+            <linkId value="MF_Stoffwechsel_5762791_1.1" />
+            <prefix value="13.1" />
+            <text value="Besteht eine Stoffwechselerkrankung?" />
+            <type value="open-choice" />
+            <required value="true" />
+            <repeats value="true" />
+            <answerOption id="MF_Stoffwechsel_5762791_1.1_none">
+                <extension
+                    url="http://hl7.org/fhir/StructureDefinition/questionnaire-optionExclusive">
+                    <valueBoolean value="true" />
+                </extension>
+                <valueString value="nein" />
+            </answerOption>
+            <answerOption id="MF_Stoffwechsel_5762791_1.1_1">
+                <valueString value="Zuckerkrankheit" />
+            </answerOption>
+            <answerOption id="MF_Stoffwechsel_5762791_1.1_2">
+                <valueString value="Gicht" />
+            </answerOption><!--Die
+            Freitext&#45;Oder&#45;Option muss durch den Questionnaire&#45;Renderer aufgrund
+            "open&#45;choice" eingefügt werden.--><!--<answerOption
+            id="MF_Stoffwechsel_5762791_1.1_others"><valueString value="oder:"/></answerOption>-->
+        </item>
+        <item>
+            <linkId value="MF_Niere_Harn_5759200_1.1" />
+            <prefix value="14.1" />
+            <text
+                value="Besteht/​Bestand eine Erkrankung oder Fehlbildung der Nieren bzw. Harnorgane?" />
+            <type value="open-choice" />
+            <required value="true" />
+            <repeats value="true" />
+            <answerOption id="MF_Niere_Harn_5759200_1.1_none">
+                <extension
+                    url="http://hl7.org/fhir/StructureDefinition/questionnaire-optionExclusive">
+                    <valueBoolean value="true" />
+                </extension>
+                <valueString value="nein" />
+            </answerOption>
+            <answerOption id="MF_Niere_Harn_5759200_1.1_1">
+                <valueString value="Nierenfunktionsstörung" />
+            </answerOption>
+            <answerOption id="MF_Niere_Harn_5759200_1.1_2">
+                <valueString value="Nierensteine" />
+            </answerOption>
+            <answerOption id="MF_Niere_Harn_5759200_1.1_3">
+                <valueString value="chronischer Harnwegsinfekt" />
+            </answerOption>
+            <answerOption id="MF_Niere_Harn_5759200_1.1_4">
+                <valueString value="Nierenentzündung" />
+            </answerOption>
+            <answerOption id="MF_Niere_Harn_5759200_1.1_5">
+                <valueString value="angeborene Fehlbildung (z.B. Doppelniere)" />
+            </answerOption>
+            <answerOption id="MF_Niere_Harn_5759200_1.1_6">
+                <valueString value="Blasenentleerungsstörung/​verzögerte Blasenentleerung" />
+            </answerOption><!--Die
+            Freitext&#45;Oder&#45;Option muss durch den Questionnaire&#45;Renderer aufgrund
+            "open&#45;choice" eingefügt werden.--><!--<answerOption
+            id="MF_Niere_Harn_5759200_1.1_others"><valueString value="oder:"/></answerOption>-->
+        </item>
+        <item>
+            <linkId value="D-IP7_02-2020_Frage_I.15.1" />
+            <prefix value="15.1" />
+            <text value="Sind Sie dialysepflichtig?" />
+            <type value="boolean" />
+            <required value="true" />
+        </item>
+        <item>
+            <linkId value="D-IP7_02-2020_Frage_I.16.1" />
+            <prefix value="16.1" />
+            <text value="Wurde Ihnen eine Niere transplantiert?" />
+            <type value="boolean" />
+            <required value="true" />
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/entryFormat">
+                <valueString value="JJJJ-MM-TT" />
+            </extension>
+            <linkId value="D-IP7_02-2020_Frage_I.16.2" />
+            <prefix value="16.2" />
+            <text value="Wenn ja, wann?" />
+            <type value="date" />
+            <enableWhen>
+                <question value="D-IP7_02-2020_Frage_I.16.1" />
+                <operator value="=" />
+                <answerBoolean value="true" />
+            </enableWhen>
+            <required value="true" />
+        </item>
+        <item>
+            <linkId value="D-IP7_02-2020_Frage_I.17.1" />
+            <prefix value="17.1" />
+            <text value="Wurde Ihnen eine Niere entfernt?" />
+            <type value="boolean" />
+            <required value="true" />
+        </item>
+        <item>
+            <extension url="http://hl7.org/fhir/StructureDefinition/entryFormat">
+                <valueString value="JJJJ-MM-TT" />
+            </extension>
+            <linkId value="D-IP7_02-2020_Frage_I.17.2" />
+            <prefix value="17.2" />
+            <text value="Wenn ja, wann?" />
+            <type value="date" />
+            <enableWhen>
+                <question value="D-IP7_02-2020_Frage_I.17.1" />
+                <operator value="=" />
+                <answerBoolean value="true" />
+            </enableWhen>
+            <required value="true" />
+        </item>
+        <item>
+            <linkId value="D-IP7_02-2020_Frage_I.18.1" />
+            <prefix value="18.1" />
+            <text value="Wurde schon einmal eine Nierenbiopsie durchgeführt?" />
+            <type value="boolean" />
+            <required value="true" />
+        </item>
+        <item>
+            <linkId value="D-IP7_02-2020_Frage_I.18.2" />
+            <prefix value="18.2" />
+            <text value="Wenn ja, haben sich dabei Besonderheiten ergeben?" />
+            <type value="open-choice" />
+            <enableWhen>
+                <question value="D-IP7_02-2020_Frage_I.18.1" />
+                <operator value="=" />
+                <answerBoolean value="true" />
+            </enableWhen>
+            <required value="true" />
+            <repeats value="true" />
+            <answerOption id="D-IP7_02-2020_Frage_I.18.2_none">
+                <extension
+                    url="http://hl7.org/fhir/StructureDefinition/questionnaire-optionExclusive">
+                    <valueBoolean value="true" />
+                </extension>
+                <valueString value="nein" />
+            </answerOption>
+            <answerOption id="D-IP7_02-2020_Frage_I.18.2_1">
+                <valueString
+                    value="Feststellung einer behandlungs- oder kontrollbedürftigen Erkrankung" />
+            </answerOption>
+            <answerOption id="D-IP7_02-2020_Frage_I.18.2_2">
+                <valueString value="Komplikationen" />
+            </answerOption>
+            <answerOption id="D-IP7_02-2020_Frage_I.18.2_3">
+                <valueString value="vorzeitiger Abbruch" />
+            </answerOption><!--Die
+            Freitext&#45;Oder&#45;Option muss durch den Questionnaire&#45;Renderer aufgrund
+            "open&#45;choice" eingefügt werden.--><!--<answerOption
+            id="D&#45;IP7_02&#45;2020_Frage_I.18.2_others"><valueString
+            value="oder:"/></answerOption>-->
+        </item>
+    </item>
+    <item>
+        <linkId value="D-IP7_02-2020_Frage_II.0" />
+        <prefix value="II." />
+        <text value="Zusatzfragen bei Frauen" />
+        <type value="group" />
+        <required value="true" />
+        <item>
+            <extension
+                url="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression">
+                <valueExpression>
+                    <language value="text/fhirpath" />
+                    <expression
+                        value="today() &gt;= $resource.item.where(linkId = &apos;dateOfBirth&apos;).answer.valueDate + 10 years and today() &lt;= $resource.item.where(linkId = &apos;dateOfBirth&apos;).answer.valueDate + 59 years" />
+                </valueExpression>
+            </extension>
+            <linkId value="MF_Frauen_Schwanger_5737899_1.1" />
+            <prefix value="1.1" />
+            <text value="Könnten Sie schwanger sein?" />
+            <type value="boolean" />
+            <enableWhen>
+                <question value="baseDataDecimalGender" />
+                <operator value="=" />
+                <answerString value="weiblich" />
+            </enableWhen>
+            <required value="true" />
+        </item>
+        <item>
+            <extension
+                url="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression">
+                <valueExpression>
+                    <language value="text/fhirpath" />
+                    <expression
+                        value="today() &gt;= $resource.item.where(linkId = &apos;dateOfBirth&apos;).answer.valueDate + 10 years and today() &lt;= $resource.item.where(linkId = &apos;dateOfBirth&apos;).answer.valueDate + 59 years" />
+                </valueExpression>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/entryFormat">
+                <valueString value="JJJJ-MM-TT" />
+            </extension>
+            <linkId value="MF_Frauen_Regelblutung_5737879_1.1" />
+            <prefix value="2.1" />
+            <text value="Wann war der 1. Tag der letzten Regelblutung?" />
+            <type value="date" />
+            <enableWhen>
+                <question value="baseDataDecimalGender" />
+                <operator value="=" />
+                <answerString value="weiblich" />
+            </enableWhen>
+            <required value="true" />
+        </item>
+        <item>
+            <extension
+                url="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression">
+                <valueExpression>
+                    <language value="text/fhirpath" />
+                    <expression
+                        value="today() &gt;= $resource.item.where(linkId = &apos;dateOfBirth&apos;).answer.valueDate + 10 years and today() &lt;= $resource.item.where(linkId = &apos;dateOfBirth&apos;).answer.valueDate + 59 years" />
+                </valueExpression>
+            </extension>
+            <linkId value="MF_Frauen_Verhuetungsmittel_5771150_1.1" />
+            <prefix value="3.1" />
+            <text value="Verwenden Sie Verhütungsmittel?" />
+            <type value="open-choice" />
+            <enableWhen>
+                <question value="baseDataDecimalGender" />
+                <operator value="=" />
+                <answerString value="weiblich" />
+            </enableWhen>
+            <required value="true" />
+            <repeats value="true" />
+            <answerOption id="MF_Frauen_Verhuetungsmittel_5771150_1.1_none">
+                <extension
+                    url="http://hl7.org/fhir/StructureDefinition/questionnaire-optionExclusive">
+                    <valueBoolean value="true" />
+                </extension>
+                <valueString value="nein" />
+            </answerOption>
+            <answerOption id="MF_Frauen_Verhuetungsmittel_5771150_1.1_1">
+                <valueString value="Antibabypille" />
+            </answerOption>
+            <answerOption id="MF_Frauen_Verhuetungsmittel_5771150_1.1_2">
+                <valueString value="Hormonspirale" />
+            </answerOption>
+            <answerOption id="MF_Frauen_Verhuetungsmittel_5771150_1.1_3">
+                <valueString value="Kupferspirale" />
+            </answerOption><!--Die
+            Freitext&#45;Oder&#45;Option muss durch den Questionnaire&#45;Renderer aufgrund
+            "open&#45;choice" eingefügt werden.--><!--<answerOption
+            id="MF_Frauen_Verhuetungsmittel_5771150_1.1_others"><valueString
+            value="oder:"/></answerOption>-->
+        </item>
+    </item>
+</Questionnaire>

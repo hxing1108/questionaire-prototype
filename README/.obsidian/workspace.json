@@ -1,0 +1,183 @@
+{
+  "main": {
+    "id": "4e772f62a6729c46",
+    "type": "split",
+    "children": [
+      {
+        "id": "cf3b76e212021377",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5dfa0323b5748014",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "fhir-rendering-architecture.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "fhir-rendering-architecture"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "dfccbd76d090ef2f",
+    "type": "split",
+    "children": [
+      {
+        "id": "4e0dd6c5d534a86b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c36b91daf21c952e",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "c13e10cbe12b7500",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "0d1c9ea28986d25c",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "7b99f04b2946e273",
+    "type": "split",
+    "children": [
+      {
+        "id": "5bdea037305eb62b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c9a3054b2be83009",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "typeform-style-implementation.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for typeform-style-implementation"
+            }
+          },
+          {
+            "id": "7c5b1523d80b4e60",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "typeform-style-implementation.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from typeform-style-implementation"
+            }
+          },
+          {
+            "id": "16d7935f09e77775",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "5699cde455ebece5",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "typeform-style-implementation.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of typeform-style-implementation"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "5dfa0323b5748014",
+  "lastOpenFiles": [
+    "README.md",
+    "typeform-style-implementation.md",
+    "typeform-implementation-summary.md",
+    "fhir-rendering-architecture.md",
+    "xml-to-component-rendering.md",
+    "ui-redesign-options.md",
+    "how-project-works.md",
+    "project-structure.md",
+    "technology-stack.md"
+  ]
+}

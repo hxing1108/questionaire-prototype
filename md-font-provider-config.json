@@ -1,0 +1,52 @@
+{
+    "availableFonts": [
+        {
+            "fontFamily": "Exile-Regular",
+            "srcUrl": "./fonts/Exile-Regular.ttf"
+        },
+        {
+            "fontFamily": "Material Icons Outline",
+            "srcUrl": "./fonts/MaterialIconsOutlined.otf"
+        },
+        {
+            "fontFamily": "Material Icons Regular",
+            "srcUrl": "./fonts/MaterialIconsRegular.otf"
+        },
+        {
+            "fontFamily": "Material Icons",
+            "srcUrl": "./fonts/MaterialIcons.woff2"
+        },
+        {
+            "fontFamily": "Roboto-Regular",
+            "srcUrl": "./fonts/Roboto-Regular.ttf"
+        },
+        {
+            "fontFamily": "Roboto-Bold",
+            "srcUrl": "./fonts/Roboto-Bold.ttf"
+        },
+        {
+            "fontFamily": "Roboto-Italic",
+            "srcUrl": "./fonts/Roboto-Italic.ttf"
+        },
+        {
+            "fontFamily": "Roboto-Bold-Italic",
+            "srcUrl": "./fonts/Roboto-BoldItalic.ttf"
+        },
+        {
+            "fontFamily": "CourierPrime-Regular",
+            "srcUrl": "./fonts/CourierPrime-Regular.ttf"
+        },
+        {
+            "fontFamily": "CourierPrime-Bold",
+            "srcUrl": "./fonts/CourierPrime-Bold.ttf"
+        },
+        {
+            "fontFamily": "CourierPrime-Italic",
+            "srcUrl": "./fonts/CourierPrime-Italic.ttf"
+        },
+        {
+            "fontFamily": "CourierPrime-Bold-Italic",
+            "srcUrl": "./fonts/CourierPrime-BoldItalic.ttf"
+        }
+    ]
+}

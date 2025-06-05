@@ -1,0 +1,1 @@
+/*! For license information please see signature-lib.js.LICENSE.txt */

@@ -1,0 +1,151 @@
+<Questionnaire xmlns="http://hl7.org/fhir">
+    <id value="81ae262e-f997-4b1a-8c19-9dd2ebced947"/>
+    <language value="de-DE"/>
+    <version value="04/2025"/>
+    <name value="SimpleForm"/>
+    <status value="draft"/>
+    <url value="my/xxSimpleForm_04/2025-81ae262e-f997-4b1a-8c19-9dd2ebced947SimpleForm_04/2025-81ae262e-f997-4b1a-8c19-9dd2ebced947"/>
+    <identifier>
+    </identifier>
+    <extension url="http://medidok.de/fhir/extensions/eforms-acroform">
+        <valueBoolean value="true"></valueBoolean>
+    </extension>
+    <item xmlns="">
+        <linkId value="12df0c06-379b-498a-a61d-fe22e6bb64ea"/>
+        <text value="Placeholder text"/>
+        <type value="group"/>
+        <required value="false"/>
+        <item>
+            <extension url="http://medidok.de/fhir/extensions/eforms-acrofield-name">
+
+
+                <valueCodeableConcept>
+                    <text value="Field comment"/>
+                    <coding>
+                        <system value="eFormsAcrofieldName"/>
+                        <code value="{&quot;acrofieldName&quot;:&quot;RO_!003OPT_OUT(Selected%20Option:%20#CONTENT#%0A)_GDTFIELD(Option%201:7990|Option%202:7990|:7991)&quot;,&quot;valueWhenChecked&quot;:&quot;&quot;}"/>
+                        <display value="003OPT"/>
+                    </coding>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="d0f8391e-28ce-4dc4-b2ee-af5ea74fc749"/>
+            <text value="Single choice"/>
+            <type value="choice"/>
+            <required value="false"/>
+            <repeats value="false"/>
+            <answerOption id="35c3b030-9bee-4364-9bcc-9650ad8e6075">
+
+                <valueCoding>
+                    <display value="Option 1"/>
+                </valueCoding>
+
+            </answerOption>
+            <answerOption id="82e41461-5d13-4872-8f5a-076f0b37eb4c">
+
+                <valueCoding>
+                    <display value="Option 2"/>
+                </valueCoding>
+
+            </answerOption>
+        </item>
+        <item>
+            <linkId value="8ecb6c49-9c06-499b-bff6-c8ec973e7cf7"/>
+            <text value="Multi option"/>
+            <type value="open-choice"/>
+            <required value="false"/>
+            <repeats value="false"/>
+            <answerOption id="48eb4b89-7793-4a11-9df8-75bcb22191f9">
+                <extension url="http://medidok.de/fhir/extensions/eforms-acrofield-name">
+
+
+                    <valueCodeableConcept>
+                        <text value="Field comment"/>
+                        <coding>
+                            <system value="eFormsAcrofieldName"/>
+                            <code value="{&quot;acrofieldName&quot;:&quot;CO_!005PACE_OUT(Pacemaker:%20#CONTENT#%0A)_GDTFIELD(Yes:7993)&quot;,&quot;valueWhenChecked&quot;:&quot;Yes&quot;}"/>
+                            <display value="005PACE"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+
+                <valueCoding>
+                    <display value="Choice 1"/>
+                </valueCoding>
+
+            </answerOption>
+            <answerOption id="5a123a1c-c93b-428a-98fa-842d80a539a6">
+                <extension url="http://medidok.de/fhir/extensions/eforms-acrofield-name">
+
+
+                    <valueCodeableConcept>
+                        <text value="Field comment"/>
+                        <coding>
+                            <system value="eFormsAcrofieldName"/>
+                            <code value="{&quot;acrofieldName&quot;:&quot;CO_!PACE2_OUT(Pacemaker:%20#CONTENT#%0A)_GDTFIELD(Yes:7993)&quot;,&quot;valueWhenChecked&quot;:&quot;&quot;}"/>
+                            <display value="PACE2"/>
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+
+                <valueCoding>
+                    <display value="Choice 2"/>
+                </valueCoding>
+
+            </answerOption>
+        </item>
+        <item>
+            <extension url="http://medidok.de/fhir/extensions/eforms-acrofield-name">
+
+
+                <valueCodeableConcept>
+                    <text value="Field comment"/>
+                    <coding>
+                        <system value="eFormsAcrofieldName"/>
+                        <code value="{&quot;acrofieldName&quot;:&quot;TC_!001FIELD_IN(#PATIENTNAME#)_OUT(Field%20001%20is:%20#CONTENT#%0AText:#005PACE#%0A)&quot;,&quot;valueWhenChecked&quot;:&quot;&quot;}"/>
+                        <display value="001FIELD"/>
+                    </coding>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="163e1f8b-cfc5-4c50-8a63-54ef448aa07d"/>
+            <text value="Text field"/>
+            <type value="text"/>
+            <required value="false"/>
+        </item>
+        <item>
+            <extension url="http://medidok.de/fhir/extensions/eforms-acrofield-name">
+
+
+                <valueCodeableConcept>
+                    <text value="Field comment"/>
+                    <coding>
+                        <system value="eFormsAcrofieldName"/>
+                        <code value="{&quot;acrofieldName&quot;:&quot;NO_!002FIELD_OUT(Field%20002%20is:%20#CONTENT#%0A)_OUTEMPTY(Field%20002%20is%20empty%0A)&quot;,&quot;valueWhenChecked&quot;:&quot;&quot;}"/>
+                        <display value="002FIELD"/>
+                    </coding>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="a404efdf-22c0-4077-ad99-58d6fb884b1a"/>
+            <text value="Numeric data"/>
+            <type value="integer"/>
+            <required value="false"/>
+        </item>
+        <item>
+            <extension url="http://medidok.de/fhir/extensions/eforms-acrofield-name">
+
+
+                <valueCodeableConcept>
+                    <text value="Field comment"/>
+                    <coding>
+                        <system value="eFormsAcrofieldName"/>
+                        <code value="{&quot;acrofieldName&quot;:&quot;CR_!007AGREE_IN(#PATIENT_AGREED#)_OUT(Patient%20agreed.%0A)&quot;,&quot;valueWhenChecked&quot;:&quot;j&quot;}"/>
+                        <display value="007AGREE"/>
+                    </coding>
+                </valueCodeableConcept>
+            </extension>
+            <linkId value="830403b0-8a35-4720-8ffc-b6e7a3c18c78"/>
+            <text value="Boolean question"/>
+            <type value="boolean"/>
+            <required value="false"/>
+        </item>
+    </item>
+</Questionnaire>

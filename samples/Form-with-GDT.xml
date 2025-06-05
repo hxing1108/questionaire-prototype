@@ -1,0 +1,155 @@
+<Questionnaire xmlns="http://hl7.org/fhir">
+	<id value="81ae262e-f997-4b1a-8c19-9dd2ebced947"/>
+	<language value="de-DE"/>
+	<version value="03/2025"/>
+	<name value="Form with GDT"/>
+	<status value="draft"/>
+	<url value="my/xxForm with GDT_03/2025-81ae262e-f997-4b1a-8c19-9dd2ebced947"/>
+	<identifier>
+	</identifier>
+<item xmlns="">
+    <linkId value="12df0c06-379b-498a-a61d-fe22e6bb64ea"/>
+    <text value="Placeholder text"/>
+    <type value="group"/>
+    <required value="false"/>
+<item>
+<extension xmlns="http://medidok.de/fhir" url="http://medidok.de/fhir/extensions/fhir-gdt">
+	<valueCodeableConcept>
+		<coding>
+			<system value="GDT" />
+			<code value="0011" />
+			<display value="boolean" />
+		</coding>
+		<text value="GDT comment" />
+	</valueCodeableConcept>
+</extension>
+    <linkId value="ecb528e6-8af1-4386-93af-af4aea1dc44d"/>
+    <text value="Yes/no question"/>
+    <type value="boolean"/>
+    <required value="false"/>
+</item>
+<item>
+    <linkId value="17fce498-e255-43d3-b376-12c158522517"/>
+    <text value="Choice one of"/>
+    <type value="choice"/>
+    <required value="false"/>
+    <repeats value="false"/>
+<answerOption id="ff4ec9ce-72dc-423c-9935-a02881431a6c">
+<extension xmlns="http://medidok.de/fhir" url="http://medidok.de/fhir/extensions/fhir-gdt">
+	<valueCodeableConcept>
+		<coding>
+			<system value="GDT" />
+			<code value="0021" />
+			<display value="boolean" />
+		</coding>
+		<text value="GDT comment" />
+	</valueCodeableConcept>
+</extension>	
+	<valueCoding>
+		<display value="One of 1"/>
+	</valueCoding>
+	
+</answerOption>
+<answerOption id="af367aa4-db64-4fa1-90d1-5e621822ad75">
+<extension xmlns="http://medidok.de/fhir" url="http://medidok.de/fhir/extensions/fhir-gdt">
+	<valueCodeableConcept>
+		<coding>
+			<system value="GDT" />
+			<code value="0022" />
+			<display value="boolean" />
+		</coding>
+		<text value="GDT comment" />
+	</valueCodeableConcept>
+</extension>		
+	<valueCoding>
+		<display value="One of 2"/>
+	</valueCoding>
+	
+</answerOption>
+</item>
+<item>
+    <linkId value="84bc83b2-489c-46b1-9674-c564a2410c1c"/>
+    <text value="Multi choice"/>
+    <type value="open-choice"/>
+    <required value="false"/>
+    <repeats value="false"/>
+<answerOption id="5ed7e7f3-09a4-41f8-82c1-8760ed6b99b2">
+<extension xmlns="http://medidok.de/fhir" url="http://medidok.de/fhir/extensions/fhir-gdt">
+	<valueCodeableConcept>
+		<coding>
+			<system value="GDT" />
+			<code value="0031" />
+			<display value="boolean" />
+		</coding>
+		<text value="GDT comment" />
+	</valueCodeableConcept>
+</extension>		
+	<valueCoding>
+		<display value="Multi 1"/>
+	</valueCoding>
+	
+</answerOption>
+<answerOption id="32457d3e-e800-4c6d-90b4-53e5fb606e58__string">
+<extension xmlns="http://medidok.de/fhir" url="http://medidok.de/fhir/extensions/fhir-gdt">
+	<valueCodeableConcept>
+		<coding>
+			<system value="GDT" />
+			<code value="0032" />
+			<display value="string" />
+		</coding>
+		<text value="GDT comment" />
+	</valueCodeableConcept>
+</extension>	
+	<valueString value="Multi oder"/>
+	
+	
+</answerOption>
+</item>
+<item>
+<extension xmlns="http://medidok.de/fhir" url="http://medidok.de/fhir/extensions/fhir-gdt">
+	<valueCodeableConcept>
+		<coding>
+			<system value="GDT" />
+			<code value="0041" />
+			<display value="string" />
+		</coding>
+		<text value="GDT comment" />
+	</valueCodeableConcept>
+</extension>	
+    <linkId value="6c195de4-3be3-41f7-90b4-0408b4307d15"/>
+    <text value="Text question"/>
+    <type value="text"/>
+    <required value="false"/>
+</item>
+<item>
+<extension xmlns="http://medidok.de/fhir" url="http://medidok.de/fhir/extensions/fhir-gdt">
+	<valueCodeableConcept>
+		<coding>
+			<system value="GDT" />
+			<code value="0051" />
+			<display value="integer" />
+		</coding>
+		<text value="GDT comment" />
+	</valueCodeableConcept>
+</extension>	
+    <linkId value="134c9ed6-4a52-48b2-9986-90cd260eb1a6"/>
+    <text value="Number question"/>
+    <type value="integer"/>
+    <required value="false"/>
+</item>
+<item>
+<extension xmlns="http://medidok.de/fhir" url="http://medidok.de/fhir/extensions/fhir-gdt">
+	<valueCodeableConcept>
+		<coding>
+			<system value="GDT" />
+			<code value="0061" />
+			<display value="date" />
+		</coding>
+		<text value="GDT comment" />
+	</valueCodeableConcept>
+</extension>	
+    <linkId value="3f22fe1f-a388-420c-a0cf-553074ff6944"/>
+    <text value="Some date"/>
+    <type value="date"/>
+    <required value="false"/>
+</item></item></Questionnaire>

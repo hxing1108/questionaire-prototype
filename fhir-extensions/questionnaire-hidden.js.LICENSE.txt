@@ -1,0 +1,3 @@
+/*! For license information please see acrofield-codec.js.LICENSE.txt */
+
+/*! For license information please see signature-lib.js.LICENSE.txt */

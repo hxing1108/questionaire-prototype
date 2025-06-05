@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug FHIR Structure</title>
+    <script src="./app.js"></script>
+    <style>
+        body { font-family: monospace; }
+        .debug { margin: 20px; padding: 10px; border: 1px solid #ccc; }
+        .element { margin: 5px 0; padding: 5px; background: #f9f9f9; }
+    </style>
+</head>
+<body>
+    <h1>Debug FHIR Structure</h1>
+    <button onclick="loadAndDebug()">Load D-IP7-02-2020.xml and Debug</button>
+    <div id="results"></div>
+    
+    <script>
+        async function loadAndDebug() {
+            try {
+                // Wait for FHIR system
+                await waitForFHIR();
+                
+                // Load the XML file
+                const response = await fetch('./samples/D-IP7-02-2020.xml');
+                const xmlContent = await response.text();
+                
+                // Create FHIR form
+                const fhirForm = document.createElement('fhir-form');
+                fhirForm.setAttribute('editmode', 'false');
+                fhirForm.setAttribute('showcontrols', 'false');
+                fhirForm.setAttribute('showtestingpanel', 'false');
+                fhirForm.style.display = 'none';
+                document.body.appendChild(fhirForm);
+                
+                // Load questionnaire
+                if (fhirForm.loadQuestionnaireXmlContent) {
+                    fhirForm.loadQuestionnaireXmlContent(xmlContent);
+                } else if (fhirForm.loadFromString) {
+                    fhirForm.loadFromString(xmlContent);
+                }
+                
+                // Wait for rendering
+                await new Promise(resolve => setTimeout(resolve, 3000));
+                
+                // Debug the structure
+                debugStructure(fhirForm);
+                
+            } catch (error) {
+                console.error('Debug failed:', error);
+                document.getElementById('results').innerHTML = 
+                    `<p style="color: red;">Debug failed: ${error.message}</p>`;
+            }
+        }
+        
+        function debugStructure(fhirForm) {
+            const results = document.getElementById('results');
+            
+            // Check for elements with linkid
+            const linkidElements = fhirForm.querySelectorAll('[linkid]');
+            console.log('Elements with linkid:', linkidElements.length);
+            
+            // Check for inputs
+            const inputs = fhirForm.querySelectorAll('input, select, textarea');
+            console.log('Total inputs:', inputs.length);
+            
+            // Check for various element types
+            const sections = fhirForm.querySelectorAll('section');
+            const divs = fhirForm.querySelectorAll('div');
+            const labels = fhirForm.querySelectorAll('label');
+            
+            console.log('Sections:', sections.length);
+            console.log('Divs:', divs.length);
+            console.log('Labels:', labels.length);
+            
+            // Build debug output
+            let output = `
+                <div class="debug">
+                    <h3>FHIR Form Structure Debug</h3>
+                    <p><strong>Elements with linkid:</strong> ${linkidElements.length}</p>
+                    <p><strong>Total inputs:</strong> ${inputs.length}</p>
+                    <p><strong>Sections:</strong> ${sections.length}</p>
+                    <p><strong>Divs:</strong> ${divs.length}</p>
+                    <p><strong>Labels:</strong> ${labels.length}</p>
+                </div>
+            `;
+            
+            // Show first few linkid elements
+            if (linkidElements.length > 0) {
+                output += '<div class="debug"><h3>Elements with linkid:</h3>';
+                Array.from(linkidElements).slice(0, 10).forEach((el, i) => {
+                    const linkId = el.getAttribute('linkid');
+                    const hasInputs = el.querySelector('input, select, textarea') ? 'Yes' : 'No';
+                    output += `<div class="element">
+                        ${i+1}. ${el.tagName} linkid="${linkId}" hasInputs=${hasInputs}
+                    </div>`;
+                });
+                output += '</div>';
+            }
+            
+            // Show structure of first section
+            if (sections.length > 0) {
+                output += '<div class="debug"><h3>First Section Structure:</h3>';
+                const firstSection = sections[0];
+                const sectionInputs = firstSection.querySelectorAll('input, select, textarea');
+                output += `<p>Section has ${sectionInputs.length} inputs</p>`;
+                
+                // Show first few inputs in section
+                Array.from(sectionInputs).slice(0, 20).forEach((input, i) => {
+                    const parent = input.parentElement;
+                    const grandParent = parent?.parentElement;
+                    output += `<div class="element">
+                        Input ${i+1}: ${input.type} name="${input.name || 'no-name'}"<br>
+                        Parent: ${parent?.tagName} class="${parent?.className || 'no-class'}"<br>
+                        GrandParent: ${grandParent?.tagName} class="${grandParent?.className || 'no-class'}"
+                    </div>`;
+                });
+                output += '</div>';
+            }
+            
+            results.innerHTML = output;
+        }
+        
+        function waitForFHIR() {
+            return new Promise((resolve, reject) => {
+                let attempts = 0;
+                const checkInterval = setInterval(() => {
+                    attempts++;
+                    const hasSystem = window.customElements && window.customElements.get('fhir-form');
+                    
+                    if (hasSystem) {
+                        console.log('FHIR system ready');
+                        clearInterval(checkInterval);
+                        resolve();
+                    } else if (attempts > 100) {
+                        clearInterval(checkInterval);
+                        console.log('FHIR timeout, proceeding anyway');
+                        resolve();
+                    }
+                }, 100);
+            });
+        }
+    </script>
+</body>
+</html>

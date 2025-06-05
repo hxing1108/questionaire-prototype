@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Working FHIR Typeform Demo</title>
+
+    <!-- Load FHIR system -->
+    <script src="./app.js"></script>
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+          sans-serif;
+        background: #f8fafc;
+      }
+
+      .uploader-container {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+      }
+
+      .uploader-card {
+        background: white;
+        border-radius: 12px;
+        padding: 3rem;
+        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+        max-width: 500px;
+        width: 100%;
+        text-align: center;
+      }
+
+      .uploader-title {
+        font-size: 1.75rem;
+        font-weight: 600;
+        color: #1f2937;
+        margin-bottom: 0.5rem;
+      }
+
+      .file-drop-zone {
+        border: 2px dashed #d1d5db;
+        border-radius: 8px;
+        padding: 3rem 2rem;
+        margin: 2rem 0;
+        cursor: pointer;
+        transition: all 0.2s;
+        background: #f9fafb;
+      }
+
+      .file-drop-zone:hover {
+        border-color: #3b82f6;
+        background: #eff6ff;
+      }
+
+      .upload-button {
+        background: #3b82f6;
+        color: white;
+        border: none;
+        padding: 0.75rem 2rem;
+        border-radius: 8px;
+        font-size: 1rem;
+        cursor: pointer;
+        margin-top: 1rem;
+      }
+
+      .sample-files {
+        margin-top: 2rem;
+        padding-top: 2rem;
+        border-top: 1px solid #e5e7eb;
+      }
+
+      .sample-file {
+        display: inline-block;
+        margin: 0.25rem;
+        padding: 0.5rem 1rem;
+        background: #f3f4f6;
+        border-radius: 6px;
+        color: #4b5563;
+        cursor: pointer;
+        transition: background 0.2s;
+      }
+
+      .sample-file:hover {
+        background: #e5e7eb;
+      }
+
+      .hidden {
+        display: none !important;
+      }
+
+      .loading {
+        padding: 2rem;
+        text-align: center;
+        color: #6b7280;
+      }
+
+      .error {
+        background: #fef2f2;
+        border: 1px solid #fecaca;
+        color: #dc2626;
+        padding: 1rem;
+        border-radius: 8px;
+        margin: 1rem 0;
+      }
+
+      /* FHIR container styling */
+      .fhir-container {
+        min-height: 100vh;
+        padding: 2rem;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .back-button {
+        background: transparent;
+        border: 1px solid #d1d5db;
+        padding: 0.5rem 1rem;
+        border-radius: 6px;
+        cursor: pointer;
+        margin-bottom: 2rem;
+      }
+
+      /* Override FHIR styles for better appearance */
+      .fhir-form {
+        background: white;
+        border-radius: 12px;
+        padding: 2rem;
+        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- File uploader UI -->
+    <div id="uploaderContainer" class="uploader-container">
+      <div class="uploader-card">
+        <h1 class="uploader-title">FHIR Questionnaire Demo</h1>
+        <p>Upload a FHIR XML questionnaire or try a sample</p>
+
+        <div
+          id="fileDropZone"
+          class="file-drop-zone"
+          onclick="document.getElementById('fileInput').click()"
+        >
+          <div>📁</div>
+          <div>Drop your FHIR XML file here</div>
+          <div>or click to browse</div>
+          <button type="button" class="upload-button">Choose File</button>
+        </div>
+
+        <input type="file" id="fileInput" accept=".xml" style="display: none" />
+
+        <div id="errorMessage" class="error hidden"></div>
+
+        <div class="sample-files">
+          <h3>Or try sample questionnaires:</h3>
+          <div id="sampleFiles">
+            <span
+              class="sample-file"
+              data-file="samples/RD17_cs-DE_FHIR-Questionnaire.xml"
+            >
+              German Clinical Questionnaire
+            </span>
+            <span
+              class="sample-file"
+              onclick="window.debugFHIR()"
+              style="background: #eff6ff; color: #1d4ed8"
+            >
+              Debug FHIR System
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Loading state -->
+    <div id="loadingContainer" class="loading hidden">
+      <div>Loading questionnaire...</div>
+    </div>
+
+    <!-- FHIR container -->
+    <div id="fhirContainer" class="fhir-container hidden">
+      <button class="back-button" onclick="showUploader()">
+        ← Back to Upload
+      </button>
+      <div id="fhirForm" class="fhir-form"></div>
+    </div>
+
+    <script>
+      let currentFhirForm = null;
+
+      // Initialize when DOM is ready
+      document.addEventListener('DOMContentLoaded', () => {
+        setupEventListeners();
+
+        // Wait for FHIR system to be ready
+        waitForFHIR()
+          .then(() => {
+            console.log('FHIR system ready!');
+          })
+          .catch((err) => {
+            console.error('FHIR system failed to load:', err);
+            console.log('Attempting to continue anyway...');
+            // Don't show error immediately, let user try to load a file anyway
+          });
+      });
+
+      function waitForFHIR() {
+        return new Promise((resolve, reject) => {
+          let attempts = 0;
+          const maxAttempts = 200; // Increase timeout to 20 seconds
+
+          const checkInterval = setInterval(() => {
+            attempts++;
+
+            // More comprehensive FHIR system detection
+            const hasFhirForm =
+              window.FhirForm && typeof window.FhirForm === 'object';
+            const hasMediDOK =
+              window.mediDOK && window.mediDOK.FhirQuestionnaries;
+            const hasAnyFhir = window.FhirForm || window.mediDOK;
+
+            console.log(`FHIR check attempt ${attempts}:`, {
+              hasFhirForm,
+              hasMediDOK,
+              hasAnyFhir,
+              FhirForm: !!window.FhirForm,
+              mediDOK: !!window.mediDOK,
+            });
+
+            if (hasAnyFhir) {
+              console.log('FHIR system detected!');
+              clearInterval(checkInterval);
+              resolve();
+            } else if (attempts > maxAttempts) {
+              clearInterval(checkInterval);
+              console.error(
+                'Available globals:',
+                Object.keys(window).filter(
+                  (key) =>
+                    key.toLowerCase().includes('fhir') ||
+                    key.toLowerCase().includes('medidok') ||
+                    key.toLowerCase().includes('questionnaire')
+                )
+              );
+              reject(new Error('FHIR system failed to load within timeout'));
+            }
+          }, 100);
+        });
+      }
+
+      function setupEventListeners() {
+        // File input change
+        document.getElementById('fileInput').addEventListener('change', (e) => {
+          const file = e.target.files[0];
+          if (file) {
+            loadFile(file);
+          }
+        });
+
+        // Sample file clicks
+        document.querySelectorAll('.sample-file').forEach((btn) => {
+          btn.addEventListener('click', () => {
+            const filePath = btn.getAttribute('data-file');
+            loadSampleFile(filePath);
+          });
+        });
+
+        // Drag and drop
+        const dropZone = document.getElementById('fileDropZone');
+        dropZone.addEventListener('dragover', (e) => {
+          e.preventDefault();
+          dropZone.style.borderColor = '#3b82f6';
+        });
+
+        dropZone.addEventListener('dragleave', (e) => {
+          e.preventDefault();
+          dropZone.style.borderColor = '#d1d5db';
+        });
+
+        dropZone.addEventListener('drop', (e) => {
+          e.preventDefault();
+          dropZone.style.borderColor = '#d1d5db';
+
+          const files = e.dataTransfer.files;
+          if (files.length > 0) {
+            loadFile(files[0]);
+          }
+        });
+      }
+
+      async function loadFile(file) {
+        if (!file.name.toLowerCase().endsWith('.xml')) {
+          showError('Please select an XML file.');
+          return;
+        }
+
+        try {
+          showLoading();
+          const text = await file.text();
+          await loadQuestionnaire(text);
+        } catch (error) {
+          console.error('Error loading file:', error);
+          showError('Error loading file: ' + error.message);
+          showUploader();
+        }
+      }
+
+      async function loadSampleFile(filePath) {
+        try {
+          showLoading();
+          const response = await fetch(filePath);
+          if (!response.ok) {
+            throw new Error(
+              `Failed to load sample file: ${response.statusText}`
+            );
+          }
+
+          const text = await response.text();
+          await loadQuestionnaire(text);
+        } catch (error) {
+          console.error('Error loading sample file:', error);
+          showError(
+            "Error loading sample file. Make sure you're running this from a web server."
+          );
+          showUploader();
+        }
+      }
+
+      async function loadQuestionnaire(xmlContent) {
+        try {
+          // Try to wait for FHIR system, but don't fail if it times out
+          try {
+            await waitForFHIR();
+            console.log('FHIR system confirmed ready');
+          } catch (err) {
+            console.warn(
+              'FHIR system check failed, but continuing anyway:',
+              err.message
+            );
+            // Wait a bit more and check again
+            await new Promise((resolve) => setTimeout(resolve, 2000));
+          }
+
+          // Get the container for the FHIR form
+          const fhirFormContainer = document.getElementById('fhirForm');
+          fhirFormContainer.innerHTML = '';
+
+          // Create a new container element for the FHIR form
+          const formElement = document.createElement('div');
+          formElement.id = 'questionnaire-container';
+          fhirFormContainer.appendChild(formElement);
+
+          console.log('Attempting to render questionnaire...');
+          console.log('Available FHIR objects:', {
+            FhirForm: typeof window.FhirForm,
+            mediDOK: typeof window.mediDOK,
+            FhirFormKeys: window.FhirForm
+              ? Object.keys(window.FhirForm)
+              : 'N/A',
+          });
+
+          // Method 1: Try using FhirForm directly
+          if (window.FhirForm && typeof window.FhirForm === 'object') {
+            console.log('Attempting to load questionnaire using FhirForm...');
+
+            // Try different approaches to load the questionnaire
+            if (window.FhirForm.loadFromString) {
+              console.log('Trying FhirForm.loadFromString...');
+              window.FhirForm.loadFromString(xmlContent, formElement);
+            } else if (window.FhirForm.loadQuestionnaire) {
+              console.log('Trying FhirForm.loadQuestionnaire...');
+              window.FhirForm.loadQuestionnaire(xmlContent, formElement);
+            } else if (window.FhirForm.init) {
+              console.log('Trying FhirForm.init...');
+              window.FhirForm.init(formElement, { xml: xmlContent });
+            } else {
+              console.log('Trying fallback methods...');
+              // Fallback: set the XML content and try to trigger rendering
+              formElement.innerHTML = xmlContent;
+
+              // Try to find a render method
+              Object.keys(window.FhirForm).forEach((key) => {
+                const value = window.FhirForm[key];
+                if (
+                  typeof value === 'function' &&
+                  key.toLowerCase().includes('render')
+                ) {
+                  try {
+                    console.log(`Trying FhirForm.${key}...`);
+                    value.call(window.FhirForm, formElement);
+                  } catch (e) {
+                    console.log(`Failed to call ${key}:`, e.message);
+                  }
+                }
+              });
+            }
+          }
+
+          // Method 2: Try using mediDOK
+          if (window.mediDOK && window.mediDOK.FhirQuestionnaries) {
+            console.log('Attempting to load questionnaire using mediDOK...');
+
+            const fhir = window.mediDOK.FhirQuestionnaries;
+
+            // Try different methods
+            if (fhir.render) {
+              console.log('Trying mediDOK render...');
+              fhir.render(formElement, xmlContent);
+            } else if (fhir.loadXML) {
+              console.log('Trying mediDOK loadXML...');
+              fhir.loadXML(xmlContent, formElement);
+            } else if (fhir.createForm) {
+              console.log('Trying mediDOK createForm...');
+              fhir.createForm(formElement, xmlContent);
+            }
+          }
+
+          // Show the form
+          showFhirForm();
+
+          // If nothing was rendered, show the raw XML in a formatted way
+          setTimeout(() => {
+            if (
+              formElement.children.length === 0 &&
+              !formElement.textContent.trim()
+            ) {
+              console.log('No FHIR rendering detected, showing fallback');
+              showXMLFallback(xmlContent, formElement);
+            } else {
+              console.log('FHIR form successfully rendered!');
+            }
+          }, 2000); // Increased timeout for rendering
+        } catch (error) {
+          console.error('Error rendering questionnaire:', error);
+          showError('Error rendering questionnaire: ' + error.message);
+          showUploader();
+        }
+      }
+
+      function showXMLFallback(xmlContent, container) {
+        // Parse the XML and create a basic form representation
+        try {
+          const parser = new DOMParser();
+          const xmlDoc = parser.parseFromString(xmlContent, 'text/xml');
+
+          container.innerHTML = `
+            <div style="padding: 20px; background: #f9f9f9; border-radius: 8px;">
+              <h2>FHIR Questionnaire Preview</h2>
+              <p><em>The FHIR system is loaded but automatic rendering failed. Here's a basic preview:</em></p>
+              <div id="xml-preview"></div>
+              <details style="margin-top: 20px;">
+                <summary>View Raw XML</summary>
+                <pre style="background: #f5f5f5; padding: 10px; border-radius: 4px; overflow-x: auto;">${xmlContent
+                  .replace(/</g, '&lt;')
+                  .replace(/>/g, '&gt;')}</pre>
+              </details>
+            </div>
+          `;
+
+          // Try to extract basic information from the XML
+          const items = xmlDoc.querySelectorAll('item');
+          const preview = document.getElementById('xml-preview');
+
+          if (items.length > 0) {
+            preview.innerHTML = '<h3>Questions found:</h3>';
+            items.forEach((item, index) => {
+              const text =
+                item.querySelector('text')?.getAttribute('value') ||
+                `Question ${index + 1}`;
+              const type = item.getAttribute('type') || 'unknown';
+              preview.innerHTML += `<p><strong>${
+                index + 1
+              }.</strong> ${text} <em>(${type})</em></p>`;
+            });
+          }
+        } catch (e) {
+          container.innerHTML = `
+            <div style="padding: 20px; background: #f9f9f9; border-radius: 8px;">
+              <h2>FHIR Questionnaire Loaded</h2>
+              <p>The XML content was loaded but could not be automatically rendered.</p>
+              <p>File size: ${xmlContent.length} characters</p>
+              <button onclick="console.log(arguments[0])" style="padding: 8px 16px; margin: 8px;">Debug in Console</button>
+            </div>
+          `;
+        }
+      }
+
+      function showUploader() {
+        document.getElementById('uploaderContainer').classList.remove('hidden');
+        document.getElementById('loadingContainer').classList.add('hidden');
+        document.getElementById('fhirContainer').classList.add('hidden');
+        hideError();
+      }
+
+      function showLoading() {
+        document.getElementById('uploaderContainer').classList.add('hidden');
+        document.getElementById('loadingContainer').classList.remove('hidden');
+        document.getElementById('fhirContainer').classList.add('hidden');
+        hideError();
+      }
+
+      function showFhirForm() {
+        document.getElementById('uploaderContainer').classList.add('hidden');
+        document.getElementById('loadingContainer').classList.add('hidden');
+        document.getElementById('fhirContainer').classList.remove('hidden');
+        hideError();
+      }
+
+      function showError(message) {
+        const errorDiv = document.getElementById('errorMessage');
+        errorDiv.textContent = message;
+        errorDiv.classList.remove('hidden');
+      }
+
+      function hideError() {
+        document.getElementById('errorMessage').classList.add('hidden');
+      }
+
+      // Debug helpers
+      window.debugFHIR = function () {
+        console.log('=== FHIR Debug Info ===');
+        console.log('FhirForm:', window.FhirForm);
+        console.log('mediDOK:', window.mediDOK);
+        if (window.mediDOK) {
+          console.log(
+            'mediDOK.FhirQuestionnaries:',
+            window.mediDOK.FhirQuestionnaries
+          );
+        }
+      };
+    </script>
+  </body>
+</html>

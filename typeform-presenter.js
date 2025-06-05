@@ -520,15 +520,21 @@ class TypeformPresenter extends HTMLElement {
         min-height: 100vh;
         max-width: 800px;
         margin: 0 auto;
-        padding: 2rem;
+        padding: 0;
+        position: relative;
       }
 
       .progress-bar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
         height: 4px;
         background: hsl(var(--border));
-        border-radius: 2px;
-        margin-bottom: 4rem;
+        border-radius: 0;
         overflow: hidden;
+        z-index: 1000;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
       }
 
       .progress-fill {
@@ -548,7 +554,8 @@ class TypeformPresenter extends HTMLElement {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding: 2rem 0;
+        padding: 6rem 2rem 8rem 2rem;
+        min-height: calc(100vh - 14rem);
       }
 
       .question-content {
@@ -710,10 +717,22 @@ class TypeformPresenter extends HTMLElement {
       }
 
       .navigation {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
         display: flex;
         justify-content: space-between;
-        margin-top: 3rem;
+        padding: 1.5rem 2rem;
         gap: 1rem;
+        background: hsl(var(--background));
+        border-top: 1px solid hsl(var(--border));
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+        max-width: 800px;
+        margin: 0 auto;
+        left: 50%;
+        transform: translateX(-50%);
       }
 
       .nav-button {
@@ -798,8 +817,17 @@ class TypeformPresenter extends HTMLElement {
 
       /* Mobile responsive */
       @media (max-width: 768px) {
-        .typeform-container {
+        .question-wrapper {
+          padding: 5rem 1rem 7rem 1rem;
+          min-height: calc(100vh - 12rem);
+        }
+        
+        .navigation {
           padding: 1rem;
+          left: 0;
+          right: 0;
+          transform: none;
+          max-width: 100%;
         }
         
         ::slotted(label) {
@@ -813,8 +841,13 @@ class TypeformPresenter extends HTMLElement {
         }
         
         .nav-button {
-          padding: 0.625rem 1.5rem;
+          padding: 0.75rem 1.5rem;
           font-size: 0.875rem;
+        }
+        
+        .nav-button.next {
+          max-width: none;
+          flex: 1;
         }
       }
 

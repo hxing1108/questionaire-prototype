@@ -1260,7 +1260,7 @@ class TypeformPresenter extends HTMLElement {
       
       case 'radio':
         return questionInfo.options.map((opt, index) => `
-          <label class="typeform-radio-label">
+          <label class="typeform-radio-label" data-auto-advance="true">
             <input type="radio" name="${questionInfo.name}" value="${opt.value}" ${opt.checked ? 'checked' : ''} ${questionInfo.required && index === 0 ? 'required' : ''}>
             <span>${opt.text}</span>
           </label>
@@ -1310,6 +1310,10 @@ class TypeformPresenter extends HTMLElement {
             selectedOriginal.checked = true;
             selectedOriginal.dispatchEvent(new Event('change', { bubbles: true }));
           }
+          
+          // Auto-advance to next question after a short delay
+          this.autoAdvanceToNextQuestion();
+          
         } else if (displayInput.type === 'checkbox') {
           // For checkboxes, find the specific one by value
           const originalInput = originalElement.querySelector(`input[name="${displayInput.name}"][value="${displayInput.value}"]`);
@@ -1317,6 +1321,27 @@ class TypeformPresenter extends HTMLElement {
             originalInput.checked = displayInput.checked;
             originalInput.dispatchEvent(new Event('change', { bubbles: true }));
           }
+          
+          // For single checkbox questions (boolean), auto-advance
+          const checkboxes = displayElement.querySelectorAll('input[type="checkbox"]');
+          if (checkboxes.length === 1) {
+            this.autoAdvanceToNextQuestion();
+          }
+          
+        } else if (displayInput.tagName.toLowerCase() === 'select') {
+          // For select dropdowns
+          const originalInput = originalElement.querySelector(`[name="${displayInput.name}"]`);
+          if (originalInput) {
+            originalInput.value = displayInput.value;
+            originalInput.dispatchEvent(new Event('change', { bubbles: true }));
+            originalInput.dispatchEvent(new Event('input', { bubbles: true }));
+          }
+          
+          // Auto-advance for select dropdowns
+          if (displayInput.value) {
+            this.autoAdvanceToNextQuestion();
+          }
+          
         } else {
           // For other input types
           const originalInput = originalElement.querySelector(`[name="${displayInput.name}"]`);
@@ -1386,6 +1411,21 @@ class TypeformPresenter extends HTMLElement {
       this.currentQuestion--;
       this.animateTransition();
     }
+  }
+
+  autoAdvanceToNextQuestion() {
+    // Clear any existing auto-advance timeout
+    if (this.autoAdvanceTimeout) {
+      clearTimeout(this.autoAdvanceTimeout);
+    }
+    
+    // Set a short delay before advancing (700ms for better UX)
+    this.autoAdvanceTimeout = setTimeout(() => {
+      // Only advance if validation passes
+      if (this.validateCurrentQuestion()) {
+        this.nextQuestion();
+      }
+    }, 700);
   }
 
   animateTransition() {
@@ -1591,10 +1631,7 @@ class TypeformPresenter extends HTMLElement {
                 );
                 if (inputs[index]) {
                   inputs[index].click();
-                  // Auto-advance for single choice
-                  if (inputs[index].type === 'radio') {
-                    setTimeout(() => this.nextQuestion(), 500);
-                  }
+                  // Auto-advance is now handled by the click event
                 }
               }
             }

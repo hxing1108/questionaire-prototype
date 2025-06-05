@@ -505,28 +505,38 @@ class TypeformPresenter extends HTMLElement {
         
         display: block;
         min-height: 100vh;
+        min-height: -webkit-fill-available;
         background: hsl(var(--background));
         color: hsl(var(--foreground));
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        padding-top: env(safe-area-inset-top);
       }
 
       * {
         box-sizing: border-box;
       }
 
+      /* Prevent horizontal scroll on mobile */
+      :host {
+        overflow-x: hidden;
+      }
+
       .typeform-container {
         display: flex;
         flex-direction: column;
         min-height: 100vh;
+        min-height: -webkit-fill-available;
         max-width: 800px;
         margin: 0 auto;
         padding: 0;
         position: relative;
+        width: 100%;
       }
 
       .progress-bar {
         position: fixed;
         top: 0;
+        top: env(safe-area-inset-top);
         left: 0;
         right: 0;
         height: 4px;
@@ -554,8 +564,9 @@ class TypeformPresenter extends HTMLElement {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding: 6rem 2rem 8rem 2rem;
+        padding: calc(6rem + env(safe-area-inset-top)) 2rem calc(8rem + env(safe-area-inset-bottom)) 2rem;
         min-height: calc(100vh - 14rem);
+        min-height: calc(-webkit-fill-available - 14rem);
       }
 
       .question-content {
@@ -567,6 +578,8 @@ class TypeformPresenter extends HTMLElement {
         width: 100%;
         max-width: 600px;
         margin: 0 auto;
+        padding: 0 1rem;
+        box-sizing: border-box;
       }
 
       .typeform-question-display .question-number {
@@ -719,11 +732,13 @@ class TypeformPresenter extends HTMLElement {
       .navigation {
         position: fixed;
         bottom: 0;
+        bottom: env(safe-area-inset-bottom);
         left: 0;
         right: 0;
         display: flex;
         justify-content: space-between;
         padding: 1.5rem 2rem;
+        padding-bottom: calc(1.5rem + env(safe-area-inset-bottom));
         gap: 1rem;
         background: hsl(var(--background));
         border-top: 1px solid hsl(var(--border));
@@ -818,16 +833,19 @@ class TypeformPresenter extends HTMLElement {
       /* Mobile responsive */
       @media (max-width: 768px) {
         .question-wrapper {
-          padding: 5rem 1rem 7rem 1rem;
+          padding: calc(5rem + env(safe-area-inset-top)) 1rem calc(7rem + env(safe-area-inset-bottom)) 1rem;
           min-height: calc(100vh - 12rem);
+          min-height: calc(-webkit-fill-available - 12rem);
         }
         
         .navigation {
           padding: 1rem;
+          padding-bottom: calc(1rem + env(safe-area-inset-bottom));
           left: 0;
           right: 0;
           transform: none;
           max-width: 100%;
+          width: 100%;
         }
         
         ::slotted(label) {

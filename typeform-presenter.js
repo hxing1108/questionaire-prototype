@@ -582,9 +582,6 @@ class TypeformPresenter extends HTMLElement {
         box-sizing: border-box;
       }
 
-      .typeform-question-display .question-number {
-        margin-bottom: 0.5rem;
-      }
 
       .question-label {
         font-size: 1.5rem;
@@ -906,7 +903,6 @@ class TypeformPresenter extends HTMLElement {
       const questionDisplay = document.createElement('div');
       questionDisplay.className = 'typeform-question-display';
       questionDisplay.innerHTML = `
-        <div class="question-number">${this.currentQuestion + 1} of ${this.questions.length}</div>
         <h2 class="question-label">${questionInfo.label}</h2>
         ${questionInfo.description ? `<p class="question-description">${questionInfo.description}</p>` : ''}
         <div class="question-input-container">
@@ -932,7 +928,6 @@ class TypeformPresenter extends HTMLElement {
       // Fallback: show raw question text
       questionContent.innerHTML = `
         <div class="typeform-question-display">
-          <div class="question-number">${this.currentQuestion + 1} of ${this.questions.length}</div>
           <h2>Question ${this.currentQuestion + 1}</h2>
           <p>Unable to display this question properly.</p>
         </div>

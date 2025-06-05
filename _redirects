@@ -1,0 +1,3 @@
+# Netlify redirects
+/ /typeform-demo.html 302
+/index.html /typeform-demo.html 302

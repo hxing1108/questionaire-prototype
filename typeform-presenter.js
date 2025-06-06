@@ -469,12 +469,14 @@ class TypeformPresenter extends HTMLElement {
           </div>
         </div>
         <div class="navigation">
-          <button class="nav-button prev" id="prevBtn">
-            ↑ Previous
-          </button>
-          <button class="nav-button next" id="nextBtn">
-            OK ✓
-          </button>
+          <div class="navigation-inner">
+            <button class="nav-button prev" id="prevBtn">
+              ↑ Previous
+            </button>
+            <button class="nav-button next" id="nextBtn">
+              OK ✓
+            </button>
+          </div>
         </div>
         <div class="error-message" id="errorMessage" style="display: none;">
           <!-- Error messages will appear here -->
@@ -734,6 +736,7 @@ class TypeformPresenter extends HTMLElement {
         right: 0;
         display: flex;
         justify-content: space-between;
+        align-items: center;
         padding: 1.5rem 2rem;
         padding-bottom: calc(1.5rem + env(safe-area-inset-bottom));
         gap: 1rem;
@@ -741,10 +744,17 @@ class TypeformPresenter extends HTMLElement {
         border-top: 1px solid hsl(var(--border));
         box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
         z-index: 999;
+        width: 100%;
+      }
+      
+      .navigation-inner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        width: 100%;
         max-width: 800px;
         margin: 0 auto;
-        left: 50%;
-        transform: translateX(-50%);
       }
 
       .nav-button {
@@ -755,12 +765,18 @@ class TypeformPresenter extends HTMLElement {
         cursor: pointer;
         transition: all 0.2s;
         font-weight: 500;
+        height: 48px; /* Fixed height for all buttons */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
       }
 
       .nav-button.prev {
         background: hsl(var(--background));
         color: hsl(var(--foreground));
         border: 2px solid #000000 !important;
+        min-width: 120px;
       }
 
       .nav-button.prev:hover:not(:disabled) {
@@ -772,9 +788,10 @@ class TypeformPresenter extends HTMLElement {
       .nav-button.next {
         background: hsl(var(--primary));
         color: hsl(var(--primary-foreground));
-        flex: 1;
-        max-width: 200px;
-        margin-left: auto;
+        min-width: 180px; /* Longer than prev button */
+        padding: 0.75rem 2.5rem; /* Same vertical padding as base */
+        font-size: 1rem; /* Same font size for consistent height */
+        border: 2px solid transparent; /* Consistent border sizing */
       }
 
       .nav-button.next:hover:not(:disabled) {
@@ -1396,8 +1413,8 @@ class TypeformPresenter extends HTMLElement {
 
     // Update previous button
     prevBtn.disabled = this.currentQuestion === 0;
-    prevBtn.style.visibility =
-      this.currentQuestion === 0 ? 'hidden' : 'visible';
+    prevBtn.style.display =
+      this.currentQuestion === 0 ? 'none' : 'inline-block';
 
     // Update next button
     if (this.currentQuestion === this.questions.length - 1) {

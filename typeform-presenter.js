@@ -11,6 +11,7 @@ class TypeformPresenter extends HTMLElement {
     this.questions = [];
     this.responses = {};
     this.fhirSystemReady = false;
+    this.autoAdvanceTimeout = null;
   }
 
   connectedCallback() {
@@ -19,6 +20,8 @@ class TypeformPresenter extends HTMLElement {
       .then(() => {
         this.initializePresenter();
         this.setupKeyboardNavigation();
+        // Dispatch event to signal readiness
+        this.dispatchEvent(new CustomEvent('presenterReady'));
       })
       .catch((error) => {
         console.error('Failed to initialize FHIR system:', error);
@@ -207,6 +210,8 @@ class TypeformPresenter extends HTMLElement {
       if (this.questions.length > 0) {
         this.render();
         this.showCurrentQuestion();
+        // Dispatch contentReady event
+        this.dispatchEvent(new CustomEvent('contentReady'));
       } else {
         console.log('Still no questions found, waiting for events...');
       }
@@ -461,9 +466,7 @@ class TypeformPresenter extends HTMLElement {
           <div class="progress-fill" style="width: ${this.getProgress()}%"></div>
         </div>
         <div class="question-wrapper">
-          <div class="question-number">${this.currentQuestion + 1} → ${
-      this.questions.length
-    }</div>
+          <div class="question-number">${this.getTimeEstimate()}</div>
           <div class="question-content" id="questionContent">
             <!-- Current question will be inserted here -->
           </div>
@@ -480,6 +483,11 @@ class TypeformPresenter extends HTMLElement {
         </div>
         <div class="error-message" id="errorMessage" style="display: none;">
           <!-- Error messages will appear here -->
+        </div>
+        <div class="transition-overlay" id="transitionOverlay">
+          <div class="transition-content" id="transitionContent">
+            <!-- Dynamic transition content will be inserted here -->
+          </div>
         </div>
       </div>
     `;
@@ -559,6 +567,12 @@ class TypeformPresenter extends HTMLElement {
         font-size: 0.875rem;
         color: hsl(var(--muted-foreground));
         margin-bottom: 2rem;
+        display: inline-block;
+        font-weight: 400;
+        text-decoration: underline;
+        text-decoration-style: dotted;
+        text-decoration-color: hsl(var(--border));
+        text-underline-offset: 4px;
       }
 
       .question-wrapper {
@@ -846,6 +860,99 @@ class TypeformPresenter extends HTMLElement {
           transform: translateX(0);
         }
       }
+
+      /* Transition overlay styles */
+      .transition-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(255, 255, 255, 0.95);
+        z-index: 9999;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+      }
+
+      .transition-overlay.active {
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      .transition-content {
+        text-align: center;
+        transform: scale(0.8);
+        opacity: 0;
+        transition: all 0.3s ease;
+      }
+
+      .transition-overlay.active .transition-content {
+        transform: scale(1);
+        opacity: 1;
+      }
+
+      /* Checkmark animation */
+      .checkmark-circle {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto 20px;
+        position: relative;
+      }
+
+      .checkmark-svg {
+        width: 100%;
+        height: 100%;
+      }
+
+      .checkmark-circle-path {
+        stroke: #22c55e;
+        stroke-width: 3;
+        fill: none;
+        stroke-dasharray: 251.2;
+        stroke-dashoffset: 251.2;
+        animation: drawCircle 0.6s ease forwards;
+      }
+
+      .checkmark-path {
+        stroke: #22c55e;
+        stroke-width: 4;
+        fill: none;
+        stroke-dasharray: 50;
+        stroke-dashoffset: 50;
+        animation: drawCheck 0.4s ease forwards 0.4s;
+      }
+
+      @keyframes drawCircle {
+        to {
+          stroke-dashoffset: 0;
+        }
+      }
+
+      @keyframes drawCheck {
+        to {
+          stroke-dashoffset: 0;
+        }
+      }
+
+      .transition-text {
+        font-size: 1.25rem;
+        color: hsl(var(--foreground));
+        font-weight: 500;
+        margin: 0;
+        opacity: 0;
+        animation: fadeInText 0.3s ease forwards 0.5s;
+      }
+
+      @keyframes fadeInText {
+        to {
+          opacity: 1;
+        }
+      }
+
 
       /* Mobile responsive */
       @media (max-width: 768px) {
@@ -1427,12 +1534,21 @@ class TypeformPresenter extends HTMLElement {
 
   nextQuestion() {
     if (this.validateCurrentQuestion()) {
+      // Check if question has an answer before showing transition
+      const hasAnswer = this.checkIfQuestionHasAnswer();
+      
       // Save current response
       this.saveCurrentResponse();
 
       if (this.currentQuestion < this.questions.length - 1) {
         this.currentQuestion++;
-        this.animateTransition();
+        if (hasAnswer) {
+          // Show transition only if answer was provided
+          this.animateTransition();
+        } else {
+          // Skip transition animation, go directly to next question
+          this.performDefaultTransition();
+        }
       } else {
         this.submitForm();
       }
@@ -1461,9 +1577,81 @@ class TypeformPresenter extends HTMLElement {
     }, 700);
   }
 
+  checkIfQuestionHasAnswer() {
+    const currentWidget = this.questions[this.currentQuestion];
+    
+    // Check display inputs in the shadow DOM
+    const displayInputs = this.shadowRoot.querySelectorAll(
+      'input:not([type="hidden"]), select, textarea'
+    );
+    
+    for (let input of displayInputs) {
+      if (input.type === 'radio' || input.type === 'checkbox') {
+        if (input.checked) {
+          return true;
+        }
+      } else if (input.value && input.value.trim() !== '') {
+        return true;
+      }
+    }
+    
+    // Also check original widget inputs
+    const originalInputs = currentWidget.querySelectorAll(
+      'input:not([type="hidden"]), select, textarea'
+    );
+    
+    for (let input of originalInputs) {
+      if (input.type === 'radio' || input.type === 'checkbox') {
+        if (input.checked) {
+          return true;
+        }
+      } else if (input.value && input.value.trim() !== '') {
+        return true;
+      }
+    }
+    
+    return false;
+  }
+
   animateTransition() {
+    // Always show the checkmark transition
+    this.showTransitionOverlay();
+  }
+
+  showTransitionOverlay() {
+    const overlay = this.shadowRoot.getElementById('transitionOverlay');
+    const content = this.shadowRoot.getElementById('transitionContent');
+    
+    // Only show checkmark transition
+    content.innerHTML = `
+      <div class="checkmark-circle">
+        <svg class="checkmark-svg" viewBox="0 0 100 100">
+          <circle class="checkmark-circle-path" cx="50" cy="50" r="40" />
+          <path class="checkmark-path" d="M 30 50 L 45 65 L 70 35" />
+        </svg>
+      </div>
+      <p class="transition-text">Antwort gespeichert – weiter geht's!</p>
+    `;
+    
+    // Show overlay
+    overlay.classList.add('active');
+    
+    // Hide overlay and continue with transition after animation
+    setTimeout(() => {
+      overlay.classList.remove('active');
+      this.performDefaultTransition();
+    }, 1800); // Slightly reduced for better flow
+  }
+
+  performDefaultTransition() {
     const questionContent = this.shadowRoot.getElementById('questionContent');
     questionContent.classList.add('question-transition-out');
+
+    // Clear any error messages
+    const errorDiv = this.shadowRoot.getElementById('errorMessage');
+    if (errorDiv) {
+      errorDiv.style.display = 'none';
+    }
 
     // Remove old question from light DOM
     const oldQuestion = this.querySelector('[slot="current-question"]');
@@ -1567,14 +1755,35 @@ class TypeformPresenter extends HTMLElement {
     return ((this.currentQuestion + 1) / this.questions.length) * 100;
   }
 
+  getTimeEstimate() {
+    // Calculate remaining questions
+    const remainingQuestions = this.questions.length - this.currentQuestion;
+    
+    // Estimate seconds per question (adjust based on your needs)
+    const secondsPerQuestion = 15; // 15 seconds average per question
+    
+    // Calculate total remaining seconds
+    const totalSeconds = remainingQuestions * secondsPerQuestion;
+    
+    // Convert to minutes
+    const minutes = Math.ceil(totalSeconds / 60);
+    
+    // Return formatted string
+    if (minutes <= 1) {
+      return "Weniger als 1 Minute";
+    } else if (minutes <= 2) {
+      return "Etwa 2 Minuten";
+    } else {
+      return `Etwa ${minutes} Minuten`;
+    }
+  }
+
   updateProgress() {
     const progressFill = this.shadowRoot.querySelector('.progress-fill');
     progressFill.style.width = `${this.getProgress()}%`;
 
     const questionNumber = this.shadowRoot.querySelector('.question-number');
-    questionNumber.textContent = `${this.currentQuestion + 1} → ${
-      this.questions.length
-    }`;
+    questionNumber.textContent = this.getTimeEstimate();
   }
 
   submitForm() {

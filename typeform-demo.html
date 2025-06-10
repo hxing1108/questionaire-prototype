@@ -479,40 +479,51 @@
 
         waitForTypeformPresenter() {
           return new Promise((resolve, reject) => {
-            // Check if typeform presenter is ready
+            // Check if presenter has loadFromString method
             if (
               this.typeformPresenter &&
-              this.typeformPresenter.fhirSystemReady
+              typeof this.typeformPresenter.loadFromString === 'function'
             ) {
-              console.log('Typeform presenter already ready');
+              console.log('Typeform presenter already has loadFromString method');
               resolve();
               return;
             }
 
-            // Wait for it to be ready
+            // Listen for presenter ready event
+            const readyHandler = () => {
+              console.log('Typeform presenter ready event received');
+              this.typeformPresenter.removeEventListener('presenterReady', readyHandler);
+              resolve();
+            };
+            
+            this.typeformPresenter.addEventListener('presenterReady', readyHandler);
+
+            // Also check periodically
             let attempts = 0;
-            const maxAttempts = 200; // Increase timeout to 20 seconds
+            const maxAttempts = 100; // 10 seconds
             const checkInterval = setInterval(() => {
               attempts++;
 
+              const hasLoadMethod = this.typeformPresenter && 
+                                   typeof this.typeformPresenter.loadFromString === 'function';
+
               console.log(`Typeform presenter check attempt ${attempts}:`, {
                 hasPresenter: !!this.typeformPresenter,
+                hasLoadFromString: hasLoadMethod,
                 fhirSystemReady: this.typeformPresenter?.fhirSystemReady,
               });
 
-              if (
-                this.typeformPresenter &&
-                this.typeformPresenter.fhirSystemReady
-              ) {
+              if (hasLoadMethod) {
                 console.log('Typeform presenter ready!');
                 clearInterval(checkInterval);
+                this.typeformPresenter.removeEventListener('presenterReady', readyHandler);
                 resolve();
               } else if (attempts > maxAttempts) {
                 clearInterval(checkInterval);
                 console.warn(
                   'Typeform presenter timeout, but continuing anyway...'
                 );
-                // Don't reject, just continue
+                this.typeformPresenter.removeEventListener('presenterReady', readyHandler);
                 resolve();
               }
             }, 100);

@@ -914,7 +914,7 @@ class TypeformPresenter extends HTMLElement {
         fill: none;
         stroke-dasharray: 251.2;
         stroke-dashoffset: 251.2;
-        animation: drawCircle 0.6s ease forwards;
+        animation: drawCircle 0.4s ease forwards;
       }
 
       .checkmark-path {
@@ -923,7 +923,7 @@ class TypeformPresenter extends HTMLElement {
         fill: none;
         stroke-dasharray: 50;
         stroke-dashoffset: 50;
-        animation: drawCheck 0.4s ease forwards 0.4s;
+        animation: drawCheck 0.3s ease forwards 0.3s;
       }
 
       @keyframes drawCircle {
@@ -944,7 +944,7 @@ class TypeformPresenter extends HTMLElement {
         font-weight: 500;
         margin: 0;
         opacity: 0;
-        animation: fadeInText 0.3s ease forwards 0.5s;
+        animation: fadeInText 0.2s ease forwards 0.4s;
       }
 
       @keyframes fadeInText {
@@ -1640,7 +1640,7 @@ class TypeformPresenter extends HTMLElement {
     setTimeout(() => {
       overlay.classList.remove('active');
       this.performDefaultTransition();
-    }, 1800); // Slightly reduced for better flow
+    }, 1300); // Reduced by 500ms for faster transition
   }
 
   performDefaultTransition() {
